@@ -1,12 +1,10 @@
 <!DOCTYPE html> 
-<html> 
+<html lang="en"> 
     <head>
+        <meta chartset="utf-8">
         <meta name="viewport" content="width=device-width, initialscale=1, shrink-to-fit=no">
+        <title>Bootstrap demo</title>
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity=" " crossorigin=" "> 
-        <title>Demo Bootstrap</title>
+        <link rel="stylesheet" href="assets/myStyle.css">
     </head>
-    <body> 
-        
-        <script src="assets/js/bootstrap.bundle.min.js" integrity=" " crossorigin=" "></script>
-    </body> 
-</html>
+    <body>
