@@ -3,7 +3,7 @@
 
     <footer>
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center pt-5">
         <a href="https://instagram.com">
             <img src="assets/img/icons/instagram.png"></img>
         </a>
@@ -27,7 +27,7 @@
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <a target="_blank" href="https://icons8.com/icon/PjUpgs6o2IFx/a%C3%B1adir-nuevo-icono-de-usuario-masculino">Dodge</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                    Test
                 </div>
             </div>
         </div>

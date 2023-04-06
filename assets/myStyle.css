@@ -11,9 +11,14 @@ Estilos para los practicos 1 y 2
 
 /*
 
-TODOS LOS ESTILOS PARA LAS VISTAS QUE SE COMPARTEN POR TODA LA WEB
+* TODOS LOS ESTILOS PARA LAS VISTAS QUE SE COMPARTEN POR TODA LA WEB
 
 */
+
+/*
+* Fuentes personalizadas desde un fichero .ttf
+*/
+
 .accentColor{
     color: #FFA07A;
 }
@@ -28,6 +33,20 @@ body{
     background-color: whitesmoke;
 }
 
+/* Estilos para el section*/
+section{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/*
+*Estilo para las Cards
+*/
+
+.card{
+    border-radius: 30px;
+}
+
 /* Estilos para el Footer */
 
 /* Estilos para el acordeon con todos los creditos de los Assets que use en la web */
@@ -40,7 +59,7 @@ body{
 
 /*
 
-TODOS LOS ESTILOS PARA LAS VISTAS QUE SOLO SE USAN EN UNA UNICA PAGINA
+* TODOS LOS ESTILOS PARA LAS VISTAS QUE SOLO SE USAN EN UNA UNICA PAGINA
 
 */
 
@@ -61,13 +80,16 @@ TODOS LOS ESTILOS PARA LAS VISTAS QUE SOLO SE USAN EN UNA UNICA PAGINA
 /* prueba de estilos para barra de busqueda */
 .roundSearch{
     margin:auto;
+    /*padding: 10px 30px 30px 20px;*/
     border-radius: 30px;
 }
 /* Estilos paralas tarjetas de productos */
+/*
 .productImg{
     height: 250px;
     width: 250px;
 }
+*/
 
 .productCard{
     margin: 20px;
@@ -76,11 +98,55 @@ TODOS LOS ESTILOS PARA LAS VISTAS QUE SOLO SE USAN EN UNA UNICA PAGINA
 .btn{
     border-radius: 30px;
 }
+
+#listaProductos{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 /* Estilos para la paginacion */
 
 
-/*estos estilos cambian los colores de default de btn-primary*/
+/*
+
+* Estos estilos cambian los colores de default de btn-primary
+
+TODO: tengo que terminar de corregir los errores de los estilos
+
+*/
 .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
     background-color: #FFA07A !important;
-    border-color: #FFE4B5;
+    border-color: white;
+    border-width: 1px;
+}
+
+.btn-primary:focus{
+    box-shadow: none;
+    border: solid red;
+}
+
+/* Estilos para cuando se selecciona un fromulario. */
+.form-control, .form-select{
+    border-radius: 30px;
+    border-width: 1px;
+}
+
+.form-control:focus, .form-select:valid:focus{
+    border: solid #FFA07A;
+    box-shadow: none;
+}
+
+/* Estilos para cuando se selecciona un boton */
+
+/* Estilos para la imagen que aparece en la view de login */
+#img-login{
+    height: 250px;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.margenTituloForm{
+    margin-left: 5px;
+    padding-top: 25px;
 }

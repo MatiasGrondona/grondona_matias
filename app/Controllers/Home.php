@@ -7,24 +7,45 @@ class Home extends BaseController
 {
     public function index()
     {
-        /*
-        return view('welcome_message');
-        return view('principal.html');
-        return view('plantilla.php');
-        return view('header');
-        return view('navbar');
-        return view('carusel');
-        return view('footer');
-        */
-        return view('header') . view('navbar') . view('carusel') . view('productos') . view('footer');
+        $data = array('titulo' => 'Design Testing');
+
+        return view('header', $data) . view('navbar') . view('administrarProductos') . view('footer');
     }
-    /*
+    
     public function home(){
-        $this->load->view('header');
-        $this->load->view('navbar');
-        $this->load->view('carusel');
-        $this->load->view('footer');
+        $data = array('titulo' => 'PetFun');
+        return view('header', $data) . view('navbar') . view('carusel') . view('productos') . view('footer');
     }
-    */
+
+    public function login(){
+        $data = array('titulo' => 'Login');
+        return view('header', $data) . view('navbar') . view('login') . view('footer');
+    }
+
+    public function nosotros(){
+        $data = array('titulo' => 'Quienes Somos');
+        return view('header', $data) . view('navbar') . view('nosotros') . view('footer');
+    }
+
+    public function productos(){
+        $data = array('titulo' => 'Productos');
+        return view('header', $data) . view('navbar') . view('productos') . view('footer');
+    }
+    
+    public function nuevoProducto(){
+        $data = array('titulo' => 'Agregar Producto');
+        return view('header', $data) . view('navbar') . view('nuevoProducto') . view('footer');
+    }
+
+    public function administrarProductos(){
+        $data = array('titulo' => 'Administrar Productos');
+        return view('header', $data) . view('navbar') . view('administrarProductos') . view('footer');
+    }
+
+    public function inProgressViews(){
+        $data = array('titulo' => 'Vistas en proceso');
+        return view('header', $data) . view('navbar') . view('inProgressViews') . view('footer');
+    }
+    
 }
 

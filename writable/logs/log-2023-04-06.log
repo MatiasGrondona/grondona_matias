@@ -1,0 +1,3 @@
+CRITICAL - 2023-04-06 20:37:07 --> Cannot redeclare App\Controllers\Home::productos()
+in APPPATH\Controllers\Home.php on line 30.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

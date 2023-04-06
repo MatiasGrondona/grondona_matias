@@ -47,3 +47,10 @@ $routes->get('/', 'Home::index');
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+$routes->get('home', 'Home::home');
+$routes->get('login', 'Home::login');
+$routes->get('nosotros', 'Home::nosotros');
+$routes->get('productos', 'Home::productos');
+$routes->get('nuevoProducto', 'Home::nuevoProducto');
+$routes->get('administrarProductos', 'Home::administrarProductos');
+$routes->get('inProgressViews', 'Home::inProgressViews');
