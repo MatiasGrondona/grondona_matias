@@ -14,7 +14,7 @@ class Home extends BaseController
     
     public function home(){
         $data = array('titulo' => 'PetFun');
-        return view('header', $data) . view('navbar') . view('carusel') . view('productos') . view('footer');
+        return view('header', $data) . view('navbar') . view('front/carrusel_y_login') . view('productos') . view('footer');
     }
 
     public function login(){
@@ -45,6 +45,11 @@ class Home extends BaseController
     public function inProgressViews(){
         $data = array('titulo' => 'Vistas en proceso');
         return view('header', $data) . view('navbar') . view('inProgressViews') . view('footer');
+    }
+
+    public function contacto(){
+        $data = array('titulo' => 'Contacto');
+        return view('header', $data) . view('navbar') . view('front/contacto') . view('footer');
     }
     
 }

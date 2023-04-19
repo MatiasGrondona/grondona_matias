@@ -1,5 +1,5 @@
 <section>
-    <div class="container pt-5 d-flex justify-content-center">
+    <div class="container pt-1 d-flex justify-content-center">
         <div class="card col-6">
             <div class="card-body">
                 <!--
@@ -23,6 +23,9 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Entrar</button>
                 </form>
+                <h5 class="pt-3 text-center">
+                    No tienes cuenta? <a href="registro">Registrate</a>
+                </h5>
             </div>
         </div>
     </div>

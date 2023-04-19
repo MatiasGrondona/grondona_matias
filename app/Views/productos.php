@@ -22,7 +22,7 @@
             <h5 class="card-title">Nombre del Producto</h5>
             <p class="card-text">Descripcion Basica del Producto</p>
             <h5 class="card-text">$ 1000</h5>
-            <a href="#" class="btn btn-secondary d-grid gap-2 m-2">Ver Mas</a>
+            <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Mas</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
         </div>
     </div>
@@ -33,7 +33,7 @@
             <h5 class="card-title">Nombre del Producto</h5>
             <p class="card-text">Descripcion Basica del Producto</p>
             <h5 class="card-text">$ 1000</h5>
-            <a href="#" class="btn btn-secondary d-grid gap-2 m-2">Ver Mas</a>
+            <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Mas</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
         </div>
     </div>
@@ -44,7 +44,7 @@
             <h5 class="card-title">Nombre del Producto</h5>
             <p class="card-text">Descripcion Basica del Producto</p>
             <h5 class="card-text">$ 1000</h5>
-            <a href="#" class="btn btn-secondary d-grid gap-2 m-2">Ver Mas</a>
+            <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Mas</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
         </div>
     </div>
@@ -55,7 +55,7 @@
             <h4 class="card-title">Nombre del Producto</h4>
             <p class="card-text">Descripcion Basica del Producto</p>
             <h5 class="card-text">$ 1000</h5>
-            <a href="#" class="btn btn-secondary d-grid gap-2 m-2">Ver Mas</a>
+            <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Mas</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
         </div>
     </div>
@@ -66,7 +66,7 @@
             <h4 class="card-title">Nombre del Producto</h4>
             <p class="card-text">Descripcion Basica del Producto</p>
             <h5 class="card-text">$ 1000</h5>
-            <a href="#" class="btn btn-secondary d-grid gap-2 m-2">Ver Mas</a>
+            <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Mas</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
         </div>
     </div>
@@ -77,7 +77,7 @@
             <h4 class="card-title">Nombre del Producto</h4>
             <p class="card-text">Descripcion Basica del Producto</p>
             <h5 class="card-text">$ 1000</h5>
-            <a href="#" class="btn btn-secondary d-grid gap-2 m-2">Ver Mas</a>
+            <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Mas</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
         </div>
     </div>

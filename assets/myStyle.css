@@ -1,22 +1,7 @@
 /*
-Estilos para los practicos 1 y 2
-*/
-
-#parrafoPrueba{
-    text-align: center;
-    color: red;
-}
-
-/*-------------------------------------------------------------------------------------------*/
-
-/*
 
 * TODOS LOS ESTILOS PARA LAS VISTAS QUE SE COMPARTEN POR TODA LA WEB
 
-*/
-
-/*
-* Fuentes personalizadas desde un fichero .ttf
 */
 
 .accentColor{
@@ -31,6 +16,7 @@ Estilos para los practicos 1 y 2
 /*Estilos para el Body*/
 body{
     background-color: whitesmoke;
+    position: relative;
 }
 
 /* Estilos para el section*/
@@ -49,6 +35,11 @@ section{
 
 /* Estilos para el Footer */
 
+.pie-bg{
+    background-color: red;
+}
+
+
 /* Estilos para el acordeon con todos los creditos de los Assets que use en la web */
 #accordionAssets{
     padding: 10px;
@@ -63,16 +54,34 @@ section{
 
 */
 
-/*estilos para el carusel*/
+/*estilos para el carusel
 .carousel{
+    /*
     margin: auto;
     padding-top: 40px;
     padding-bottom: 40px;
+    
 }
+
+*/
 
 .carousel img{
     height:400px;
     border-radius: 12px;
+}
+
+/*
+Estilos para el carrusel con login
+*/
+
+.carouselYLogin{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*align-content: center;
+    align-items: baseline;
+    */
+    flex-grow: 1;
 }
 
 /*Estilos para Productos*/
@@ -84,12 +93,6 @@ section{
     border-radius: 30px;
 }
 /* Estilos paralas tarjetas de productos */
-/*
-.productImg{
-    height: 250px;
-    width: 250px;
-}
-*/
 
 .productCard{
     margin: 20px;

@@ -1,0 +1,18 @@
+CRITICAL - 2023-04-12 18:15:55 --> Invalid file: "carusel_y_login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('carusel_y_login.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('carusel_y_login', [], true)
+ 3 APPPATH\Controllers\Home.php(17): view('carusel_y_login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-12 18:16:08 --> Invalid file: "front/carusel_y_login.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/carusel_y_login.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('front/carusel_y_login', [], true)
+ 3 APPPATH\Controllers\Home.php(17): view('front/carusel_y_login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->home()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

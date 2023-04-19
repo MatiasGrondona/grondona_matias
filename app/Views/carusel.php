@@ -1,3 +1,6 @@
+
+
+<!--
 <div class="row">
             <div id="carouselExampleAutoplaying" class="carousel slide col-lg-6" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -22,3 +25,5 @@
             </div>
 
         </div>
+
+-->

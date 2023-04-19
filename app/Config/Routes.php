@@ -50,6 +50,7 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 $routes->get('home', 'Home::home');
 $routes->get('login', 'Home::login');
 $routes->get('nosotros', 'Home::nosotros');
+$routes->get('contacto', 'Home::contacto');
 $routes->get('productos', 'Home::productos');
 $routes->get('nuevoProducto', 'Home::nuevoProducto');
 $routes->get('administrarProductos', 'Home::administrarProductos');
