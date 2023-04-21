@@ -1,7 +1,7 @@
 <div class="container swiper">
     <div class="slide-container">
         <div class="card-wrapper swiper-wraper">
-            <div class="card swiper-slide">
+            <div class="card col-5 swiper-slide">
                 <div class="img-box">
                     <img src="assets/img/blue.png" alt="">
                 </div>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card swiper-slide">
+            <div class="card col-5 swiper-slide">
                 <div class="img-box">
                     <img src="assets/img/blue.png" alt="">
                 </div>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card swiper-slide">
+            <div class="card col-5 swiper-slide">
                 <div class="img-box">
                     <img src="assets/img/blue.png" alt="">
                 </div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card swiper-slide">
+            <div class="card col-5 swiper-slide">
                 <div class="img-box">
                     <img src="assets/img/blue.png" alt="">
                 </div>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card swiper-slide">
+            <div class="card col-5 swiper-slide">
                 <div class="img-box">
                     <img src="assets/img/blue.png" alt="">
                 </div>

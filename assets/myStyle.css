@@ -10,7 +10,6 @@
 /*Estilos para el navbar*/
 .navbar{
     background-color: #FFE4B5;
-    /*background-color: #FFA07A;*/
 }
 
 .navbar ul li a{
@@ -99,6 +98,29 @@ section{
 * TODOS LOS ESTILOS PARA LAS VISTAS QUE SOLO SE USAN EN UNA UNICA PAGINA
 
 */
+
+/*
+* Estilo para la vista de Contacto y Ubicacion
+*/
+
+.Cont_Y_Ubi {
+    flex-wrap: nowrap;
+    
+}
+
+@media (max-width: 770px) {
+    .container{
+        padding: 0;
+    }
+    .Cont_Y_Ubi {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .Cont_Y_Ubi .card{
+        margin: 0;
+    }
+}
+
 
 /*
 * Estilos para el Carrusel de Cartas

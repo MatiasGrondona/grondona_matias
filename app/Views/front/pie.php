@@ -1,3 +1,4 @@
+
 <section class="footer">
     <div class="social">
         <a href="https://www.instagram.com"><img src="assets/img/icons/instagram.png" alt="Instagram"></a>
@@ -23,7 +24,6 @@
         Matias Grondona @ 2023
     </p>
 </section>
-
 <script src="assets/js/bootstrap.bundle.min.js" integrity=" " crossorigin=" "></script>
 <script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
