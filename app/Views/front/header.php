@@ -10,5 +10,7 @@
 -->
         <link rel="stylesheet" href="<?php echo("assets/css/bootstrap.min.css");?>">
         <link rel="stylesheet" href="<?php echo("assets/myStyle.css");?>">
+        <!-- Swiper CSS-->
+        <link rel="stylesheet" href="<?php echo("assets/css/swiper-bundle.min.css");?>" />
     </head>
     <body>

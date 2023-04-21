@@ -9,47 +9,56 @@ class Home extends BaseController
     {
         $data = array('titulo' => 'Design Testing');
 
-        return view('header', $data) . view('navbar') . view('administrarProductos') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('administrarProductos') . view('front/pie');
     }
     
     public function home(){
         $data = array('titulo' => 'PetFun');
-        return view('header', $data) . view('navbar') . view('front/carrusel_y_login') . view('productos') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('front/carrusel_y_login') . view('front/productos') . view('front/pie');
     }
 
     public function login(){
-        $data = array('titulo' => 'Login');
-        return view('header', $data) . view('navbar') . view('login') . view('footer');
+        $data = array('titulo' => 'Inicial Sesión');
+        return view('front/header', $data) . view('front/navbar') . view('front/login') . view('front/pie');
     }
 
     public function nosotros(){
         $data = array('titulo' => 'Quienes Somos');
-        return view('header', $data) . view('navbar') . view('nosotros') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('front/nosotros') . view('front/pie');
     }
 
     public function productos(){
         $data = array('titulo' => 'Productos');
-        return view('header', $data) . view('navbar') . view('productos') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('front/productos') . view('front/pie');
     }
     
     public function nuevoProducto(){
         $data = array('titulo' => 'Agregar Producto');
-        return view('header', $data) . view('navbar') . view('nuevoProducto') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('front/nuevoProducto') . view('front/pie');
     }
 
     public function administrarProductos(){
         $data = array('titulo' => 'Administrar Productos');
-        return view('header', $data) . view('navbar') . view('administrarProductos') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('front/administrarProductos') . view('front/pie');
     }
 
     public function inProgressViews(){
         $data = array('titulo' => 'Vistas en proceso');
-        return view('header', $data) . view('navbar') . view('inProgressViews') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('front/inProgressViews') . view('front/carruselCartas') . view('front/pie');
     }
 
     public function contacto(){
         $data = array('titulo' => 'Contacto');
-        return view('header', $data) . view('navbar') . view('front/contacto') . view('footer');
+        return view('front/header', $data) . view('front/navbar') . view('front/contacto') . view('front/pie');
+    }
+    public function terminos(){
+        $data = array('titulo' => 'Terminos y Condiciones');
+        return view('front/header', $data) . view('front/navbar') . view('front/terminos') . view('front/pie');
+    }
+
+    public function comercializacion(){
+        $data = array('titulo' => 'Comercialización');
+        return view('front/header', $data) . view('front/navbar') . view('front/comercializacion') . view('front/pie');
     }
     
 }

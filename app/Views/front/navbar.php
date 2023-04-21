@@ -14,9 +14,6 @@
                             <a class="nav-link" href="<?php echo base_url('productos');?>">Productos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo base_url('nosotros');?>">Quienes Somos</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('login');?>">Iniciar Sesión</a>
                         </li>
                         <li>
