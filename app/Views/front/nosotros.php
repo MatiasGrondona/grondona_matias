@@ -1,14 +1,19 @@
-<div class="container">
+<div class="container pt-3 pb-3">
     <div class="row">
-        <div class="card">
+        <div class="card text-justify">
             <div class="card-body">
-                <div class="card-title">
+                <div class="card-title text-center pt-2 pb-3">
                     <h2>Acerca de nosotros PetFun!!</h2>
                 </div>
                 <p>
-                    Agregar Descripcion basica de la empresa, año de creacion y 
-                    motivos por el que empezaron el proyecto, la fecha de inicio puede ser 2021 y usar la pandemia 
-                    y el tiemppo libre como motivacion. 
+                    ¡Bienvenidos a PetFun! Somos una tienda en línea especializada en productos para mascotas. 
+                    Ofrecemos una amplia variedad de ropa y accesorios para perros y gatos, y siempre estamos 
+                    buscando nuevas formas de mejorar la vida de tus mascotas.
+                </p>
+                <p>
+                    En PetFun, entendemos que las mascotas son parte de la familia. 
+                    Por eso, nos aseguramos de ofrecer productos de alta calidad que están diseñados para brindar comodidad, 
+                    seguridad y estilo a tus compañeros peludos.
                 </p>
             </div>
         </div>

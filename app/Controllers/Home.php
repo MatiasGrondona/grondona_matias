@@ -7,14 +7,12 @@ class Home extends BaseController
 {
     public function index()
     {
-        $data = array('titulo' => 'Design Testing');
-
-        return view('front/header', $data) . view('front/navbar') . view('administrarProductos') . view('front/pie');
+        return $this->home();
     }
     
     public function home(){
         $data = array('titulo' => 'PetFun');
-        return view('front/header', $data) . view('front/navbar') . view('front/carrusel_y_login') . view('front/productos') . view('front/pie');
+        return view('front/header', $data) . view('front/navbar') . view('front/productos') . view('front/pie');
     }
 
     public function login(){

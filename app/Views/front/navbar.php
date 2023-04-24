@@ -13,12 +13,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('productos');?>">Productos</a>
                         </li>
+                        <li>
+                            <a class="nav-link" href="<?php echo base_url('comercializacion');?>">Comercialización</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo base_url('login');?>">Iniciar Sesión</a>
                         </li>
+                        <!--
                         <li>
                             <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>    
                         </li>
+                        -->
                     </ul>
                 </div>
             </div>

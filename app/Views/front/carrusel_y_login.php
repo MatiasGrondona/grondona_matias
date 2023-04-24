@@ -35,7 +35,7 @@
                         </h2>
                         <form>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
+                                <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
@@ -44,12 +44,12 @@
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
+                                <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
                             </div>
                             <button type="submit" class="btn btn-primary">Ingresar</button>
                         </form>
                         <h5 class="pt-3 text-center">
-                            No tienes cuenta? <a href="registro">Registrate</a>
+                            No tenes cuenta? <a href="registro">Registrate</a>
                         </h5>
                     </div>
                 </div>

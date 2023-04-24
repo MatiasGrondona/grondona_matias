@@ -4,6 +4,14 @@
 
 */
 
+/*
+* Justificacion de textos
+*/
+
+p{
+    text-align: justify;
+}
+
 .accentColor{
     color: #FFA07A;
 }
@@ -19,7 +27,7 @@
 /*Estilos para el Body*/
 body{
     background-color: whitesmoke;
-    position: relative;
+    
 }
 
 /* Estilos para el section*/
@@ -46,7 +54,6 @@ section{
 .footer .social{
     text-align: center;
     padding-bottom: 25px;
-    /*margin: 0 20px;*/
 }
 .footer ul {
     text-align: center;
@@ -66,16 +73,6 @@ section{
 
 .footer ul li a:hover{
     opacity: 1;
-}
-
-@media (max-width: 600px) {
-    .footer ul{
-        padding: 10px 0;
-    }
-    .footer ul li {
-        display: block;
-        padding: 10px 0;
-    }
 }
 
 .footer .copyright {
@@ -104,23 +101,9 @@ section{
 */
 
 .Cont_Y_Ubi {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     
 }
-
-@media (max-width: 770px) {
-    .container{
-        padding: 0;
-    }
-    .Cont_Y_Ubi {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-    .Cont_Y_Ubi .card{
-        margin: 0;
-    }
-}
-
 
 /*
 * Estilos para el Carrusel de Cartas
@@ -185,7 +168,7 @@ Estilos para el carrusel con login
     /*padding: 10px 30px 30px 20px;*/
     border-radius: 30px;
 }
-/* Estilos paralas tarjetas de productos */
+/* Estilos para las tarjetas de productos */
 
 .productCard{
     margin: 20px;
@@ -214,8 +197,13 @@ TODO: tengo que terminar de corregir los errores de los estilos
 }
 
 .btn-primary:focus{
+    outline: none; /* desactiva el contorno predeterminado */
+    box-shadow: 0 0 0 3px rgba(255, 228, 181, 1); /* agrega un sombreado personalizado */
+    /*
     box-shadow: none;
-    border: solid red;
+    border: solid #ffe4b5;
+    */
+    
 }
 
 /* Estilos para cuando se selecciona un fromulario. */
@@ -242,4 +230,29 @@ TODO: tengo que terminar de corregir los errores de los estilos
 .margenTituloForm{
     margin-left: 5px;
     padding-top: 25px;
+}
+
+/*
+* Estilo para una carta especial dentro de otra carta
+*/
+.card .carta-aviso{
+    background-color: #FFE4B5;
+}
+
+/*
+! Media Querys
+*/
+@media (max-width: 600px) {
+    .footer ul{
+        padding: 10px 0;
+    }
+    .footer ul li {
+        display: block;
+        padding: 10px 0;
+    }
+    /*
+    .card{
+        margin: 0 10px;
+    }
+    */
 }
