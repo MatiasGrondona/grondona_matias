@@ -12,7 +12,7 @@ class Home extends BaseController
     
     public function home(){
         $data = array('titulo' => 'PetFun');
-        return view('front/header', $data) . view('front/navbar') . view('front/productos') . view('front/pie');
+        return view('front/header', $data) . view('front/navbar') . view('front/carrusel3') . view('front/productos') . view('front/pie');
     }
 
     public function login(){
@@ -42,7 +42,7 @@ class Home extends BaseController
 
     public function inProgressViews(){
         $data = array('titulo' => 'Vistas en proceso');
-        return view('front/header', $data) . view('front/navbar') . view('front/inProgressViews') . view('front/carruselCartas') . view('front/pie');
+        return view('front/header', $data) . view('front/navbar') . view('carruselTest3') . view('front/inProgressViews') . view('front/pie');
     }
 
     public function contacto(){
