@@ -297,3 +297,15 @@ TODO: tengo que terminar de corregir los errores de los estilos
 .swiper-pagination-bullet{
     background-color: #000;
 }
+
+/*
+! Estilos para las Cards de detalle de los productos
+*/
+ .cardDetalleProducto{
+    display: flex;
+ }
+
+ .cardDetalleProducto .card-body img{
+    width: 400px;
+    height: auto;
+ }

@@ -42,7 +42,7 @@ class Home extends BaseController
 
     public function inProgressViews(){
         $data = array('titulo' => 'Vistas en proceso');
-        return view('front/header', $data) . view('front/navbar') . view('carruselTest3') . view('front/inProgressViews') . view('front/pie');
+        return view('front/header', $data) . view('front/navbar') . view('front/inProgressViews') . view('front/pie');
     }
 
     public function contacto(){
