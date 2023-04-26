@@ -57,3 +57,4 @@ $routes->get('productos', 'Home::productos');
 $routes->get('nuevoProducto', 'Home::nuevoProducto');
 $routes->get('administrarProductos', 'Home::administrarProductos');
 $routes->get('inProgressViews', 'Home::inProgressViews');
+$routes->get('detalleProducto', 'Home::detalleProducto');

@@ -58,6 +58,11 @@ class Home extends BaseController
         $data = array('titulo' => 'Comercialización');
         return view('front/header', $data) . view('front/navbar') . view('front/comercializacion') . view('front/pie');
     }
+
+    public function detalleProducto(){
+        $data = array('titulo' => 'Nombre Producto');
+        return view('front/header', $data) . view('front/navbar') . view('front/detalleProducto') . view('front/pie');
+    }
     
 }
 
