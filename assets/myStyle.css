@@ -303,6 +303,7 @@ TODO: tengo que terminar de corregir los errores de los estilos
 */
  .cardDetalleProducto{
     display: flex;
+    
  }
 
  .cardDetalleProducto .card-body img{
