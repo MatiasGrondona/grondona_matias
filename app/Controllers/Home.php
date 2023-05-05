@@ -21,7 +21,7 @@ class Home extends BaseController
 
     public function login(){
         $data = array('titulo' => 'Inicial Sesión');
-        return view('front/header', $data) . view('front/navbar') . view('front/login') . view('front/pie');
+        return view('front/header', $data) . view('front/navbar') . view('front/loginYregistro') . view('front/pie');
     }
 
     public function nosotros(){
