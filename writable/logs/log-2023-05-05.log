@@ -1,0 +1,9 @@
+CRITICAL - 2023-05-05 20:17:14 --> Invalid file: "front/nuevoUsuario.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('front/nuevoUsuario.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('front/nuevoUsuario', [], true)
+ 3 APPPATH\Controllers\Home.php(34): view('front/nuevoUsuario')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

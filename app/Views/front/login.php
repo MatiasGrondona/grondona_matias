@@ -20,7 +20,7 @@
                 <button type="submit" class="btn btn-primary">Entrar</button>
             </form>
             <h5 class="pt-3 text-center">
-                No tienes cuenta? <a href="registro">Registrate</a>
+                No tienes cuenta? <a href="nuevoUsuario">Registrate</a>
             </h5>
         </div>
     </div>

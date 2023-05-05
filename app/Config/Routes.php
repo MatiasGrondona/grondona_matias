@@ -49,6 +49,7 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 }
 $routes->get('home', 'Home::home');
 $routes->get('login', 'Home::login');
+$routes->get('nuevoUsuario', 'Home::nuevoUsuario');
 $routes->get('nosotros', 'Home::nosotros');
 $routes->get('contacto', 'Home::contacto');
 $routes->get('terminos', 'Home::terminos');
@@ -58,3 +59,6 @@ $routes->get('nuevoProducto', 'Home::nuevoProducto');
 $routes->get('administrarProductos', 'Home::administrarProductos');
 $routes->get('inProgressViews', 'Home::inProgressViews');
 $routes->get('detalleProducto', 'Home::detalleProducto');
+
+//probando controladores y coneccion con la base de datos
+$routes->get('usuarios', 'usuarios_controller::prueba');
