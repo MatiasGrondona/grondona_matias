@@ -7,3 +7,21 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-05 20:30:49 --> syntax error, unexpected '&', expecting end of file
+in APPPATH\Views\back\usuario\nuevoUsuario.php on line 1.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/usuario/nuevoUsuario', [], true)
+ 3 APPPATH\Controllers\Home.php(34): view('back/usuario/nuevoUsuario')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-05 21:01:15 --> syntax error, unexpected '&', expecting end of file
+in APPPATH\Views\back\usuario\nuevoUsuario.php on line 1.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/usuario/nuevoUsuario', [], true)
+ 3 APPPATH\Controllers\Home.php(34): view('back/usuario/nuevoUsuario')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->nuevoUsuario()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
