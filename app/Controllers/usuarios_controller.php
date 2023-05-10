@@ -5,11 +5,10 @@ use CodeIgniter\Controller;
 
 class Usuarios_controller extends Controller {
 
-    /*
+
     public function __construct() {
-        helper(['form', 'url']);
+        helper(['form', 'url', 'html']);
     }
-    */
 
     public function create(){
         $data = array('titulo' => 'Registro');
@@ -53,7 +52,7 @@ class Usuarios_controller extends Controller {
 
             // Flashdata funciona solo en redirigir la función en el controlador en la vista de carga.
                session()->setFlashdata('success', 'Usuario registrado con exito');
-               return $this->response->redirect(site_url('/registro'));
+               return $this->response->redirect(site_url('/home'));
       
         }
     }

@@ -13,16 +13,16 @@
     <div class="card">
         <div class="card-body">
             <h1>Nuevo Usuario</h1>
-            <form method="post" action="<?php echo base_url('/enviar-form') ?>">
+            <form method="post" action="<?php echo base_url('/enviar_form') ?>">
                 <!-- NOMBRE -->
                 <label for="nombre" class="form-label">Nombre</label>
-                <input name="nombre" type="text" class="form-control" value="<?php echo set_value('nombre')?>"
+                <input type="text" name="nombre" class="form-control" value="<?php echo set_value('nombre')?>"
                     placeholder="Nombre">
                 <!-- Error -->
                 <?php if ($validation->getError('nombre')) { ?>
-                <div class='alert alert-danger mt-2'>
-                    <?= $error = $validation->getError('nombre'); ?>
-                </div>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('nombre'); ?>
+                    </div>
                 <?php } ?>
                 <!-- APELLIDO -->
                 <label for="apellido" class="form-label">Apellido</label>
@@ -63,8 +63,8 @@
                     <?= $error = $validation->getError('pass'); ?>
                 </div>
                 <?php } ?>
-                <button type="submit" class="btn-primary">Regsitrarme</button>
-                <button type="reset" class="btn-danger">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Regsitrarme</button>
+                <button type="reset" class="btn btn-danger">Cancelar</button>
             </form>
         </div>
     </div>

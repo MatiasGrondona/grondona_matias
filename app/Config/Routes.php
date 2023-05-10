@@ -62,3 +62,4 @@ $routes->get('detalleProducto', 'Home::detalleProducto');
 
 //probando controladores y coneccion con la base de datos
 $routes->get('usuarios', 'usuarios_controller::prueba');
+$routes->post('enviar_form', 'usuarios_controller::formValidation');
