@@ -17,6 +17,10 @@
                     <li>Historial de ventas</li>
                 </ul>
             </p>
+
+            <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
+                <button type="submit" class="btn btn">Cerra Sesion</button>
+            </form>
         </div>
     </div>
 </section>

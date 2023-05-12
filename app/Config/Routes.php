@@ -61,5 +61,8 @@ $routes->get('inProgressViews', 'Home::inProgressViews');
 $routes->get('detalleProducto', 'Home::detalleProducto');
 
 //probando controladores y coneccion con la base de datos
-$routes->get('usuarios', 'usuarios_controller::prueba');
 $routes->post('enviar_form', 'usuarios_controller::formValidation');
+
+//ruta para iniciar sesion
+$routes->post('enviar_login', 'login_controller::auth');
+$routes->post('cerrar_sesion', 'login_controller::logout');
