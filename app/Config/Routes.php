@@ -48,7 +48,7 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
 $routes->get('home', 'Home::home');
-$routes->get('login', 'Home::login');
+//$routes->get('login', 'Home::login');
 $routes->get('nuevoUsuario', 'Home::nuevoUsuario');
 $routes->get('nosotros', 'Home::nosotros');
 $routes->get('contacto', 'Home::contacto');
@@ -64,5 +64,6 @@ $routes->get('detalleProducto', 'Home::detalleProducto');
 $routes->post('enviar_form', 'usuarios_controller::formValidation');
 
 //ruta para iniciar sesion
+$routes->get('login', 'login_controller::index');
 $routes->post('enviar_login', 'login_controller::auth');
 $routes->post('cerrar_sesion', 'login_controller::logout');

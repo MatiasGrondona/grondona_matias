@@ -16,6 +16,10 @@ class Login_controller extends Controller{
     }
 
     public function auth(){
+        /*
+        echo password_hash("1234", PASSWORD_DEFAULT);
+        return;
+        */
         $session = session();
         $model = new usuarios_model();
         $email = $this->request->getVar('email');
