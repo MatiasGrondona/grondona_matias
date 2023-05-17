@@ -26,6 +26,9 @@
 
                 <label for="formFileMultiple" class="form-label margenTituloForm"><h5>Fotos del Producto</h5></label>
                 <input class="form-control" type="file" id="formFileMultiple" multiple />
+
+                <button type="submit" class="btn btn-primary">Cargar Producto</button>
+                <button type="reset" class="btn btn-danger">Cancelar</button>
                 </form>
             </div>
         </div>

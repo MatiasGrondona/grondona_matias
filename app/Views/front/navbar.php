@@ -1,7 +1,6 @@
 <!--------------------- NAVBAR ----------------------->
 <?php
     $session = session();
-    $nombre = $session->get('nombre');
     $perfil_id = $session->get('perfil_id');
 ?>
 
@@ -20,31 +19,41 @@
         <?php if(session()->perfil_id == 1){?>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Productos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url('administrarProductos');?>">Ver listado de productos</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('nuevoProducto');?>">Cargar Producto</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('administrarProductos');?>">Ver listado
+                                de productos</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('nuevoProducto');?>">Cargar Producto</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Usuarios
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Listado de Usuarios</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-          </ul>
-        </li>
-        <li>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Usuarios
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Listado de Usuarios</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
+                </li>
+                <li>
                     <a class="nav-link" href="#">Consultas</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>
+                </li>
+                <li>
+                    <!--tengo que centrar este boton en el eje y, puede que el form sea lo que tenga que modificar-->
+                    <form method="post" class="container-fluid justify-content-start"
+                        action="<?php echo base_url('/cerrar_sesion') ?>">
+                        <button type="submit" class="btn btn-outline-danger me-2">Cerra Sesion</button>
+                    </form>
                 </li>
 
             </ul>
@@ -53,15 +62,16 @@
         <?php } else if(session()->perfil_id == 2) {?>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('productos');?>">Productos</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('comercializacion');?>">Comercialización</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('login');?>">Cambiar por perfil de usario</a>
-                </li>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Perfil
+                </button>
             </ul>
         </div>
         <?php  } else {?>
@@ -82,3 +92,33 @@
         <?php }?>
     </div>
 </nav>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalLabel"><?php echo($session->get('nombre')." ". $session->get('apellido'));?></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Email</h3>
+                <p><?php echo($session->get('email'));?></p>
+                <h3>Nombre de Usuario</h3>
+                <p><?php echo($session->get('usuario'));?></p>
+                <h3>Telefono</h3>
+                <p>agregar campo numero tel a la base de datos</p>
+                <h3>Dirección</h3>
+                <p>Agregar campo o tabla dirreccion a la base de datos.</p>
+            </div>
+            <div class="modal-footer">
+            <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
+                <button type="submit" class="btn btn-danger">Cerra Sesion</button>
+            </form>
+                <button type="button" class="btn btn-secondary">Modificar Datos</button>
+            </div>
+        </div>
+    </div>
+</div>

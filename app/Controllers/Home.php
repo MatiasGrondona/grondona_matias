@@ -55,7 +55,7 @@ class Home extends BaseController
         $data = array('titulo' => 'Agregar Producto');
         return view('front/header', $data) 
         . view('front/navbar') 
-        . view('front/nuevoProducto') 
+        . view('back/producto/nuevoProducto') 
         . view('front/pie');
     }
 
@@ -63,7 +63,7 @@ class Home extends BaseController
         $data = array('titulo' => 'Administrar Productos');
         return view('front/header', $data) 
         . view('front/navbar') 
-        . view('front/administrarProductos') 
+        . view('back/producto/administrarProductos') 
         . view('front/pie');
     }
 
