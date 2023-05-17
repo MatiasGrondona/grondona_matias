@@ -79,7 +79,7 @@ class Home extends BaseController
         $data = array('titulo' => 'Contacto');
         return view('front/header', $data) 
         . view('front/navbar') 
-        . view('front/contacto') 
+        . view('back/contacto/contacto') 
         . view('front/pie');
     }
     public function terminos(){

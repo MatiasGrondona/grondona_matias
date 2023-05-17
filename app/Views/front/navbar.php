@@ -55,7 +55,6 @@
                         <button type="submit" class="btn btn-outline-danger me-2">Cerra Sesion</button>
                     </form>
                 </li>
-
             </ul>
         </div>
         <!--            MENU PARA CLIENTES-->
@@ -100,7 +99,8 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="exampleModalLabel"><?php echo($session->get('nombre')." ". $session->get('apellido'));?></h1>
+                <h1 class="modal-title" id="exampleModalLabel">
+                    <?php echo($session->get('nombre')." ". $session->get('apellido'));?></h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -114,9 +114,9 @@
                 <p>Agregar campo o tabla dirreccion a la base de datos.</p>
             </div>
             <div class="modal-footer">
-            <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
-                <button type="submit" class="btn btn-danger">Cerra Sesion</button>
-            </form>
+                <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
+                    <button type="submit" class="btn btn-danger">Cerra Sesion</button>
+                </form>
                 <button type="button" class="btn btn-secondary">Modificar Datos</button>
             </div>
         </div>
