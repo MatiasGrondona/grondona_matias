@@ -1,3 +1,10 @@
+<!--------------------- NAVBAR ----------------------->
+<?php
+    $session = session();
+    $nombre = $session->get('nombre');
+    $perfil_id = $session->get('perfil_id');
+?>
+
 <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo base_url('home');?>">
@@ -10,17 +17,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!--            MENU PARA ADMINISTRADOR-->
-        <?php if( ($this->session->userdata('logged_in')) and (($perfil_id) =='1')){?>
+        <?php if(session()->perfil_id == 1){?>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('productos');?>">Productos</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="<?php echo base_url('comercializacion');?>">Comercialización</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('login');?>">Iniciar Sesión</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>
@@ -29,7 +30,7 @@
             </ul>
         </div>
         <!--            MENU PARA CLIENTES-->
-        <?php } else if( ($this->session->userdata('logged_in')) and (($perfil_id)=='2')) {?>
+        <?php } else if(session()->perfil_id == 2) {?>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -41,11 +42,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('login');?>">Cambiar por perfil de usario</a>
                 </li>
-                <!--
-                        <li>
-                            <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>    
-                        </li>
-                        -->
             </ul>
         </div>
         <?php  } else {?>
@@ -61,11 +57,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('login');?>">Iniciar Sesión</a>
                 </li>
-                <!--
-                        <li>
-                            <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>    
-                        </li>
-                        -->
             </ul>
         </div>
         <?php }?>
