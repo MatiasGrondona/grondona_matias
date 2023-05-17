@@ -1,3 +1,8 @@
+# Descripcion del Proyecto
+Este proyecto se trata de una página de ventas para la materia Taller de Programación 1 de la carrera Licenciatura en Sistemas de la Información de la Universidad Nacional del Nordeste (UNNE)
+
+Se utiliza CodeIgniter 4, CSS (Bootstrap), JavaScript y PHP. 
+
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?

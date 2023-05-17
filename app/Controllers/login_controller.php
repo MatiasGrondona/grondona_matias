@@ -7,10 +7,10 @@ class Login_controller extends Controller{
     
     public function index() {
         helper(['form', 'url', 'html']);
-
+        
         $data = array('titulo' => 'Iniciar Sesión');
         echo view('front/header', $data);
-        echo view('front/navbar');
+        echo view('front/navbar', $data);
         echo view('front/login');
         echo view('front/pie');
     }
