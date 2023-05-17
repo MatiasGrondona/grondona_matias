@@ -31,7 +31,6 @@ p{
 /*Estilos para el Body*/
 body{
     background-color: whitesmoke;
-    
 }
 
 /* Estilos para el section*/
@@ -48,6 +47,46 @@ section{
     /*margin: 0 .5em;*/
     border-radius: 30px;
     /*box-shadow: 2px 6px 8px rgba(22, 22, 26, 18);*/
+}
+
+/*
+* Estilo para una carta interna dentro de otra carta
+*/
+.card .carta-aviso{
+    background-color: #FFE4B5;
+}
+
+/*
+
+* Estos estilos cambian los colores de default de btn-primary
+
+TODO: tengo que terminar de corregir los errores de los estilos
+
+*/
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #FFA07A !important;
+    border-color: white;
+    border-width: 1px;
+}
+
+.btn-primary:focus{
+    outline: none; /* desactiva el contorno predeterminado */
+    box-shadow: 0 0 0 3px rgba(255, 228, 181, 1); /* agrega un sombreado personalizado */
+    /*
+    box-shadow: none;
+    border: solid #ffe4b5;
+    */
+}
+
+/* Estilos para cuando se selecciona un fromulario. */
+.form-control, .form-select{
+    border-radius: 30px;
+    border-width: 1px;
+}
+
+.form-control:focus, .form-select:valid:focus{
+    border: solid #FFA07A;
+    box-shadow: none;
 }
 
 /* Estilos para el Footer */
@@ -85,13 +124,6 @@ section{
     margin-top: 15px;
     font-size: 20px;
     color: #aaa;
-}
-
-
-/* Estilos para el acordeon con todos los creditos de los Assets que use en la web */
-#accordionAssets{
-    padding: 10px;
-    background-color: whitesmoke;
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -137,43 +169,11 @@ section{
     margin-right: 20px;
 }
 
-/*
-
-* Estos estilos cambian los colores de default de btn-primary
-
-TODO: tengo que terminar de corregir los errores de los estilos
-
-*/
-.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
-    background-color: #FFA07A !important;
-    border-color: white;
-    border-width: 1px;
-}
-
-.btn-primary:focus{
-    outline: none; /* desactiva el contorno predeterminado */
-    box-shadow: 0 0 0 3px rgba(255, 228, 181, 1); /* agrega un sombreado personalizado */
-    /*
-    box-shadow: none;
-    border: solid #ffe4b5;
-    */
-    
-}
-
-/* Estilos para cuando se selecciona un fromulario. */
-.form-control, .form-select{
-    border-radius: 30px;
-    border-width: 1px;
-}
-
-.form-control:focus, .form-select:valid:focus{
-    border: solid #FFA07A;
-    box-shadow: none;
-}
-
 /* Estilos para cuando se selecciona un boton */
 
 /* Estilos para la imagen que aparece en la view de login */
+
+/*TODO: revisar si esto se usa en algun lado y si no es asi entonces eliminar*/
 #img-login{
     height: 250px;
     width: 250px;
@@ -184,13 +184,6 @@ TODO: tengo que terminar de corregir los errores de los estilos
 .margenTituloForm{
     margin-left: 5px;
     padding-top: 25px;
-}
-
-/*
-* Estilo para una carta especial dentro de otra carta
-*/
-.card .carta-aviso{
-    background-color: #FFE4B5;
 }
 
 /*
@@ -209,6 +202,7 @@ TODO: tengo que terminar de corregir los errores de los estilos
 /*
 
 ! Estilos para el carruselTest3
+TODO revisar si se usa y eliminar si no es asi
 
 */
 

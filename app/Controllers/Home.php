@@ -15,7 +15,7 @@ class Home extends BaseController
         return view('front/header', $data) 
         . view('front/navbar')
         . view('front/carrusel3') 
-        . view('front/productos') 
+        . view('back/producto/productos') 
         . view('front/pie');
     }
 
@@ -47,7 +47,7 @@ class Home extends BaseController
         $data = array('titulo' => 'Productos');
         return view('front/header', $data) 
         . view('front/navbar') 
-        . view('front/productos') 
+        . view('back/producto/productos') 
         . view('front/pie');
     }
     
@@ -102,7 +102,7 @@ class Home extends BaseController
         $data = array('titulo' => 'Nombre Producto');
         return view('front/header', $data) 
         . view('front/navbar') 
-        . view('front/detalleProducto') 
+        . view('back/producto/detalleProducto') 
         . view('front/pie');
     }
     

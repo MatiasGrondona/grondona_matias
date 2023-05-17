@@ -19,7 +19,7 @@
         <div class="card-body">
             <h4 class="card-title">Abrigo Gris</h4>
             <p class="card-text text-center">Abrigo con capucha de color gris oscuro y celeste tamaño grande.</p>
-            <h5 class="card-text">$ $800</h5>
+            <h5 class="card-text">$800</h5>
             <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Más</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
         </div>
