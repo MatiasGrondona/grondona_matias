@@ -26,9 +26,9 @@
                         Productos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url('administrarProductos');?>">Ver listado
+                        <li><a class="dropdown-item" href="<?php echo base_url('adminProductos');?>">Ver listado
                                 de productos</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('nuevoProducto');?>">Cargar Producto</a>
+                        <li><a class="dropdown-item" href="<?php echo base_url('vistaAgregarProducto');?>">Cargar Producto</a>
                         </li>
                     </ul>
                 </li>

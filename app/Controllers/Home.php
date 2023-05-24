@@ -2,6 +2,7 @@
 //defined('BASEPATH') OR exit('No direct script access allowed');
 
 namespace App\Controllers;
+use App\Models\productos_model;
 
 class Home extends BaseController
 {
@@ -12,10 +13,14 @@ class Home extends BaseController
     
     public function home(){
         $data = array('titulo' => 'PetFun');
+
+        $productoModel = new Productos_model();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
+
         return view('front/header', $data) 
         . view('front/navbar')
         . view('front/carrusel3') 
-        . view('back/producto/productos') 
+        . view('back/producto/productos', $listaProd) 
         . view('front/pie');
     }
 

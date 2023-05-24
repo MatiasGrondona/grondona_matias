@@ -33,12 +33,10 @@ class Usuarios_controller extends Controller {
      
         if (!$input) {
                $data['titulo']='Registro'; 
-                echo view('front/head_view',$data);
-                echo view('front/nav_view');
-                //echo view('back/usuario/registrarse', ['validation' => $this->validator]);
+                echo view('front/header',$data);
+                echo view('front/navbar');
                 echo view('back/usuario/registro', ['validation' => $this->validator]);
-                echo view('front/footer_view');
-
+                echo view('front/pie');
         } else {
             $formModel->save([
                 'nombre' => $this->request->getVar('nombre'),

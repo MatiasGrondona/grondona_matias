@@ -1,52 +1,71 @@
+<div>
+    <!--recuperamos datos con la función Flashdata para mostrarlos-->
+    <?php if (session()->getFlashdata('success')) {
+      echo "
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
+  </div>";
+    } ?>
+</div>
+<!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
+<?php $validation = \Config\Services::validation(); ?>
+
+
 <section class="p-3">
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <div class="card-title text-center pt-3 pb-3"><h1>Listado de Productos</h1></div>
+                <div class="card-title text-center pt-3 pb-3">
+                    <h1>Listado de Productos</h1>
+                </div>
+                <div>
+                    <a href="<?php echo base_url('/vistaAgregarProducto') ?>" class="btn btn-success">Agregar
+                        Producto</a>
+                    <a href="<?php echo base_url('/productosEliminados') ?>" class="btn btn-info">Productos
+                        Eliminados</a>
+                </div>
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Codigo Unico Producto</th>
+                            <th scope="col">id Producto</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Tamaño</th>
                             <th scope="col">Precio Costo</th>
                             <th scope="col">Precio Venta</th>
+                            <th scope="col">Stock Minimo</th>
                             <th scope="col">Stock</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Editar</th>
                             <th scope="col">Dar de Baja/Alta</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>1</th>
-                            <td>Ejemplo 1</td>
-                            <td>300</td>
-                            <td>400</td>
-                            <td>0</td>
-                            <td>
-                                <button type="button" class="btn btn-success">Dar Alta</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>2</th>
-                            <td>Ejemplo 2</td>
-                            <td>503</td>
-                            <td>620</td>
-                            <td>5</td>
-                            <td>
-                                <button type="button" class="btn btn-danger">Dar Baja</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>3</th>
-                            <td>Ejemplo 3</td>
-                            <td>893</td>
-                            <td>1040</td>
-                            <td>9</td>
-                            <td>
-                                <button type="button" class="btn btn-danger">Dar Baja</button>
-                            </td>
-                        </tr>
+                        <?php if(!$productos) { ?>
+                            <p>No hay productos Cargados</p>
+                        <?php } else { ?>
+                            <?php foreach($productos as $row){ ?>
+                                <tr>
+                                    <td><?php echo $row['id'];  ?></td>
+                                    <td><?php echo $row['nombre_prod'];  ?></td>
+                                    <td><?php echo $row['descripcion'];  ?></td>
+                                    <td><?php echo $row['size'];  ?></td>
+                                    <td><?php echo $row['precio_costo'];  ?></td>
+                                    <td><?php echo $row['precio_venta'];  ?></td>
+                                    <td><?php echo $row['stock_min'];  ?></td>
+                                    <td><?php echo $row['stock'];  ?></td>
+                                    <td><img height="50px" whidth="50px" src="<?=base_url()?>/assets/upload/<?php echo $row['imagen'];  ?>" alt=""></td>
+                                    <td>
+                                        <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo base_url('eliminarProducto/');?>" class="btn btn-danger">Eliminar</a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        <?php }?>
                     </tbody>
-                    </table>
+                </table>
             </div>
         </div>
     </div>

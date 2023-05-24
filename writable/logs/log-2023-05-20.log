@@ -1,0 +1,7 @@
+INFO - 2023-05-20 10:20:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 10:20:25 --> Call to a member function getRandomName() on null
+in APPPATH\Controllers\productos_controller.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProducto()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

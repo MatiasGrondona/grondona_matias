@@ -48,15 +48,11 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
 $routes->get('home', 'Home::home');
-//$routes->get('login', 'Home::login');
 $routes->get('nuevoUsuario', 'Home::nuevoUsuario');
 $routes->get('nosotros', 'Home::nosotros');
 $routes->get('contacto', 'Home::contacto');
 $routes->get('terminos', 'Home::terminos');
 $routes->get('comercializacion', 'Home::comercializacion');
-$routes->get('productos', 'Home::productos');
-$routes->get('nuevoProducto', 'Home::nuevoProducto');
-$routes->get('administrarProductos', 'Home::administrarProductos');
 $routes->get('inProgressViews', 'Home::inProgressViews');
 $routes->get('detalleProducto', 'Home::detalleProducto');
 
@@ -67,3 +63,17 @@ $routes->post('enviar_form', 'usuarios_controller::formValidation');
 $routes->get('login', 'login_controller::index');
 $routes->post('enviar_login', 'login_controller::auth');
 $routes->post('cerrar_sesion', 'login_controller::logout');
+
+//Rutas para administrar productos
+$routes->get('adminProductos', 'productos_controller::index');
+$routes->get('vistaAgregarProducto', 'productos_controller::agregarProductoView');
+$routes->post('agregarProducto', 'productos_controller::agregarProducto');
+
+$routes->get('editarProducto/(:num)', 'productos_controller::editarProducto/$1');
+$routes->get('eliminarProducto/(:num)', 'productos_controller::eliminarProducto/$1');
+
+//Vistas de productos cliente
+$routes->get('productos', 'productos_controller::listadoProductosCliente');
+
+//$routes->get('administrarProductos', 'Home::administrarProductos');
+//$routes->post('editar_producto', 'productos_controller::editarProducto');
