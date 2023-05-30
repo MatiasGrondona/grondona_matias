@@ -43,7 +43,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="nav-link" href="#">Consultas</a>
+                    <a class="nav-link" href="<?php echo base_url('administrarMensajes');?>">Consultas</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>

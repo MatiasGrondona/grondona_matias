@@ -47,20 +47,19 @@ $routes->get('/', 'Home::index');
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+//Vistas basicas de la web que no requieren back end
 $routes->get('home', 'Home::home');
-$routes->get('nuevoUsuario', 'Home::nuevoUsuario');
 $routes->get('nosotros', 'Home::nosotros');
-$routes->get('contacto', 'Home::contacto');
 $routes->get('terminos', 'Home::terminos');
 $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('inProgressViews', 'Home::inProgressViews');
-$routes->get('detalleProducto', 'Home::detalleProducto');
 
 //probando controladores y coneccion con la base de datos
 $routes->post('enviar_form', 'usuarios_controller::formValidation');
 
 //ruta para iniciar sesion
 $routes->get('login', 'login_controller::index');
+$routes->get('nuevoUsuario', 'Home::nuevoUsuario');
 $routes->post('enviar_login', 'login_controller::auth');
 $routes->post('cerrar_sesion', 'login_controller::logout');
 
@@ -74,6 +73,11 @@ $routes->get('eliminarProducto/(:num)', 'productos_controller::eliminarProducto/
 
 //Vistas de productos cliente
 $routes->get('productos', 'productos_controller::listadoProductosCliente');
-
+$routes->get('detalleProducto', 'Home::detalleProducto');
 //$routes->get('administrarProductos', 'Home::administrarProductos');
 //$routes->post('editar_producto', 'productos_controller::editarProducto');
+
+//Vistas para el manejo de mensajes del formulario de contacto. 
+$routes->get('contacto', 'mensaje_controller::index');
+$routes->post('enviarMensaje', 'mensaje_controller::enviarMensaje');
+$routes->get('administrarMensajes', 'mensaje_controller::adminMensajes');

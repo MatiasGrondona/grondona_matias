@@ -43,7 +43,8 @@ class Productos_controller extends Controller {
             'precio_costo'  => 'required',
             'precio_venta'     => 'required',
             'stock_min'    => 'required',
-            'stock'     => 'required'
+            'stock'     => 'required',
+            'imagen' => 'required|uploaded[imagen]|max_size[imagen,5120]|mime_in[imagen,image/jpg,image/jpeg,image/png]|ext_in[imagen,png,jpg,jpeg]|is_image[imagen]'
         ],);
 
         $productoModel = new Productos_model();
@@ -95,7 +96,7 @@ class Productos_controller extends Controller {
         $data = array('titulo' => 'Listado de Productos');
         return view('front/header', $data) 
         . view('front/navbar') 
-        . view('front/producto/listadoProductos', $listaProd) 
+        . view('back/producto/Productos', $listaProd) 
         . view('front/pie');
     }
 }

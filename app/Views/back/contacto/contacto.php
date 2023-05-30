@@ -1,3 +1,15 @@
+<div>
+    <!--recuperamos datos con la función Flashdata para mostrarlos-->
+    <?php if (session()->getFlashdata('success')) {
+      echo "
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
+  </div>";
+    } ?>
+</div>
+<!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
+<?php $validation = \Config\Services::validation(); ?>
+
 <div class="container py-3">
     <div class="row">
         <div class="col-12 col-lg-6 py-1" id="card-formulario">
@@ -6,25 +18,34 @@
                     <div class="card-title">
                         <h1>Contáctanos!</h1>
                     </div>
-                    <form>
+                    <form method="post" action="<?php echo base_url('/enviarMensaje') ?>">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                            <input class="form-control" type="text"
+                            <input class="form-control" 
+                                type="text"
+                                name="nombre"
+                                value="<?php echo set_value('nombre')?>"
                                 placeholder="Ingrese su Nombre y Apellido por favor!"
                                 aria-label="default input example">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Correo Electrónico:</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input class="form-control" id="exampleFormControlInput1"
+                                type="email"
+                                name="email"
+                                value="<?php echo set_value('email')?>"
                                 placeholder="nombre@ejemplo.com">
                         </div>
 
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">¡Escriba su consulta!</label>
-                            <textarea class="form-control px-4" id="exampleFormControlTextarea1" rows="3"
-                                height="100%"></textarea>
+                            <textarea class="form-control px-3" id="exampleFormControlTextarea1" rows="3"
+                                type="text"
+                                name="mensaje"
+                                value="<?php echo set_value('mensaje')?>"
+                                height="100%" placeholder="1000 caracteres de limite."></textarea>
                         </div>
-                        <a href="" class="btn btn-primary">Enviar!</a>
+                        <button type="submit" class="btn btn-primary">Enviar!</button>
                         <button type="reset" href="" class="btn btn-secondary">limpiar</button>
                     </form>
                     <div class="card carta-aviso mt-3">

@@ -19,7 +19,7 @@ class Home extends BaseController
 
         return view('front/header', $data) 
         . view('front/navbar')
-        . view('front/carrusel3') 
+        . view('front/carrusel3', $listaProd) 
         . view('back/producto/productos', $listaProd) 
         . view('front/pie');
     }
