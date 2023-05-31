@@ -64,4 +64,19 @@ class Mensaje_controller extends Controller{
         . view('front/pie');
     }
 
+    public function adminMensajesLeidos(){
+        $mensajeModel = new Mensajes_model();
+        $listaMensajes['mensajes'] = $mensajeModel->orderBy('id', 'DESC')->findAll();
+
+        $data = array('titulo' => 'Administrar Productos');
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/contacto/administrarMensajesLeidos', $listaMensajes) 
+        . view('front/pie');
+    }
+
+    public function leetMensaje(){
+        
+    }
+
 }

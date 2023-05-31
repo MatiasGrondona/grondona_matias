@@ -15,11 +15,11 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-title text-center pt-3 pb-3">
-                    <h1>Listado de Mensajes</h1>
+                    <h1>Listado de Usuarios dados de BAJA</h1>
                 </div>
                 <div>
-                    <a href="<?php echo base_url('/administrarMensajesLeidos') ?>" class="btn btn-info">
-                        Mensajes Leídos
+                    <a href="<?php echo base_url('/adminUsuarios') ?>" class="btn btn-success">
+                        Usuarios Activos
                     </a>
                 </div>
                 <table class="table table-striped">
@@ -27,27 +27,25 @@
                         <tr>
                             <th scope="col">id</th>
                             <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Mensaje</th>
-                            <th scope="col">Leer</th>
-                            <th scope="col">Marcar Leido</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">BAJA</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if(!$mensajes) { ?>
+                        <?php if(!$usuarios) { ?>
                             <p>No hay mensajes Cargados</p>
                         <?php } else { ?>
-                            <?php foreach($mensajes as $row){ ?>
+                            <?php foreach($usuarios as $row){ ?>
                                 <tr>
                                     <td><?php echo $row['id'];  ?></td>
                                     <td><?php echo $row['nombre'];  ?></td>
+                                    <td><?php echo $row['apellido'];  ?></td>
                                     <td><?php echo $row['email'];  ?></td>
-                                    <td><?php echo $row['mensaje'];  ?></td>
+                                    <td><?php echo $row['usuario'];  ?></td>
                                     <td>
-                                        <a href="#" class="btn btn-success">Ver Mensaje</a>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">Marcar Leído</a>
+                                        <a href="#" class="btn btn-success">ALTA</a>
                                     </td>
                                 </tr>
                             <?php } ?>

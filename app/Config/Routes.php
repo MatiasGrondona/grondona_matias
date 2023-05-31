@@ -54,7 +54,7 @@ $routes->get('terminos', 'Home::terminos');
 $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('inProgressViews', 'Home::inProgressViews');
 
-//probando controladores y coneccion con la base de datos
+//probando controladores y conección con la base de datos
 $routes->post('enviar_form', 'usuarios_controller::formValidation');
 
 //ruta para iniciar sesion
@@ -63,8 +63,13 @@ $routes->get('nuevoUsuario', 'Home::nuevoUsuario');
 $routes->post('enviar_login', 'login_controller::auth');
 $routes->post('cerrar_sesion', 'login_controller::logout');
 
+//rutas para la administracion de los usuarios
+$routes->get('adminUsuarios', 'usuarios_controller::adminUsuarios');
+$routes->get('adminUsuariosBaja', 'usuarios_controller::adminUsuariosBaja');
+
 //Rutas para administrar productos
 $routes->get('adminProductos', 'productos_controller::index');
+$routes->get('adminProductosBaja', 'productos_controller::adminProductosBaja');
 $routes->get('vistaAgregarProducto', 'productos_controller::agregarProductoView');
 $routes->post('agregarProducto', 'productos_controller::agregarProducto');
 
@@ -81,3 +86,4 @@ $routes->get('detalleProducto', 'Home::detalleProducto');
 $routes->get('contacto', 'mensaje_controller::index');
 $routes->post('enviarMensaje', 'mensaje_controller::enviarMensaje');
 $routes->get('administrarMensajes', 'mensaje_controller::adminMensajes');
+$routes->get('administrarMensajesLeidos', 'mensaje_controller::adminMensajesLeidos');

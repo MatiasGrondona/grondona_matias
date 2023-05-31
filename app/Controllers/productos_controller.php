@@ -81,14 +81,6 @@ class Productos_controller extends Controller {
         }
     }
 
-    public function editarProducto(){
-
-    }
-    
-    public function eliminarProducto(){
-
-    }
-
     public function listadoProductosCliente(){
         $productoModel = new Productos_model();
         $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
@@ -98,5 +90,30 @@ class Productos_controller extends Controller {
         . view('front/navbar') 
         . view('back/producto/Productos', $listaProd) 
         . view('front/pie');
+    }
+
+    public function adminProductosBaja(){
+        $productoModel = new Productos_model();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
+
+        //$listaProd['productos'] = $this->db->get('productos')->result_array();
+
+        $data = array('titulo' => 'Administrar Productos');
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/producto/administrarProductosBaja', $listaProd) 
+        . view('front/pie');
+    }
+
+    public function editarProducto(){
+
+    }
+    
+    public function bajaProducto(){
+
+    }
+
+    public function altaProducto(){
+
     }
 }

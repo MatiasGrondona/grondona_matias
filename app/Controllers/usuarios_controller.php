@@ -54,4 +54,38 @@ class Usuarios_controller extends Controller {
       
         }
     }
+
+    public function adminUsuarios(){
+        $usuarioModel = new Usuarios_model();
+        $listaUsuarios['usuarios'] = $usuarioModel->orderBy('id', 'DESC')->findAll();
+
+        $data = array('titulo' => 'Administrar Usuarios');
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/usuario/adminUsuarios', $listaUsuarios) 
+        . view('front/pie');
+    }
+
+    public function adminUsuariosBaja(){
+        $usuarioModel = new Usuarios_model();
+        $listaUsuarios['usuarios'] = $usuarioModel->orderBy('id', 'DESC')->findAll();
+
+        $data = array('titulo' => 'Usuarios de BAJA');
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/usuario/adminUsuariosBaja', $listaUsuarios) 
+        . view('front/pie');
+    }
+
+    public function bajaUsuario(){
+
+    }
+
+    public function altaUsuario(){
+
+    }
+
+    public function editarUsuario(){
+        
+    }
 }

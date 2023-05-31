@@ -15,11 +15,11 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-title text-center pt-3 pb-3">
-                    <h1>Listado de Mensajes</h1>
+                    <h1>Listado de Mensajes Leidos</h1>
                 </div>
                 <div>
-                    <a href="<?php echo base_url('/administrarMensajesLeidos') ?>" class="btn btn-info">
-                        Mensajes Leídos
+                    <a href="<?php echo base_url('/administrarMensajes') ?>" class="btn btn-info">
+                        Mensajes
                     </a>
                 </div>
                 <table class="table table-striped">

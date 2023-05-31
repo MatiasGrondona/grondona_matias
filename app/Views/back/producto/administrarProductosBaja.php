@@ -16,13 +16,10 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-title text-center pt-3 pb-3">
-                    <h1>Listado de Productos</h1>
+                    <h1>Listado de Productos dados de BAJA</h1>
                 </div>
                 <div>
-                    <a href="<?php echo base_url('/vistaAgregarProducto') ?>" class="btn btn-success">Agregar
-                        Producto</a>
-                    <a href="<?php echo base_url('/adminProductosBaja') ?>" class="btn btn-info">Productos
-                        Eliminados</a>
+                    <a href="<?php echo base_url('/adminProductos') ?>" class="btn btn-info">Productos</a>
                 </div>
                 <table class="table table-striped">
                     <thead>
@@ -59,7 +56,7 @@
                                         <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
                                     </td>
                                     <td>
-                                        <a href="<?php echo base_url('eliminarProducto/');?>" class="btn btn-danger">Eliminar</a>
+                                        <a href="<?php echo base_url('eliminarProducto/');?>" class="btn btn-danger">Dar de ALTA</a>
                                     </td>
                                 </tr>
                             <?php } ?>

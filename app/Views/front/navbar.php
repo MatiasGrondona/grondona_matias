@@ -38,7 +38,7 @@
                         Usuarios
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Listado de Usuarios</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url('adminUsuarios');?>">Listado de Usuarios</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                     </ul>
                 </li>
