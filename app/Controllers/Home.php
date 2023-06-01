@@ -12,18 +12,20 @@ class Home extends BaseController
     }
     
     public function home(){
+        //falta combinar las tablas de producto y oferta para poder mandar al carrusel unicamente los productos en oferta
         $data = array('titulo' => 'PetFun');
 
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        $prodOferta['productos'] = $productoModel->orderBy('id', 'ASC')->where('tiene_oferta', 'SI')->where('baja', 'NO')->findAll();
 
         return view('front/header', $data) 
         . view('front/navbar')
-        . view('front/carrusel3', $listaProd) 
+        . view('front/carrusel3', $prodOferta) 
         . view('back/producto/productos', $listaProd) 
         . view('front/pie');
     }
-
+    
     public function login(){
         $data = array('titulo' => 'Inicial Sesión');
         return view('front/header', $data) 
@@ -87,6 +89,7 @@ class Home extends BaseController
         . view('back/contacto/contacto') 
         . view('front/pie');
     }
+
     public function terminos(){
         $data = array('titulo' => 'Terminos y Condiciones');
         return view('front/header', $data) 

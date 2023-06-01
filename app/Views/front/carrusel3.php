@@ -10,7 +10,7 @@
 <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
 <?php $validation = \Config\Services::validation(); ?>
 
-<div class="container carouselBody py-3">
+<div class="container carouselBody py-4">
     <div class="container carouselContainer swiper">
         <div class="slide-container">
             <div class="card-wrapper swiper-wrapper">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <?php } ?>
-                <div class="card carouselCard swiper-slide">
+                <div class="card carouselCard swiper-slide position-relative">
                     <div class="img-box">
                         <img src="assets/img/fotos/carousel2.jpeg" alt="">
                     </div>
@@ -52,6 +52,10 @@
                             </div>
                         </div>
                     </div>
+                    <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
+                        20%
+                        <span class="visually-hidden">Descuento</span>
+                    </span>
                 </div>
                 <div class="card carouselCard swiper-slide">
                     <div class="img-box">

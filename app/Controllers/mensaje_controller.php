@@ -55,7 +55,7 @@ class Mensaje_controller extends Controller{
 
     public function adminMensajes(){
         $mensajeModel = new Mensajes_model();
-        $listaMensajes['mensajes'] = $mensajeModel->orderBy('id', 'DESC')->findAll();
+        $listaMensajes['mensajes'] = $mensajeModel->orderBy('id', 'DESC')->where('leído', 'NO')->findAll();
 
         $data = array('titulo' => 'Administrar Productos');
         return view('front/header', $data) 
@@ -66,7 +66,7 @@ class Mensaje_controller extends Controller{
 
     public function adminMensajesLeidos(){
         $mensajeModel = new Mensajes_model();
-        $listaMensajes['mensajes'] = $mensajeModel->orderBy('id', 'DESC')->findAll();
+        $listaMensajes['mensajes'] = $mensajeModel->orderBy('id', 'DESC')->where('leído', 'SI')->findAll();
 
         $data = array('titulo' => 'Administrar Productos');
         return view('front/header', $data) 

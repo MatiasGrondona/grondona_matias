@@ -10,7 +10,6 @@
 <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
 <?php $validation = \Config\Services::validation(); ?>
 
-
 <section class="p-3">
     <div class="container">
         <div class="card">

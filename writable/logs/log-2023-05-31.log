@@ -1,3 +1,98 @@
 INFO - 2023-05-31 00:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-31 00:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-05-31 00:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 18:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 18:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 18:29:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:20:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:21:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:24:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:24:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 19:42:00 --> Undefined variable: prodBaja
+in APPPATH\Views\back\producto\productos.php on line 33.
+ 1 APPPATH\Views\back\producto\productos.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: prodBaja', 'APPPATH\\Views\\back\\producto\\productos.php', 33, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\productos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/Productos', [], true)
+ 5 APPPATH\Controllers\productos_controller.php(91): view('back/producto/Productos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 19:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:44:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 19:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 20:02:15 --> Undefined index: baja
+in APPPATH\Controllers\productos_controller.php on line 90.
+ 1 APPPATH\Controllers\productos_controller.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: baja', 'APPPATH\\Controllers\\productos_controller.php', 90, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 20:02:50 --> Undefined index: baja
+in APPPATH\Controllers\productos_controller.php on line 90.
+ 1 APPPATH\Controllers\productos_controller.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: baja', 'APPPATH\\Controllers\\productos_controller.php', 90, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 20:04:56 --> Undefined index: baja
+in APPPATH\Controllers\productos_controller.php on line 90.
+ 1 APPPATH\Controllers\productos_controller.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: baja', 'APPPATH\\Controllers\\productos_controller.php', 90, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 20:06:15 --> Undefined variable: productos
+in APPPATH\Controllers\productos_controller.php on line 88.
+ 1 APPPATH\Controllers\productos_controller.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: productos', 'APPPATH\\Controllers\\productos_controller.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 20:07:01 --> Undefined variable: productosNoBaja
+in APPPATH\Controllers\productos_controller.php on line 88.
+ 1 APPPATH\Controllers\productos_controller.php(88): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: productosNoBaja', 'APPPATH\\Controllers\\productos_controller.php', 88, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 20:08:20 --> Undefined index: baja
+in APPPATH\Controllers\productos_controller.php on line 90.
+ 1 APPPATH\Controllers\productos_controller.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: baja', 'APPPATH\\Controllers\\productos_controller.php', 90, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 20:10:36 --> Trying to get property 'baja' of non-object
+in APPPATH\Controllers\productos_controller.php on line 90.
+ 1 APPPATH\Controllers\productos_controller.php(90): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'baja\' of non-object', 'APPPATH\\Controllers\\productos_controller.php', 90, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 20:14:53 --> Trying to get property 'baja' of non-object
+in APPPATH\Controllers\productos_controller.php on line 92.
+ 1 APPPATH\Controllers\productos_controller.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'baja\' of non-object', 'APPPATH\\Controllers\\productos_controller.php', 92, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->listadoProductosCliente()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

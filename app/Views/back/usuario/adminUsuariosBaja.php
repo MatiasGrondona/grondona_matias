@@ -35,7 +35,7 @@
                     </thead>
                     <tbody>
                         <?php if(!$usuarios) { ?>
-                            <p>No hay mensajes Cargados</p>
+                            <p>No hay Usuarios dados de BAJA</p>
                         <?php } else { ?>
                             <?php foreach($usuarios as $row){ ?>
                                 <tr>

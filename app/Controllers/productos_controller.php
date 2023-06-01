@@ -12,7 +12,7 @@ class Productos_controller extends Controller {
 
     public function index(){
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
 
         //$listaProd['productos'] = $this->db->get('productos')->result_array();
 
@@ -82,8 +82,9 @@ class Productos_controller extends Controller {
     }
 
     public function listadoProductosCliente(){
+        //falta filtrar unicamente los productos que no estan dados de baja
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
 
         $data = array('titulo' => 'Listado de Productos');
         return view('front/header', $data) 
@@ -94,7 +95,7 @@ class Productos_controller extends Controller {
 
     public function adminProductosBaja(){
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'SI')->findAll();
 
         //$listaProd['productos'] = $this->db->get('productos')->result_array();
 

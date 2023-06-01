@@ -56,7 +56,7 @@
                                         <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
                                     </td>
                                     <td>
-                                        <a href="<?php echo base_url('eliminarProducto/');?>" class="btn btn-danger">Dar de ALTA</a>
+                                        <a href="<?php echo base_url('eliminarProducto/');?>" class="btn btn-success">Dar de ALTA</a>
                                     </td>
                                 </tr>
                             <?php } ?>
