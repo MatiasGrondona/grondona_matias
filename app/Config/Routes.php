@@ -53,6 +53,7 @@ $routes->get('nosotros', 'Home::nosotros');
 $routes->get('terminos', 'Home::terminos');
 $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('inProgressViews', 'Home::inProgressViews');
+$routes->get('panelControl', 'Home::panelControl');
 
 //probando controladores y conección con la base de datos
 $routes->post('enviar_form', 'usuarios_controller::formValidation');
@@ -75,6 +76,8 @@ $routes->post('agregarProducto', 'productos_controller::agregarProducto');
 
 $routes->get('editarProducto/(:num)', 'productos_controller::editarProducto/$1');
 $routes->get('eliminarProducto/(:num)', 'productos_controller::eliminarProducto/$1');
+
+$routes->get('ofertasAdmin', 'productos_controller::ofertasAdmin');
 
 //Vistas de productos cliente
 $routes->get('productos', 'productos_controller::listadoProductosCliente');

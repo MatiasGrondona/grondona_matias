@@ -48,7 +48,11 @@
                                     <td><?php echo $row['id'];  ?></td>
                                     <td><?php echo $row['nombre_prod'];  ?></td>
                                     <td><?php echo $row['descripcion'];  ?></td>
-                                    <td><?php echo $row['size'];  ?></td>
+                                    <?php foreach($tamaño as $size){ ?>
+                                        <?php if($row['size'] == $size['id_tamaño']) {?>
+                                            <td><?php echo $size['size'];  ?></td>
+                                        <?php } ?>
+                                    <?php }?>
                                     <td><?php echo $row['precio_costo'];  ?></td>
                                     <td><?php echo $row['precio_venta'];  ?></td>
                                     <td><?php echo $row['stock_min'];  ?></td>

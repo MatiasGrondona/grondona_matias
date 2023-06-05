@@ -16,11 +16,27 @@ class Home extends BaseController
         $data = array('titulo' => 'PetFun');
 
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('tiene_oferta', 'NO')->where('baja', 'NO')->findAll();
         $prodOferta['productos'] = $productoModel->orderBy('id', 'ASC')->where('tiene_oferta', 'SI')->where('baja', 'NO')->findAll();
 
         return view('front/header', $data) 
         . view('front/navbar')
+        . view('front/carrusel3', $prodOferta) 
+        . view('back/producto/productos', $listaProd) 
+        . view('front/pie');
+    }
+
+    public function panelControl(){
+        //falta combinar las tablas de producto y oferta para poder mandar al carrusel unicamente los productos en oferta
+        $data = array('titulo' => 'Panel de Control');
+
+        $productoModel = new Productos_model();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('tiene_oferta', 'NO')->where('baja', 'NO')->findAll();
+        $prodOferta['productos'] = $productoModel->orderBy('id', 'ASC')->where('tiene_oferta', 'SI')->where('baja', 'NO')->findAll();
+
+        return view('front/header', $data) 
+        . view('front/navbar')
+        . view('front/adminDashboard')
         . view('front/carrusel3', $prodOferta) 
         . view('back/producto/productos', $listaProd) 
         . view('front/pie');

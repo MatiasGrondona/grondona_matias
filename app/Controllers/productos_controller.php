@@ -2,6 +2,8 @@
 namespace App\Controllers;
 use App\Models\usuarios_model;
 use App\Models\productos_model;
+use App\Models\ofertas_model;
+use App\Models\size_model;
 use CodeIgniter\Controller;
 
 class Productos_controller extends Controller {
@@ -11,6 +13,9 @@ class Productos_controller extends Controller {
     }
 
     public function index(){
+        $sizeModel = new Size_model();
+        $listaProd['tamaño'] = $sizeModel->getSizes();
+
         $productoModel = new Productos_model();
         $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
 
@@ -24,6 +29,9 @@ class Productos_controller extends Controller {
     }
 
     public function agregarProductoView(){
+        $sizeModel = new Size_model();
+        $listaProd['tamaño'] = $sizeModel->getSizes();
+
         $productoModel = new Productos_model();
         $listaProd['obj'] = $productoModel->orderBy('id', 'DESC')->findAll();
 
@@ -44,17 +52,20 @@ class Productos_controller extends Controller {
             'precio_venta'     => 'required',
             'stock_min'    => 'required',
             'stock'     => 'required',
-            'imagen' => 'required|uploaded[imagen]|max_size[imagen,5120]|mime_in[imagen,image/jpg,image/jpeg,image/png]|ext_in[imagen,png,jpg,jpeg]|is_image[imagen]'
+            'imagen' => 'uploaded[imagen]|max_size[imagen,5120]|mime_in[imagen,image/jpg,image/jpeg,image/png]|ext_in[imagen,png,jpg,jpeg]|is_image[imagen]'
         ],);
+
+        $sizeModel = new Size_model();
+        $data['tamaño'] = $sizeModel->getSizes();
 
         $productoModel = new Productos_model();
 
         if (!$input) {
-            session()->setFlashdata('success', 'error falla el input');
+            session()->setFlashdata('success', 'hay un error con alguno de los campos');
             $data['titulo']='Agregar Producto'; 
              echo view('front/header',$data);
              echo view('front/navbar');
-             echo view('back/producto/nuevoProducto', ['validation' => $this->validator]);
+             echo view('back/producto/nuevoProducto', ['validation' => $this->validator], $data);
              echo view('front/pie');
 
         } else {
@@ -82,7 +93,9 @@ class Productos_controller extends Controller {
     }
 
     public function listadoProductosCliente(){
-        //falta filtrar unicamente los productos que no estan dados de baja
+        $sizeModel = new Size_model();
+        $listaProd['tamaño'] = $sizeModel->getSizes();
+
         $productoModel = new Productos_model();
         $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
 
@@ -94,6 +107,9 @@ class Productos_controller extends Controller {
     }
 
     public function adminProductosBaja(){
+        $sizeModel = new Size_model();
+        $listaProd['tamaño'] = $sizeModel->getSizes();
+
         $productoModel = new Productos_model();
         $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'SI')->findAll();
 
@@ -116,5 +132,24 @@ class Productos_controller extends Controller {
 
     public function altaProducto(){
 
+    }
+
+    public function ofertasAdmin(){
+        $sizeModel = new Size_model();
+        $listaProd['tamaño'] = $sizeModel->getSizes();
+
+        $productoModel = new Productos_model();
+        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+
+        $ofertaModel = new Ofertas_model();
+        $listaProd['ofertas'] = $ofertaModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+
+        //$listaProd['productos'] = $this->db->get('productos')->result_array();
+
+        $data = array('titulo' => 'Administrar Productos');
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/producto/ofertasAdmin', $listaProd) 
+        . view('front/pie');
     }
 }

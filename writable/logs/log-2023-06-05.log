@@ -1,0 +1,418 @@
+INFO - 2023-06-05 00:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:37:14 --> Class 'App\Controllers\Size_model' not found
+in APPPATH\Controllers\productos_controller.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 01:38:23 --> Class 'app\Models\size_model' not found
+in APPPATH\Controllers\productos_controller.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:39:01 --> Undefined variable: sizeData
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sizeData', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:39:41 --> Undefined variable: sizes
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sizes', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:40:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:40:22 --> Undefined variable: tamaños
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaños', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:42:39 --> Undefined variable: tamaños
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaños', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:43:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:43:05 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:44:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:44:55 --> Undefined variable: sizeData
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: sizeData', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:46:34 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:47:28 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:48:01 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:48:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:48:02 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:48:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:48:03 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:49:49 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:49:50 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:49:51 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:49:51 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:49:52 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(38): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProductoView()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:55:18 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(64): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProducto()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:55:48 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 49.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 49, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(64): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProducto()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 01:59:06 --> Undefined variable: tamano
+in APPPATH\Views\back\producto\nuevoProducto.php on line 55.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamano', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 55, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(64): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProducto()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 01:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 01:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 02:00:27 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 55.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 55, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(64): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProducto()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 02:00:47 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 55.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 55, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(64): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProducto()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 02:02:03 --> Undefined variable: tamaño
+in APPPATH\Views\back\producto\nuevoProducto.php on line 55.
+ 1 APPPATH\Views\back\producto\nuevoProducto.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\producto\\nuevoProducto.php', 55, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\nuevoProducto.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/nuevoProducto', [...], true)
+ 5 APPPATH\Controllers\productos_controller.php(64): view('back/producto/nuevoProducto', [...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->agregarProducto()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:18:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:32:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:36:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:37:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 02:40:11 --> Undefined index: descuento
+in APPPATH\Views\back\producto\ofertasAdmin.php on line 42.
+ 1 APPPATH\Views\back\producto\ofertasAdmin.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: descuento', 'APPPATH\\Views\\back\\producto\\ofertasAdmin.php', 42, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\ofertasAdmin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/ofertasAdmin', [], true)
+ 5 APPPATH\Controllers\productos_controller.php(148): view('back/producto/ofertasAdmin', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 02:42:11 --> Class 'App\Controllers\Oferta_model' not found
+in APPPATH\Controllers\productos_controller.php on line 143.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 02:42:52 --> Class 'App\Controllers\Oferta_model' not found
+in APPPATH\Controllers\productos_controller.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 02:43:21 --> Class 'App\Controllers\Oferta_model' not found
+in APPPATH\Controllers\productos_controller.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 02:44:38 --> Class 'App\Controllers\Oferta_model' not found
+in APPPATH\Controllers\productos_controller.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 02:45:26 --> Class 'App\Controllers\Oferta_model' not found
+in APPPATH\Controllers\productos_controller.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 02:45:56 --> Class 'App\Controllers\Oferta_model' not found
+in APPPATH\Controllers\productos_controller.php on line 144.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 02:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 02:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 08:20:48 --> Undefined variable: session
+in APPPATH\Views\front\adminDashboard.php on line 11.
+ 1 APPPATH\Views\front\adminDashboard.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: session', 'APPPATH\\Views\\front\\adminDashboard.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\front\\adminDashboard.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('front/adminDashboard', [], true)
+ 5 APPPATH\Controllers\Home.php(39): view('front/adminDashboard')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->panelControl()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 08:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:26:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:26:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 08:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

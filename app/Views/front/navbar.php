@@ -19,6 +19,9 @@
         <?php if(session()->perfil_id == 1){?>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li>
+                    <a class="nav-link" href="<?php echo base_url('panelControl');?>">Panel de Control</a>    
+                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -26,34 +29,25 @@
                         Productos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url('adminProductos');?>">Ver listado
-                                de productos</a></li>
-                        <li><a class="dropdown-item" href="<?php echo base_url('vistaAgregarProducto');?>">Cargar Producto</a>
+                        <li>
+                            <a class="dropdown-item" href="<?php echo base_url('vistaAgregarProducto');?>">Cargar Producto</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="<?php echo base_url('adminProductos');?>">Listado de productos</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="<?php echo base_url('ofertasAdmin');?>">Listado de Ofertas</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Usuarios
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="<?php echo base_url('adminUsuarios');?>">Listado de Usuarios</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                    </ul>
+                <li>
+                    <a class="nav-link" href="<?php echo base_url('adminUsuarios');?>">Usuarios</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('administrarMensajes');?>">Consultas</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>
-                </li>
-                <li>
-                    <!--tengo que centrar este boton en el eje y, puede que el form sea lo que tenga que modificar-->
-                    <form method="post" class="container-fluid justify-content-start"
-                        action="<?php echo base_url('/cerrar_sesion') ?>">
-                        <button type="submit" class="btn btn-outline-danger me-2">Cerra Sesion</button>
-                    </form>
                 </li>
             </ul>
         </div>
@@ -100,7 +94,8 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title" id="exampleModalLabel">
-                    <?php echo($session->get('nombre')." ". $session->get('apellido'));?></h1>
+                    <?php echo($session->get('nombre')." ". $session->get('apellido'));?>
+                </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

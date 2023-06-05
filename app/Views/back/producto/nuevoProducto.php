@@ -25,12 +25,12 @@
                     <input class="form-control" type="text" name="nombre_prod"
                         value="<?php echo set_value('nombre_prod')?>" placeholder="Nombre del Producto"
                         aria-label="default input example">
-                        <!-- ERROR -->
-                        <?php if($validation->getError('nombre_prod')) {?>
-                            <div class='alert alert-danger mt-2'>
-                                <?= $error = $validation->getError('nombre_prod'); ?>
-                            </div>
-                        <?php }?>
+                    <!-- ERROR -->
+                    <?php if($validation->getError('nombre_prod')) {?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('nombre_prod'); ?>
+                    </div>
+                    <?php }?>
 
                     <!-- descripcion de producto -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
@@ -39,16 +39,29 @@
                     <input class="form-control" type="text" name="descripcion"
                         value="<?php echo set_value('descripcion')?>" placeholder="Descripción del Producto"
                         aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('descripcion')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('descripcion'); ?>
+                    </div>
+                    <?php } ?>
 
                     <!-- tamaño del producto -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
                         <h5>Seleccione el Tamaño del producto</h5>
                     </label>
                     <select class="form-select" type="number" name="size" aria-label="Default select example">
-                        <option selected>Seleccione el tamaño.</option>
-                        <option value="1">Pequeño</option>
-                        <option value="2">Mediano</option>
-                        <option value="3">Grande</option>
+                        <option value="">Seleccione el tamaño.</option>
+                        <?php foreach($tamaño as $row){ ?>
+                        <option value="<?php echo $row['id_tamaño']?>">
+                            <?php echo $row['size']?>
+                        </option>
+                        <?php if ($validation->getError('size')) { ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('size'); ?>
+                        </div>
+                        <?php } ?>
+                        <?php }?>
                     </select>
 
                     <!-- Precio de Costo del Producto -->
@@ -58,6 +71,12 @@
                     <input class="form-control" type="number" name="precio_costo"
                         value="<?php echo set_value('precio_costo')?>" placeholder="Precio de Costo del Producto"
                         aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('precio_costo')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('precio_costo'); ?>
+                    </div>
+                    <?php } ?>
 
                     <!-- Precio de Ventan del producto -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
@@ -66,6 +85,12 @@
                     <input class="form-control" type="number" name="precio_venta"
                         value="<?php echo set_value('precio_venta')?>" placeholder="Precio de Venta del Producto"
                         aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('precio_venta')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('precio_venta'); ?>
+                    </div>
+                    <?php } ?>
 
                     <!-- Stock Minimo -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
@@ -74,6 +99,12 @@
                     <input class="form-control" type="number" name="stock_min"
                         value="<?php echo set_value('stock_min')?>" placeholder="Stock Minimo"
                         aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('stock_min')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('stock_min'); ?>
+                    </div>
+                    <?php } ?>
 
                     <!-- Stock -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
@@ -81,14 +112,26 @@
                     </label>
                     <input class="form-control" type="number" name="stock" value="<?php echo set_value('stock')?>"
                         placeholder="Stock Actual del Producto" aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('stock')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('stock'); ?>
+                    </div>
+                    <?php } ?>
 
 
                     <!-- Foto del producto -->
                     <div class="mb-3">
                         <label for="formFile" class="form-label margenTituloForm">Imagen de Producto</label>
-                        <input class="form-control" id="formFile"
-                        name="imagen" type="file" value="<?php echo set_value('precio_venta')?>">
+                        <input class="form-control" id="formFile" name="imagen" type="file"
+                            value="<?php echo set_value('precio_venta')?>">
                     </div>
+                    <!-- Error -->
+                    <?php if ($validation->getError('imagen')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('imagen'); ?>
+                    </div>
+                    <?php } ?>
                     <!-- Botones de enviar Formulario -->
                     <div class="pt-3">
                         <button type="submit" class="btn btn-primary">Cargar Producto</button>
