@@ -43,7 +43,7 @@
                         <?php } else { ?>
                             <?php foreach($productos as $row){ ?>
                                 <tr>
-                                    <td><?php echo $row['id'];  ?></td>
+                                    <td><?php echo $row['id_producto'];  ?></td>
                                     <td><?php echo $row['nombre_prod'];  ?></td>
                                     <td><?php echo $row['descripcion'];  ?></td>
                                     <?php foreach($tamaño as $size){ ?>

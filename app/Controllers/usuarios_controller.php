@@ -5,7 +5,6 @@ use CodeIgniter\Controller;
 
 class Usuarios_controller extends Controller {
 
-
     public function __construct() {
         helper(['form', 'url', 'html']);
     }

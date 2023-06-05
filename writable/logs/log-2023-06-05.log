@@ -416,3 +416,113 @@ INFO - 2023-06-05 08:26:09 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-06-05 08:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-05 08:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-05 08:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-05 09:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 09:54:42 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH\Models\ofertas_model.php on line 25.
+ 1 APPPATH\Controllers\productos_controller.php(146): App\Models\Ofertas_model->getOfertasActivas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-05 09:55:21 --> mysqli_sql_exception: Column 'baja' in where clause is ambiguous in C:\xampp\htdocs\grondona_matias\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\grondona_matias\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\grondona_matias\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\grondona_matias\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\grondona_matias\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\grondona_matias\app\Models\ofertas_model.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\grondona_matias\app\Controllers\productos_controller.php(146): App\Models\Ofertas_model->getOfertasActivas()
+#6 C:\xampp\htdocs\grondona_matias\system\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+#7 C:\xampp\htdocs\grondona_matias\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+#8 C:\xampp\htdocs\grondona_matias\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\grondona_matias\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-05 09:55:21 --> Column 'baja' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ofertas`
+JOIN `productos` ON `ofertas`.`id_producto` = `productos`.`id`
+WHERE `baja` = :baja:', [...], false)
+ 2 APPPATH\Models\ofertas_model.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\productos_controller.php(146): App\Models\Ofertas_model->getOfertasActivas()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->ofertasAdmin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 09:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 09:59:22 --> Call to undefined method App\Models\Productos_model::getTodosProdutos
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\productos_controller.php(21): CodeIgniter\Model->__call('getTodosProdutos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 09:59:43 --> Call to undefined method App\Models\Productos_model::getTodosProductos
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\productos_controller.php(21): CodeIgniter\Model->__call('getTodosProductos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 10:00:03 --> Call to undefined method App\Models\Productos_model::getTodosProductos
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\productos_controller.php(21): CodeIgniter\Model->__call('getTodosProductos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-05 10:00:06 --> Call to undefined method App\Models\Productos_model::getTodosProductos
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\productos_controller.php(21): CodeIgniter\Model->__call('getTodosProductos', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 10:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:00:30 --> Illegal string offset 'id'
+in APPPATH\Views\back\producto\administrarProductos.php on line 48.
+ 1 APPPATH\Views\back\producto\administrarProductos.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'id\'', 'APPPATH\\Views\\back\\producto\\administrarProductos.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\administrarProductos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/administrarProductos', [], true)
+ 5 APPPATH\Controllers\productos_controller.php(28): view('back/producto/administrarProductos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 10:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:01:31 --> Illegal string offset 'productos.id'
+in APPPATH\Views\back\producto\administrarProductos.php on line 48.
+ 1 APPPATH\Views\back\producto\administrarProductos.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'productos.id\'', 'APPPATH\\Views\\back\\producto\\administrarProductos.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\administrarProductos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/administrarProductos', [], true)
+ 5 APPPATH\Controllers\productos_controller.php(28): view('back/producto/administrarProductos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 10:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:01:51 --> Illegal string offset 'id'
+in APPPATH\Views\back\producto\administrarProductos.php on line 48.
+ 1 APPPATH\Views\back\producto\administrarProductos.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'id\'', 'APPPATH\\Views\\back\\producto\\administrarProductos.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\administrarProductos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/administrarProductos', [], true)
+ 5 APPPATH\Controllers\productos_controller.php(28): view('back/producto/administrarProductos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-05 10:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-05 10:04:00 --> Illegal string offset 'id_producto'
+in APPPATH\Views\back\producto\administrarProductos.php on line 48.
+ 1 APPPATH\Views\back\producto\administrarProductos.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'id_producto\'', 'APPPATH\\Views\\back\\producto\\administrarProductos.php', 48, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\producto\\administrarProductos.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/producto/administrarProductos', [], true)
+ 5 APPPATH\Controllers\productos_controller.php(28): view('back/producto/administrarProductos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Productos_controller->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Productos_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

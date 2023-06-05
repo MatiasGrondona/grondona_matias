@@ -17,7 +17,8 @@ class Productos_controller extends Controller {
         $listaProd['tamaño'] = $sizeModel->getSizes();
 
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        //$listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        $listaProd['productos'] = $productoModel->getTodosProdutos();
 
         //$listaProd['productos'] = $this->db->get('productos')->result_array();
 
@@ -139,10 +140,11 @@ class Productos_controller extends Controller {
         $listaProd['tamaño'] = $sizeModel->getSizes();
 
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        //$listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
 
         $ofertaModel = new Ofertas_model();
-        $listaProd['ofertas'] = $ofertaModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        //$listaProd['ofertas'] = $ofertaModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        $listaProd['ofertas'] = $ofertaModel->getOfertasActivas();
 
         //$listaProd['productos'] = $this->db->get('productos')->result_array();
 
