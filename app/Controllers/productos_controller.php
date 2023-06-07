@@ -13,14 +13,17 @@ class Productos_controller extends Controller {
     }
 
     public function index(){
-        $sizeModel = new Size_model();
-        $listaProd['tamaño'] = $sizeModel->getSizes();
 
         $productoModel = new Productos_model();
         //$listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
-        $listaProd['productos'] = $productoModel->getTodosProdutos();
+        $listaProd['productos'] = $productoModel->getTodosProductos();
 
         //$listaProd['productos'] = $this->db->get('productos')->result_array();
+        /*
+        echo '<pre>'; 
+            print_r($listaProd); 
+        echo '<pre>';
+        */
 
         $data = array('titulo' => 'Administrar Productos');
         return view('front/header', $data) 
@@ -34,7 +37,7 @@ class Productos_controller extends Controller {
         $listaProd['tamaño'] = $sizeModel->getSizes();
 
         $productoModel = new Productos_model();
-        $listaProd['obj'] = $productoModel->orderBy('id', 'DESC')->findAll();
+        $listaProd['obj'] = $productoModel->orderBy('id_producto', 'DESC')->findAll();
 
         $data['titulo']='Alta Producto';
         $data = array('titulo' => 'Administrar Productos');
@@ -94,11 +97,13 @@ class Productos_controller extends Controller {
     }
 
     public function listadoProductosCliente(){
-        $sizeModel = new Size_model();
-        $listaProd['tamaño'] = $sizeModel->getSizes();
+       //$sizeModel = new Size_model();
+        //$listaProd['tamaño'] = $sizeModel->getSizes();
 
+        //$productoModel = new Productos_model();
+        //$listaProd['productos'] = $productoModel->orderBy('id_producto', 'DESC')->where('baja', 'NO')->findAll();
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        $listaProd['productos'] = $productoModel->getTodosProductos();
 
         $data = array('titulo' => 'Listado de Productos');
         return view('front/header', $data) 
@@ -108,13 +113,16 @@ class Productos_controller extends Controller {
     }
 
     public function adminProductosBaja(){
+        /*
         $sizeModel = new Size_model();
         $listaProd['tamaño'] = $sizeModel->getSizes();
 
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'SI')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id_producto', 'DESC')->where('baja', 'SI')->findAll();
+        */
 
-        //$listaProd['productos'] = $this->db->get('productos')->result_array();
+        $productoModel = new Productos_model();
+        $listaProd['productos'] = $productoModel->getProductosBaja();
 
         $data = array('titulo' => 'Administrar Productos');
         return view('front/header', $data) 
@@ -143,10 +151,7 @@ class Productos_controller extends Controller {
         //$listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
 
         $ofertaModel = new Ofertas_model();
-        //$listaProd['ofertas'] = $ofertaModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
         $listaProd['ofertas'] = $ofertaModel->getOfertasActivas();
-
-        //$listaProd['productos'] = $this->db->get('productos')->result_array();
 
         $data = array('titulo' => 'Administrar Productos');
         return view('front/header', $data) 

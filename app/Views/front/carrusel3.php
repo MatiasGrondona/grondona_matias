@@ -18,18 +18,17 @@
 
                 <div class="card carouselCard swiper-slide">
                     <div class="img-box">
-                        <img src="<?=base_url()?>/assets/upload/<?php echo $row['imagen'];  ?>" alt="...">
+                        <img src="<?=base_url()?>/assets/upload/<?php echo $row->imagen;  ?>" alt="...">
                     </div>
                     <div class="product-details">
                         <div class="product-description">
                             <h3 class="product">
-                                <?php echo $row['nombre_prod'];  ?>
+                                <?php echo $row->nombre_prod;  ?>
                             </h3>
                             <div class="description">
-                                <?php echo $row['descripcion'];  ?>
-                                <h5><s style="color: red"><?php echo $row['precio_venta'];  ?></s></h5>
-                                <h5><strong>$850</strong></h5>
-                                <h5><strong>Stock: </strong> <?php echo $row['stock'];  ?></h5>
+                                <h5><s style="color: red"><?php echo $row->precio_venta;  ?></s></h5>
+                                <h5><strong>-<?php echo $row->descuento;  ?>% <?php echo $row->precio_oferta;  ?></strong></h5>
+                                <h5><strong>Stock: </strong> <?php echo $row->stock;  ?></h5>
                                 <a href="#" class="btn btn-primary">Ver Detalle</a>
                             </div>
                         </div>

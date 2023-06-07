@@ -35,13 +35,13 @@
                         <?php if(!$ofertas) { ?>
                             <p>No hay productos Cargados</p>
                         <?php } else { ?>
-                            <?php foreach($ofertasS as $row){ ?>
+                            <?php foreach($ofertas as $row){ ?>
                                 <tr>
-                                    <td><?php echo $row['id'];  ?></td>
-                                    <td><?php echo $row['nombre_prod'];  ?></td>
-                                    <td><?php echo $row['descuento'];  ?></td>
-                                    <td><?php echo $row['precio_venta'];  ?></td>
-                                    <td><?php echo $row['precio_oferta'];  ?></td>
+                                    <td><?php echo $row->id_producto;  ?></td>
+                                    <td><?php echo $row->nombre_prod;  ?></td>
+                                    <td><?php echo $row->descuento;  ?>%</td>
+                                    <td><?php echo $row->precio_venta;  ?></td>
+                                    <td><?php echo $row->precio_oferta;  ?></td>
                                     <td>
                                         <a href="#" class="btn btn-danger">Eliminar Oferta</a>
                                     </td>

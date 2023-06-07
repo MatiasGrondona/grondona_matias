@@ -3,6 +3,7 @@
 
 namespace App\Controllers;
 use App\Models\productos_model;
+use App\Models\ofertas_model;
 
 class Home extends BaseController
 {
@@ -14,10 +15,12 @@ class Home extends BaseController
     public function home(){
         //falta combinar las tablas de producto y oferta para poder mandar al carrusel unicamente los productos en oferta
         $data = array('titulo' => 'PetFun');
+        $ofertasModel = new Ofertas_model();
+        $prodOferta['productos'] = $ofertasModel->getOfertasActivas();
 
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('tiene_oferta', 'NO')->where('baja', 'NO')->findAll();
-        $prodOferta['productos'] = $productoModel->orderBy('id', 'ASC')->where('tiene_oferta', 'SI')->where('baja', 'NO')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id_producto', 'DESC')->where('tiene_oferta', 'NO')->where('baja', 'NO')->findAll();
+        //$prodOferta['productos'] = $productoModel->orderBy('id_producto', 'ASC')->where('tiene_oferta', 'SI')->where('baja', 'NO')->findAll();
 
         return view('front/header', $data) 
         . view('front/navbar')
@@ -31,8 +34,8 @@ class Home extends BaseController
         $data = array('titulo' => 'Panel de Control');
 
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('tiene_oferta', 'NO')->where('baja', 'NO')->findAll();
-        $prodOferta['productos'] = $productoModel->orderBy('id', 'ASC')->where('tiene_oferta', 'SI')->where('baja', 'NO')->findAll();
+        $listaProd['productos'] = $productoModel->orderBy('id_producto', 'DESC')->where('tiene_oferta', 'NO')->where('baja', 'NO')->findAll();
+        $prodOferta['productos'] = $productoModel->orderBy('id_producto', 'ASC')->where('tiene_oferta', 'SI')->where('baja', 'NO')->findAll();
 
         return view('front/header', $data) 
         . view('front/navbar')

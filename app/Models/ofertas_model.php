@@ -4,8 +4,8 @@ use CodeIgniter\Model;
 
 class Ofertas_model extends Model {
     protected $table = 'ofertas';
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['id_producto', 'descuento', 'precio_oferta', 'baja'];
+    protected $primaryKey = 'id_oferta';
+    protected $allowedFields = ['id_producto', 'descuento', 'precio_oferta', 'baja_oferta'];
 
     public function getBuilderOfertas(){
         // connect() es un metod que te permite conectar a la base de datos
@@ -15,16 +15,14 @@ class Ofertas_model extends Model {
         //Hace una consulta a la base de datos
         $builder->select('*');
         // hace el join de la tabla productos
-        $builder->join('productos', 'ofertas.id_producto = productos.id');
+        $builder->join('productos', 'ofertas.id_producto = productos.id_producto');
         //retorna el builder
         return $builder;
     }
 
     public function getOfertasActivas(){
         $builder = $this->getBuilderOfertas();
-        $builder->where('ofertas.baja', 'NO');
-        $query = $builder->get();
-        return $query->getResultArray();
+        return $builder->where(['baja_oferta' => 'NO'])->get()->getResult();
     }
 }
 

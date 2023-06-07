@@ -20,23 +20,32 @@ class Productos_model extends Model {
         return $builder;
     }
 
-    public function getTodosProdutos(){
+    public function getTodosProductos(){
         $builder = $this->getBuilderProductos();
-        $builder->where('productos.baja', 'NO');
-        $query = $builder->get();
-        return $query->getRowArray();
+        return $builder->where(['baja' => 'NO'])->get()->getResult();
     }
 
-    public function getProduto($id = null){
+    public function getProductosBaja(){
         $builder = $this->getBuilderProductos();
-        $builder->where('productos.id', $id);
+        return $builder->where(['baja' => 'SI'])->get()->getResult();
+    }
+
+    public function getProductosOferta(){
+        $builder = $this->getBuilderProductos();
+        $builder-join('ofertas', 'ofertas.id_producto = productos.id_producto');
+        return $builder->where(['baja' => 'NO'])->get()->getResult();
+    }
+
+    public function getProducto($id = null){
+        $builder = $this->getBuilderProductos();
+        $builder->where('productos.id_producto', $id);
         $query = $builder->get();
         return $query->getRowArray();
     }
 
     public function updateStock($id = null, $stock_actual = null){
         $builder = $this->getBuilderProductos();
-        $builder->where('productos.id', $id);
+        $builder->where('productos.id_producto', $id);
         $builder->set('productos.stock', $stock_actual);
         $builder->update();
     }

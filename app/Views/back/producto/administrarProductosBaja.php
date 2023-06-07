@@ -43,19 +43,16 @@
                         <?php } else { ?>
                             <?php foreach($productos as $row){ ?>
                                 <tr>
-                                    <td><?php echo $row['id_producto'];  ?></td>
-                                    <td><?php echo $row['nombre_prod'];  ?></td>
-                                    <td><?php echo $row['descripcion'];  ?></td>
-                                    <?php foreach($tamaño as $size){ ?>
-                                        <?php if($row['size'] == $size['id_tamaño']) {?>
-                                            <td><?php echo $size['size'];  ?></td>
-                                        <?php } ?>
-                                    <?php }?>
-                                    <td><?php echo $row['precio_costo'];  ?></td>
-                                    <td><?php echo $row['precio_venta'];  ?></td>
-                                    <td><?php echo $row['stock_min'];  ?></td>
-                                    <td><?php echo $row['stock'];  ?></td>
-                                    <td><img height="50px" whidth="50px" src="<?=base_url()?>/assets/upload/<?php echo $row['imagen'];  ?>" alt=""></td>
+                                    <td><?php echo $row->id_producto;  ?></td>
+                                    <td><?php echo $row->nombre_prod;  ?></td>
+                                    <td><?php echo $row->descripcion;  ?></td>
+                                    <td><?php echo $row->size;  ?></td>
+                                    
+                                    <td><?php echo $row->precio_costo;  ?></td>
+                                    <td><?php echo $row->precio_venta;  ?></td>
+                                    <td><?php echo $row->stock_min;  ?></td>
+                                    <td><?php echo $row->stock;  ?></td>
+                                    <td><img height="50px" whidth="50px" src="<?=base_url()?>/assets/upload/<?php echo $row->imagen;  ?>" alt=""></td>
                                     <td>
                                         <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
                                     </td>
