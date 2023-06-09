@@ -75,8 +75,35 @@ class Mensaje_controller extends Controller{
         . view('front/pie');
     }
 
-    public function leetMensaje(){
-        
+    public function leerMensaje($id){
+        $mensajeModel = new Mensajes_model();
+        $data = ['leído' => 'SI'];
+
+        $mensajeModel->update($id, $data);
+
+        return $this->response->redirect(base_url('/administrarMensajes'));
+    }
+
+    public function mensajeNoLeido($id){
+        $mensajeModel = new Mensajes_model();
+        $data = ['leído' => 'NO'];
+
+        $mensajeModel->update($id, $data);
+
+        return $this->response->redirect(base_url('/administrarMensajesLeidos'));
+    }
+
+    public function verMensaje($id){
+        $mensajeModel = new Mensajes_model();
+
+        $mensaje['mensaje'] = $mensajeModel->getMensaje($id);
+
+        $data = array('titulo' => 'Mensaje');
+
+        return view('front/header', $data) 
+        . view('front/navbar')
+        . view('back/contacto/verMensaje', $mensaje) 
+        . view('front/pie');
     }
 
 }

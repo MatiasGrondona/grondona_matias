@@ -6,10 +6,16 @@
                 Faltan las vistas de:
                 <ul>
                     <li>
-                        <a href="<?php echo base_url('detalleProducto');?>">Detalle Producto</a>
+                        Ver Producto ya funciona falta terminar de diseñar las vistas.
                     </li>
                     <li>
-                        <a href="<?php echo base_url('vistaAgregarProducto');?>">Nuevo Producto</a>
+                        Ver mensaje ya funciona falta terminar de diseñar las vistas.
+                    </li>
+                    <li>
+                        <p>
+                            <a href="<?php echo base_url('vistaAgregarProducto');?>">Nuevo Producto</a> 
+                            tengo que revisar si tiene errores pero creo que funciona
+                        </p>
                     </li>
                     <li>
                         <a href="#">Editar Info Usuario</a>
@@ -28,12 +34,6 @@
                     </li>
                     <li>
                         <a href="#">Ventas Admin</a>
-                    </li>
-                    <li>
-                        <a href="#">void</a>
-                    </li>
-                    <li>
-                        <a href="#">void</a>
                     </li>
                 </ul>
             </p>

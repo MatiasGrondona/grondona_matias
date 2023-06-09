@@ -22,6 +22,9 @@
                         Usuarios de BAJA
                     </a>
                 </div>
+                <?php if(!$usuarios) { ?>
+                <p>No hay Usuarios Cargados</p>
+                <?php } else { ?>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -34,24 +37,24 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if(!$usuarios) { ?>
-                            <p>No hay Usuarios Cargados</p>
-                        <?php } else { ?>
-                            <?php foreach($usuarios as $row){ ?>
-                                <tr>
-                                    <td><?php echo $row['id'];  ?></td>
-                                    <td><?php echo $row['nombre'];  ?></td>
-                                    <td><?php echo $row['apellido'];  ?></td>
-                                    <td><?php echo $row['email'];  ?></td>
-                                    <td><?php echo $row['usuario'];  ?></td>
-                                    <td>
-                                        <a href="#" class="btn btn-danger">Dar BAJA</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        <?php }?>
+
+                        <?php foreach($usuarios as $row){ ?>
+                        <tr>
+                            <td><?php echo $row['id_usuario'];  ?></td>
+                            <td><?php echo $row['nombre'];  ?></td>
+                            <td><?php echo $row['apellido'];  ?></td>
+                            <td><?php echo $row['email'];  ?></td>
+                            <td><?php echo $row['usuario'];  ?></td>
+                            <td>
+                                <a href="<?php echo base_url('bajaUsuario/'.$row['id_usuario']);?>"
+                                    class="btn btn-danger">Dar BAJA</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
+
                     </tbody>
                 </table>
+                <?php }?>
             </div>
         </div>
     </div>

@@ -56,7 +56,7 @@ class Usuarios_controller extends Controller {
 
     public function adminUsuarios(){
         $usuarioModel = new Usuarios_model();
-        $listaUsuarios['usuarios'] = $usuarioModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
+        $listaUsuarios['usuarios'] = $usuarioModel->orderBy('id_usuario', 'DESC')->where('baja', 'NO')->findAll();
 
         $data = array('titulo' => 'Administrar Usuarios');
         return view('front/header', $data) 
@@ -67,7 +67,7 @@ class Usuarios_controller extends Controller {
 
     public function adminUsuariosBaja(){
         $usuarioModel = new Usuarios_model();
-        $listaUsuarios['usuarios'] = $usuarioModel->orderBy('id', 'DESC')->where('baja', 'SI')->findAll();
+        $listaUsuarios['usuarios'] = $usuarioModel->orderBy('id_usuario', 'DESC')->where('baja', 'SI')->findAll();
 
         $data = array('titulo' => 'Usuarios de BAJA');
         return view('front/header', $data) 
@@ -76,12 +76,22 @@ class Usuarios_controller extends Controller {
         . view('front/pie');
     }
 
-    public function bajaUsuario(){
+    public function bajaUsuario($id){
+        $usuarioModel = new Usuarios_model();
+        $data = ['baja' => 'SI'];
 
+        $usuarioModel->update($id, $data);
+
+        return $this->response->redirect(base_url('/adminUsuarios'));
     }
 
-    public function altaUsuario(){
+    public function altaUsuario($id){
+        $usuarioModel = new Usuarios_model();
+        $data = ['baja' => 'NO'];
 
+        $usuarioModel->update($id, $data);
+
+        return $this->response->redirect(base_url('/adminUsuariosBaja'));
     }
 
     public function editarUsuario(){

@@ -97,11 +97,6 @@ class Productos_controller extends Controller {
     }
 
     public function listadoProductosCliente(){
-       //$sizeModel = new Size_model();
-        //$listaProd['tamaño'] = $sizeModel->getSizes();
-
-        //$productoModel = new Productos_model();
-        //$listaProd['productos'] = $productoModel->orderBy('id_producto', 'DESC')->where('baja', 'NO')->findAll();
         $productoModel = new Productos_model();
         $listaProd['productos'] = $productoModel->getTodosProductos();
 
@@ -135,21 +130,25 @@ class Productos_controller extends Controller {
 
     }
     
-    public function bajaProducto(){
+    public function bajaProducto($id){
+        $productoModel = new Productos_model();
+        $data = ['baja' => 'SI'];
 
+        $productoModel->update($id, $data);
+
+        return $this->response->redirect(base_url('/adminProductos'));
     }
 
-    public function altaProducto(){
+    public function altaProducto($id){
+        $productoModel = new Productos_model();
+        $data = ['baja' => 'NO'];
 
+        $productoModel->update($id, $data);
+
+        return $this->response->redirect(base_url('/adminProductosBaja'));
     }
 
     public function ofertasAdmin(){
-        $sizeModel = new Size_model();
-        $listaProd['tamaño'] = $sizeModel->getSizes();
-
-        $productoModel = new Productos_model();
-        //$listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
-
         $ofertaModel = new Ofertas_model();
         $listaProd['ofertas'] = $ofertaModel->getOfertasActivas();
 
@@ -157,6 +156,19 @@ class Productos_controller extends Controller {
         return view('front/header', $data) 
         . view('front/navbar') 
         . view('back/producto/ofertasAdmin', $listaProd) 
+        . view('front/pie');
+    }
+
+    public function verProducto($id){
+        $productoModel = new Productos_model();
+
+        $producto['producto'] = $productoModel->getProducto($id);
+
+        $data = array('titulo' => 'Detalle Producto');
+
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/producto/detalleProducto', $producto) 
         . view('front/pie');
     }
 }

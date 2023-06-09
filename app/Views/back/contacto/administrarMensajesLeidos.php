@@ -22,6 +22,10 @@
                         Mensajes
                     </a>
                 </div>
+                <?php if(!$mensajes) { ?>
+                <p>No hay mensajes Cargados</p>
+                <?php } else { ?>
+
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -34,26 +38,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if(!$mensajes) { ?>
-                            <p>No hay mensajes Cargados</p>
-                        <?php } else { ?>
-                            <?php foreach($mensajes as $row){ ?>
-                                <tr>
-                                    <td><?php echo $row['id'];  ?></td>
-                                    <td><?php echo $row['nombre'];  ?></td>
-                                    <td><?php echo $row['email'];  ?></td>
-                                    <td><?php echo $row['mensaje'];  ?></td>
-                                    <td>
-                                        <a href="#" class="btn btn-success">Ver Mensaje</a>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-warning">Marcar Leído</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        <?php }?>
+
+                        <?php foreach($mensajes as $row){ ?>
+                        <tr>
+                            <td><?php echo $row['id'];  ?></td>
+                            <td><?php echo $row['nombre'];  ?></td>
+                            <td><?php echo $row['email'];  ?></td>
+                            <td><?php echo $row['mensaje'];  ?></td>
+                            <td>
+                                <a href="<?php echo base_url('verMensaje/'.$row['id']);?>" class="btn btn-info">Ver
+                                    Mensaje</a>
+                            </td>
+                            <td>
+                                <a href="<?php echo base_url('mensajeNoLeido/'.$row['id']);?>"
+                                    class="btn btn-warning">Marcar NO Leído</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
+
                     </tbody>
                 </table>
+                <?php }?>
             </div>
         </div>
     </div>

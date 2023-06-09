@@ -26,16 +26,24 @@
                                 <?php echo $row->nombre_prod;  ?>
                             </h3>
                             <div class="description">
-                                <h5><s style="color: red"><?php echo $row->precio_venta;  ?></s></h5>
-                                <h5><strong>-<?php echo $row->descuento;  ?>% <?php echo $row->precio_oferta;  ?></strong></h5>
-                                <h5><strong>Stock: </strong> <?php echo $row->stock;  ?></h5>
-                                <a href="#" class="btn btn-primary">Ver Detalle</a>
+                                <p>Tamaño: <?php echo $row->size;  ?></p>
+                                <h5><s style="color: red">$<?php echo $row->precio_venta;  ?></s></h5>
+                                <div class="position-relative">
+                                    <h5><strong>$<?php echo $row->precio_oferta;  ?></strong></h5>
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        - <?php echo $row->descuento;  ?>%
+                                        <span class="visually-hidden">Descuento</span>
+                                    </span>
+                                </div>
+                                <a href="<?php echo base_url('verProducto/'.$row->id_producto);?>"
+                                    class="btn btn-primary">Ver Producto</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <?php } ?>
-                <div class="card carouselCard swiper-slide position-relative">
+                <div class="card carouselCard swiper-slide">
                     <div class="img-box">
                         <img src="assets/img/fotos/carousel2.jpeg" alt="">
                     </div>
@@ -46,15 +54,14 @@
                             </h3>
                             <div class="description">
                                 <h5><s style="color: red">$800</s></h5>
-                                <h5><strong>$700</strong></h5>
+                                <div>
+                                    <h5><strong>$700</strong></h5>
+                                </div>
                                 <a href="#" class="btn btn-primary">Ver Detalle</a>
                             </div>
                         </div>
                     </div>
-                    <span class="position-absolute top-50 start-100 translate-middle badge rounded-pill bg-danger">
-                        20%
-                        <span class="visually-hidden">Descuento</span>
-                    </span>
+
                 </div>
                 <div class="card carouselCard swiper-slide">
                     <div class="img-box">

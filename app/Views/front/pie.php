@@ -1,9 +1,9 @@
 <section class="footer">
     <div class="social">
-        <a href="https://www.instagram.com" target="_blank"><img src="assets/img/icons/instagram.png"
+        <a href="https://www.instagram.com" target="_blank"><img src="<?php echo base_url("assets/img/icons/instagram.png");?>"
                 alt="Instagram"></a>
-        <a href="https://www.facebook.com" target="_blank"><img src="assets/img/icons/facebook.png" alt="Facebook"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="assets/img/icons/twitter.png" alt="Twitter"></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="<?php echo base_url("assets/img/icons/facebook.png");?>" alt="Facebook"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="<?php echo base_url("assets/img/icons/twitter.png");?>" alt="Twitter"></a>
     </div>
 
     <ul>
@@ -21,12 +21,13 @@
         Matias Grondona @ 2023
     </p>
 </section>
-<script src="assets/js/bootstrap.bundle.min.js" integrity=" " crossorigin=" "></script>
+<script src="<?php echo base_url("assets/js/bootstrap.bundle.min.js");?>" integrity=" " crossorigin=" "></script>
 <!-- Swipper JS -->
 
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script src="assets/js/modal.js"></script>
+<script src="<?php echo base_url("assets/js/swiper-bundle.min.js");?>"></script>
+<script src="<?php echo base_url("assets/js/script.js");?>"></script>
+<script src="<?php echo base_url("assets/js/modal.js");?>"></script>
+
 </body>
 
 </html>

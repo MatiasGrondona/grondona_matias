@@ -7,8 +7,8 @@
 <nav class="navbar navbar-expand-lg shadow-sm sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo base_url('home');?>">
-            <img src="assets/img/icons/dog_face_color.svg" alt="logo" width="50" height="50">
-            <img src="assets/img/icons/Petfun.png" alt="PetFun Store">
+            <img src="<?php echo base_url("assets/img/icons/dog_face_color.svg");?>" alt="logo" width="50" height="50">
+            <img src="<?php echo base_url("assets/img/icons/Petfun.png");?>" alt="PetFun Store">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
