@@ -94,7 +94,30 @@ class Usuarios_controller extends Controller {
         return $this->response->redirect(base_url('/adminUsuariosBaja'));
     }
 
-    public function editarUsuario(){
-        
+    public function editarUsuario($id){
+        $usuarioModel = new Usuarios_model();
+        $usuario['usuario'] = $usuarioModel->getUsuario($id);
+
+        $data = array('titulo' => 'Editar Datos');
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/usuario/modificarDatosUsuario', $usuario) 
+        . view('front/pie');
+    }
+
+    public function editarUsuarioForm(){
+        $usuarioModel = new Usuarios_model();
+        $id = $this->request->getVar('id_usuario');
+
+        $usuarioData = [
+            'nombre' => $this->request->getVar('nombre'),
+            'apellido'=> $this->request->getVar('apellido'),
+            'email'=> $this->request->getVar('email'),
+            'usuario'=> $this->request->getVar('usuario'),
+        ];
+        $usuarioModel->update($id, $usuarioData);
+
+        session()->setFlashdata('success', 'Datos de usuario editados con Exito');
+        return $this->response->redirect(base_url('/home'));
     }
 }

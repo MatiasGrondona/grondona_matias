@@ -16,7 +16,7 @@ class Home extends BaseController
         $data = array('titulo' => 'PetFun');
         $ofertasModel = new Ofertas_model();
         $prodOferta['productos'] = $ofertasModel->getOfertasActivas();
-
+        
         $productoModel = new Productos_model();
         $listaProd['productos'] = $productoModel->getTodosProductos();
 

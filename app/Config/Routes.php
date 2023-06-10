@@ -55,38 +55,35 @@ $routes->get('comercializacion', 'Home::comercializacion');
 $routes->get('inProgressViews', 'Home::inProgressViews');
 $routes->get('panelControl', 'Home::panelControl');
 
-//probando controladores y conección con la base de datos
-$routes->post('enviar_form', 'usuarios_controller::formValidation');
+//Vistas de productos cliente
+$routes->get('productos', 'productos_controller::listadoProductosCliente');
+$routes->get('verProducto/(:num)', 'productos_controller::verProducto/$1');
 
 //ruta para iniciar sesion
 $routes->get('login', 'login_controller::index');
 $routes->get('nuevoUsuario', 'Home::nuevoUsuario');
 $routes->post('enviar_login', 'login_controller::auth');
 $routes->post('cerrar_sesion', 'login_controller::logout');
+$routes->post('enviar_form', 'usuarios_controller::formValidation');
 
 //rutas para la administracion de los usuarios
 $routes->get('adminUsuarios', 'usuarios_controller::adminUsuarios');
 $routes->get('adminUsuariosBaja', 'usuarios_controller::adminUsuariosBaja');
 $routes->get('bajaUsuario/(:num)', 'usuarios_controller::bajaUsuario/$1');
 $routes->get('altaUsuario/(:num)', 'usuarios_controller::altaUsuario/$1');
+$routes->get('editarUsuario/(:num)', 'usuarios_controller::editarUsuario/$1');
+$routes->post('editarUsuarioForm', 'usuarios_controller::editarUsuarioForm');
 
 //Rutas para administrar productos
 $routes->get('adminProductos', 'productos_controller::index');
 $routes->get('adminProductosBaja', 'productos_controller::adminProductosBaja');
 $routes->get('vistaAgregarProducto', 'productos_controller::agregarProductoView');
 $routes->post('agregarProducto', 'productos_controller::agregarProducto');
-
 $routes->get('editarProducto/(:num)', 'productos_controller::editarProducto/$1');
+$routes->post('editarProductoForm', 'productos_controller::editarProductoForm');
 $routes->get('eliminarProducto/(:num)', 'productos_controller::bajaProducto/$1');
 $routes->get('altaProducto/(:num)', 'productos_controller::altaProducto/$1');
-
 $routes->get('ofertasAdmin', 'productos_controller::ofertasAdmin');
-
-//Vistas de productos cliente
-$routes->get('productos', 'productos_controller::listadoProductosCliente');
-$routes->get('verProducto/(:num)', 'productos_controller::verProducto/$1');
-//$routes->get('administrarProductos', 'Home::administrarProductos');
-//$routes->post('editar_producto', 'productos_controller::editarProducto');
 
 //Vistas para el manejo de mensajes del formulario de contacto. 
 $routes->get('contacto', 'mensaje_controller::index');
@@ -97,29 +94,21 @@ $routes->get('leerMensaje/(:num)', 'mensaje_controller::leerMensaje/$1');
 $routes->get('mensajeNoLeido/(:num)', 'mensaje_controller::mensajeNoLeido/$1');
 $routes->get('verMensaje/(:num)','mensaje_controller::verMensaje/$1');
 
-
 /*
 * Rutas del carrito
 */
 $routes->get('vista_compras/(:num)', 'ventas_controller::ver_factura/$1', ['filter'=>'auth']);
-
 //muestra todos los productos del catalogo
 $routes->get('/todos_p', 'carrito_controller::catalogo',['filter' => 'auth']);
-
 //carga la vista carrito_parte_view
 $routes->get('/muestro', 'carrito_controller::muestra',['filter' => 'auth']);
-
 //actualiza los datos del carrito
 $routes->get('/carrito_actualiza','carrito_controller::actualiza_carrito',['filter' => 'auth']);
-
 //agregar los items al carrito
 $routes->post('/carrito_agrega', 'carrito_controller::add',['filter' => 'auth']);
-
 //elimina un ítem seleccionado
 $routes->get('carrito_elimina/(:any)','carrito_controller::remove/$1',['filter' => 'auth']);
-
 //eliminar todo el carrito
 $routes->get('/borrar','carrito_controller::borrar_carrito',['filter' => 'auth']);
-
 //muestra las compras una vez que realizamos la misma
 $routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta',['filter' => 'auth']);

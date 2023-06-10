@@ -23,7 +23,7 @@
                     </a>
                 </div>
                 <?php if(!$mensajes) { ?>
-                <p>No hay mensajes Cargados</p>
+                <p class="text-center py-1">No hay mensajes Cargados</p>
                 <?php } else { ?>
 
                 <table class="table table-striped">

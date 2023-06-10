@@ -22,7 +22,7 @@
                     <a href="<?php echo base_url('/adminProductos') ?>" class="btn btn-info">Productos</a>
                 </div>
                 <?php if(!$productos) { ?>
-                <p>No hay productos Cargados</p>
+                <p class="text-center py-1">No hay productos dados de BAJA</p>
                 <?php } else { ?>
                 <table class="table table-striped">
                     <thead>

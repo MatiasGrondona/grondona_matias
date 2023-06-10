@@ -13,10 +13,7 @@
             }
             ?>
             <table class="table table-striped">
-            <?php
-
-                if ($cart == TRUE):
-                ?>
+            <?php if ($cart == TRUE): ?>
                 <tr class="table-active">
                     <td>ID</td>
                     <td>Nombre Producto</td>

@@ -23,7 +23,7 @@
                     </a>
                 </div>
                 <?php if(!$usuarios) { ?>
-                <p>No hay Usuarios Cargados</p>
+                <p class="text-center py-1">No hay Usuarios Cargados</p>
                 <?php } else { ?>
                 <table class="table table-striped">
                     <thead>

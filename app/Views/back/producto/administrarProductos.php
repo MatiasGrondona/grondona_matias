@@ -24,8 +24,8 @@
                         Eliminados</a>
                 </div>
                 <?php if(!$productos) { ?>
-                            <p>No hay productos Cargados</p>
-                        <?php } else { ?>
+                    <p class="text-center py-1">No hay productos Cargados</p>
+                <?php } else { ?>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -57,7 +57,7 @@
                                     <td><?php echo $row->stock;  ?></td>
                                     <td><img height="50px" whidth="50px" src="<?=base_url()?>/assets/upload/<?php echo $row->imagen;  ?>" alt=""></td>
                                     <td>
-                                        <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
+                                        <a href="<?php echo base_url('editarProducto/'.$row->id_producto);?>" class="btn btn-warning">Editar</a>
                                     </td>
                                     <td>
                                         <a href="<?php echo base_url('eliminarProducto/'.$row->id_producto);?>" class="btn btn-danger">Eliminar</a>

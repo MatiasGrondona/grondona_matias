@@ -15,58 +15,124 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-title text-center pt-3 pb-3">
-                    <h1>Agregar Producto</h1>
+                    <h1>Editar Producto</h1>
                 </div>
-                <form>
+                <form method="post" action="<?php echo base_url('/editarProductoForm') ?>" enctype="multipart/form-data">
+                    <!-- Manda de manera oculta el id del producto -->
+                    <input type="hidden" name="id_producto" value="<?= $producto['id_producto'] ?>">
+                    <!-- NOMBRE del Producto -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
                         <h5>Nombre del Producto</h5>
                     </label>
-                    <input class="form-control" type="text" placeholder="Nombre del Producto"
-                        aria-label="default input example">
+                    <input class="form-control" type="text" name="nombre_prod"
+                        value="<?= $producto['nombre_prod'] ?>" aria-label="default input example">
+                    <!-- ERROR -->
+                    <?php if($validation->getError('nombre_prod')) {?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('nombre_prod'); ?>
+                    </div>
+                    <?php }?>
 
+                    <!-- descripcion de producto -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
                         <h5>Descripción</h5>
                     </label>
-                    <input class="form-control" type="text" placeholder="Descripción"
-                        aria-label="default input example">
+                    <input class="form-control" type="text" name="descripcion"
+                        value="<?= $producto['descripcion'] ?>" aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('descripcion')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('descripcion'); ?>
+                    </div>
+                    <?php } ?>
 
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione el tamaño.</option>
-                        <option value="1">Pequeño</option>
-                        <option value="2">Mediano</option>
-                        <option value="3">Grande</option>
+                    <!-- tamaño del producto -->
+                    <label for="exampleFormControlInput1" class="form-label margenTituloForm">
+                        <h5>Seleccione el Tamaño del producto</h5>
+                    </label>
+                    <select class="form-select" type="number" name="size" aria-label="Default select example">
+                        <option selected value="<?= $producto['id_tamaño'] ?>"><?= $producto['size'] ?></option>
+                        <?php foreach($tamaño as $row){ ?>
+                        <option value="<?php echo $row['id_tamaño']?>">
+                            <?php echo $row['size']?>
+                        </option>
+                        <?php if ($validation->getError('size')) { ?>
+                        <div class='alert alert-danger mt-2'>
+                            <?= $error = $validation->getError('size'); ?>
+                        </div>
+                        <?php } ?>
+                        <?php }?>
                     </select>
 
+                    <!-- Precio de Costo del Producto -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
                         <h5>Precio de Costo</h5>
                     </label>
-                    <input class="form-control" type="number" placeholder="Precio Costo"
-                        aria-label="default input example">
+                    <input class="form-control" type="number" name="precio_costo"
+                        value="<?= $producto['precio_costo'] ?>" aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('precio_costo')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('precio_costo'); ?>
+                    </div>
+                    <?php } ?>
 
+                    <!-- Precio de Ventan del producto -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
                         <h5>Precio de Venta</h5>
                     </label>
-                    <input class="form-control" type="number" placeholder="Precio Venta"
-                        aria-label="default input example">
+                    <input class="form-control" type="number" name="precio_venta"
+                        value="<?= $producto['precio_venta'] ?>" aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('precio_venta')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('precio_venta'); ?>
+                    </div>
+                    <?php } ?>
 
+                    <!-- Stock Minimo -->
+                    <label for="exampleFormControlInput1" class="form-label margenTituloForm">
+                        <h5>Stock Minimo</h5>
+                    </label>
+                    <input class="form-control" type="number" name="stock_min"
+                        value="<?= $producto['stock_min'] ?>" aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('stock_min')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('stock_min'); ?>
+                    </div>
+                    <?php } ?>
+
+                    <!-- Stock -->
                     <label for="exampleFormControlInput1" class="form-label margenTituloForm">
                         <h5>Stock</h5>
                     </label>
-                    <input class="form-control" type="number" placeholder="Stock" aria-label="default input example">
+                    <input class="form-control" type="number" name="stock" value="<?= $producto['stock'] ?>" aria-label="default input example">
+                    <!-- Error -->
+                    <?php if ($validation->getError('stock')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('stock'); ?>
+                    </div>
+                    <?php } ?>
 
-                    <label for="exampleFormControlInput1" class="form-label margenTituloForm">
-                        <h5>Codigo del Producto</h5>
-                    </label>
-                    <input class="form-control" type="text" placeholder="Default input"
-                        aria-label="default input example">
+                    <!-- Foto del producto -->
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label margenTituloForm">Imagen de Producto</label>
+                        <input class="form-control" id="formFile" name="imagen" type="file"
+                            value="<?=base_url()?>/assets/upload/<?php echo $producto['imagen'];  ?>">
+                    </div>
+                    <!-- Error -->
+                    <?php if ($validation->getError('imagen')) { ?>
+                    <div class='alert alert-danger mt-2'>
+                        <?= $error = $validation->getError('imagen'); ?>
+                    </div>
+                    <?php } ?>
 
-                    <label for="formFileMultiple" class="form-label margenTituloForm">
-                        <h5>Fotos del Producto</h5>
-                    </label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple />
-
-                    <button type="submit" class="btn btn-primary">Cargar Producto</button>
-                    <button type="reset" class="btn btn-danger">Cancelar</button>
+                    <!-- Botones de enviar Formulario -->
+                    <div class="pt-3">
+                        <button type="submit" class="btn btn-primary">Cargar Producto</button>
+                        <button type="reset" class="btn btn-danger">Cancelar</button>
+                    </div>
                 </form>
             </div>
         </div>

@@ -16,6 +16,8 @@ class Ofertas_model extends Model {
         $builder->select('*');
         // hace el join de la tabla productos
         $builder->join('productos', 'ofertas.id_producto = productos.id_producto');
+        // hace el join de la tabla con los tamaños
+        $builder->join('size', 'productos.size = size.id_tamaño');
         //retorna el builder
         return $builder;
     }

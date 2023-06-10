@@ -20,6 +20,9 @@
                 <div>
                     <a href="#" class="btn btn-success">Agregar Oferta</a>
                 </div>
+                <?php if(!$ofertas) { ?>
+                <p class="text-center py-1">No hay productos Cargados</p>
+                <?php } else { ?>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -32,24 +35,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php if(!$ofertas) { ?>
-                            <p>No hay productos Cargados</p>
-                        <?php } else { ?>
-                            <?php foreach($ofertas as $row){ ?>
-                                <tr>
-                                    <td><?php echo $row->id_producto;  ?></td>
-                                    <td><?php echo $row->nombre_prod;  ?></td>
-                                    <td><?php echo $row->descuento;  ?>%</td>
-                                    <td><?php echo $row->precio_venta;  ?></td>
-                                    <td><?php echo $row->precio_oferta;  ?></td>
-                                    <td>
-                                        <a href="#" class="btn btn-danger">Eliminar Oferta</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        <?php }?>
+                        <?php foreach($ofertas as $row){ ?>
+                        <tr>
+                            <td><?php echo $row->id_producto;  ?></td>
+                            <td><?php echo $row->nombre_prod;  ?></td>
+                            <td><?php echo $row->descuento;  ?>%</td>
+                            <td><?php echo $row->precio_venta;  ?></td>
+                            <td><?php echo $row->precio_oferta;  ?></td>
+                            <td>
+                                <a href="#" class="btn btn-danger">Eliminar Oferta</a>
+                            </td>
+                        </tr>
+                        <?php } ?>
+
                     </tbody>
                 </table>
+                <?php }?>
             </div>
         </div>
     </div>
@@ -59,7 +60,9 @@
     <div class="container py-3">
         <div class="card">
             <div class="card-body">
-                <div class="card-title"><h1>Tu usuario no tiene los permisos necesarios para acceder a esta pagina</h1></div>
+                <div class="card-title">
+                    <h1>Tu usuario no tiene los permisos necesarios para acceder a esta pagina</h1>
+                </div>
             </div>
         </div>
     </div>

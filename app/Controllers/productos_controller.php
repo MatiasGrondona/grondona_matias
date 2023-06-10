@@ -15,7 +15,6 @@ class Productos_controller extends Controller {
     public function index(){
 
         $productoModel = new Productos_model();
-        //$listaProd['productos'] = $productoModel->orderBy('id', 'DESC')->where('baja', 'NO')->findAll();
         $listaProd['productos'] = $productoModel->getTodosProductos();
 
         //$listaProd['productos'] = $this->db->get('productos')->result_array();
@@ -108,14 +107,6 @@ class Productos_controller extends Controller {
     }
 
     public function adminProductosBaja(){
-        /*
-        $sizeModel = new Size_model();
-        $listaProd['tamaño'] = $sizeModel->getSizes();
-
-        $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->orderBy('id_producto', 'DESC')->where('baja', 'SI')->findAll();
-        */
-
         $productoModel = new Productos_model();
         $listaProd['productos'] = $productoModel->getProductosBaja();
 
@@ -126,8 +117,37 @@ class Productos_controller extends Controller {
         . view('front/pie');
     }
 
-    public function editarProducto(){
+    public function editarProducto($id){
+        $sizeModel = new Size_model();
+        $producto['tamaño'] = $sizeModel->getSizes();
 
+        $productoModel = new Productos_model();
+        $producto['producto'] = $productoModel->getProducto($id);
+
+        $data = array('titulo' => 'Editar Productos');
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/producto/editarProducto', $producto) 
+        . view('front/pie');
+    }
+
+    public function editarProductoForm(){
+        $productoModel = new Productos_model();
+        $id = $this->request->getVar('id_producto');
+
+        $productoData = [
+            'nombre_prod' => $this->request->getVar('nombre_prod'),
+            'descripcion'=> $this->request->getVar('descripcion'),
+            'size'=> $this->request->getVar('size'),
+            'precio_costo'=> $this->request->getVar('precio_costo'),
+            'precio_venta'=> $this->request->getVar('precio_venta'),
+            'stock_min'=> $this->request->getVar('stock_min'),
+            'stock'=> $this->request->getVar('stock'),
+        ];
+        $productoModel->update($id, $productoData);
+
+        session()->setFlashdata('success', 'Producto editado con Exito');
+        return $this->response->redirect(base_url('/adminProductos'));
     }
     
     public function bajaProducto($id){

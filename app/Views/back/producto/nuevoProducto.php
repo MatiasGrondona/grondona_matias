@@ -124,7 +124,7 @@
                     <div class="mb-3">
                         <label for="formFile" class="form-label margenTituloForm">Imagen de Producto</label>
                         <input class="form-control" id="formFile" name="imagen" type="file"
-                            value="<?php echo set_value('precio_venta')?>">
+                            value="<?php echo set_value('imagen')?>">
                     </div>
                     <!-- Error -->
                     <?php if ($validation->getError('imagen')) { ?>

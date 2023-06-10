@@ -26,7 +26,7 @@
                                 <?php echo $row->nombre_prod;  ?>
                             </h3>
                             <div class="description">
-                                <p>Tamaño: <?php echo $row->size;  ?></p>
+                                <p class="text-center">Tamaño: <?php echo $row->size;  ?></p>
                                 <h5><s style="color: red">$<?php echo $row->precio_venta;  ?></s></h5>
                                 <div class="position-relative">
                                     <h5><strong>$<?php echo $row->precio_oferta;  ?></strong></h5>

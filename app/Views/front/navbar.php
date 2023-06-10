@@ -112,7 +112,7 @@
                 <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
                     <button type="submit" class="btn btn-danger">Cerra Sesion</button>
                 </form>
-                <button type="button" class="btn btn-secondary">Modificar Datos</button>
+                <a class="btn btn-secondary" href="<?php echo base_url('editarUsuario/'.$session->get('id_usuario'));?>">Modificar Datos</a>
             </div>
         </div>
     </div>

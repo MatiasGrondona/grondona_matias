@@ -35,7 +35,7 @@
         <img src="<?=base_url()?>/assets/upload/<?php echo $row->imagen;  ?>" class="card-img-top productImg" alt="...">
         <div class="card-body">
             <h2 class="card-title"><?php echo $row->nombre_prod;  ?></h2>
-            <p>Tamaño: <?php echo $row->size;  ?></p>
+            <p class="text-center">Tamaño: <?php echo $row->size;  ?></p>
             <h3 class="card-text"><strong>$<?php echo $row->precio_venta;  ?></strong></h3>
             <a href="<?php echo base_url('verProducto/'.$row->id_producto);?>" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Producto</a>
             <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
