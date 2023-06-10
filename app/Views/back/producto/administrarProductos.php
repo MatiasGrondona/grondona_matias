@@ -9,7 +9,7 @@
 </div>
 <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
 <?php $validation = \Config\Services::validation(); ?>
-
+<?php if(session()->perfil_id == 1){?>
 <section class="p-3">
     <div class="container">
         <div class="card">
@@ -24,8 +24,8 @@
                         Eliminados</a>
                 </div>
                 <?php if(!$productos) { ?>
-                <p>No hay productos Cargados</p>
-                <?php } else { ?>
+                            <p>No hay productos Cargados</p>
+                        <?php } else { ?>
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -43,30 +43,28 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                        <?php foreach($productos as $row){ ?>
-                        <tr>
-                            <td><?php echo $row->id_producto;  ?></td>
-                            <td><?php echo $row->nombre_prod;  ?></td>
-                            <td><?php echo $row->descripcion;  ?></td>
-                            <td><?php echo $row->size;  ?></td>
-
-                            <td><?php echo $row->precio_costo;  ?></td>
-                            <td><?php echo $row->precio_venta;  ?></td>
-                            <td><?php echo $row->stock_min;  ?></td>
-                            <td><?php echo $row->stock;  ?></td>
-                            <td><img height="50px" whidth="50px"
-                                    src="<?=base_url()?>/assets/upload/<?php echo $row->imagen;  ?>" alt=""></td>
-                            <td>
-                                <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
-                            </td>
-                            <td>
-                                <a href="<?php echo base_url('eliminarProducto/'.$row->id_producto);?>"
-                                    class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
-                        <?php } ?>
-
+                        
+                            <?php foreach($productos as $row){ ?>
+                                <tr>
+                                    <td><?php echo $row->id_producto;  ?></td>
+                                    <td><?php echo $row->nombre_prod;  ?></td>
+                                    <td><?php echo $row->descripcion;  ?></td>
+                                    <td><?php echo $row->size;  ?></td>
+                                    
+                                    <td><?php echo $row->precio_costo;  ?></td>
+                                    <td><?php echo $row->precio_venta;  ?></td>
+                                    <td><?php echo $row->stock_min;  ?></td>
+                                    <td><?php echo $row->stock;  ?></td>
+                                    <td><img height="50px" whidth="50px" src="<?=base_url()?>/assets/upload/<?php echo $row->imagen;  ?>" alt=""></td>
+                                    <td>
+                                        <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
+                                    </td>
+                                    <td>
+                                        <a href="<?php echo base_url('eliminarProducto/'.$row->id_producto);?>" class="btn btn-danger">Eliminar</a>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        
                     </tbody>
                 </table>
                 <?php }?>
@@ -74,3 +72,14 @@
         </div>
     </div>
 </section>
+<?php } else {?>
+<section>
+    <div class="container py-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"><h1>Tu usuario no tiene los permisos necesarios para acceder a esta pagina</h1></div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php }?>

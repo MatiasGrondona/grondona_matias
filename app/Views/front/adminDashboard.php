@@ -4,6 +4,7 @@
     $perfil_id = $session->get('perfil_id');
 ?>
 
+<?php if(session()->perfil_id == 1){?>
 <section>
     <div class="container py-3">
         <div class="card">
@@ -50,3 +51,14 @@
         </div>
     </div>
 </section>
+<?php } else {?>
+<section>
+    <div class="container py-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"><h1>Tu usuario no tiene los permisos necesarios para acceder a esta pagina</h1></div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php }?>

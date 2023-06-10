@@ -10,7 +10,7 @@
 <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
 <?php $validation = \Config\Services::validation(); ?>
 
-
+<?php if(session()->perfil_id == 1){?>
 <section class="p-3">
     <div class="container">
         <div class="card">
@@ -72,3 +72,14 @@
         </div>
     </div>
 </section>
+<?php } else {?>
+<section>
+    <div class="container py-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"><h1>Tu usuario no tiene los permisos necesarios para acceder a esta pagina</h1></div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php }?>
