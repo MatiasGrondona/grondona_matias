@@ -97,18 +97,18 @@ $routes->get('verMensaje/(:num)','mensaje_controller::verMensaje/$1');
 /*
 * Rutas del carrito
 */
-$routes->get('vista_compras/(:num)', 'ventas_controller::ver_factura/$1', ['filter'=>'auth']);
+$routes->get('vista_compras/(:num)', 'ventas_controller::ver_factura/$1');
 //muestra todos los productos del catalogo
-$routes->get('/todos_p', 'carrito_controller::catalogo',['filter' => 'auth']);
+$routes->get('/todos_p', 'carrito_controller::catalogo');
 //carga la vista carrito_parte_view
-$routes->get('/muestro', 'carrito_controller::muestra',['filter' => 'auth']);
+$routes->get('/muestro', 'carrito_controller::muestra');
 //actualiza los datos del carrito
-$routes->get('/carrito_actualiza','carrito_controller::actualiza_carrito',['filter' => 'auth']);
+$routes->get('/carrito_actualiza','carrito_controller::actualiza_carrito');
 //agregar los items al carrito
-$routes->post('/carrito_agrega', 'carrito_controller::add',['filter' => 'auth']);
+$routes->post('/carrito_agrega', 'carrito_controller::add');
 //elimina un ítem seleccionado
-$routes->get('carrito_elimina/(:any)','carrito_controller::remove/$1',['filter' => 'auth']);
+$routes->get('carrito_elimina/(:any)','carrito_controller::remove/$1');
 //eliminar todo el carrito
-$routes->get('/borrar','carrito_controller::borrar_carrito',['filter' => 'auth']);
+$routes->get('/borrar','carrito_controller::borrar_carrito');
 //muestra las compras una vez que realizamos la misma
-$routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta',['filter' => 'auth']);
+$routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta');

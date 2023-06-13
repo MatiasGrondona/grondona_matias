@@ -49,6 +49,12 @@
                 <li>
                     <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>
                 </li>
+                <li>
+                    <a class="nav-link" href="<?php echo base_url('todos_p');?>">Catalogo</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="<?php echo base_url('muestro');?>">Carrito</a>
+                </li>
             </ul>
         </div>
         <!--            MENU PARA CLIENTES-->

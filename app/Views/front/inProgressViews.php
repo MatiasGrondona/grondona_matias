@@ -19,10 +19,16 @@
                         </p>
                     </li>
                     <li>
-                        <a href="#">Editar Info Usuario</a>
+                        <p>
+                            <a href="#">Editar Info Usuario</a>
+                            Ya funciona pero tengo que revisar los errores.
+                        </p>
                     </li>
                     <li>
-                        <a href="#">Editar Info Producto</a>
+                        <p>
+                            <a href="#">Editar Info Producto</a>
+                            Funciona parcialmente, tengo que implementar la parte de las imagenes y ver los errores.
+                        </p>
                     </li>
                     <li>
                         <a href="#">Carrito</a>
