@@ -18,8 +18,8 @@
                     <h1>Listado de Usuarios</h1>
                 </div>
                 <div>
-                    <a href="<?php echo base_url('/adminUsuariosBaja') ?>" class="btn btn-info">
-                        Usuarios de BAJA
+                    <a href="<?php echo base_url('/adminUsuariosBaja') ?>" class="btn btn-secondary">
+                        Ver Usuarios de BAJA
                     </a>
                 </div>
                 <?php if(!$usuarios) { ?>

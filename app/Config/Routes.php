@@ -112,3 +112,10 @@ $routes->get('carrito_elimina/(:any)','carrito_controller::remove/$1');
 $routes->get('/borrar','carrito_controller::borrar_carrito');
 //muestra las compras una vez que realizamos la misma
 $routes->get('/carrito-comprar', 'carrito_controller::comprar_carrito');
+
+
+//RUTAS DE VENTAS
+$routes->get('ver_ventas_admin', 'ventas_controller::ver_ventas_admin');
+$routes->get('ver_detalle_venta_admin/(:num)', 'ventas_controller::ver_detalle_venta_admin/$1');
+$routes->get('ver_compras_cliente/(:num)', 'ventas_controller::ver_compras_cliente/$1');
+$routes->get('ver_detalle_compra_cliente/(:num)', 'ventas_controller::ver_detalle_compra_cliente/$1');

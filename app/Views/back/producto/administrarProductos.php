@@ -20,7 +20,7 @@
                 <div>
                     <a href="<?php echo base_url('/vistaAgregarProducto') ?>" class="btn btn-success">Agregar
                         Producto</a>
-                    <a href="<?php echo base_url('/adminProductosBaja') ?>" class="btn btn-info">Productos
+                    <a href="<?php echo base_url('/adminProductosBaja') ?>" class="btn btn-secondary">Ver Productos
                         Eliminados</a>
                 </div>
                 <?php if(!$productos) { ?>

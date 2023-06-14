@@ -32,16 +32,7 @@
                     <div class="col">
                         <ul>
                             <li>
-                                <a href="#">Generar reporte de productos</a>
-                            </li>
-                            <li>
-                                <a href="#">Generar reporte de ventas</a>
-                            </li>
-                            <li>
-                                <a href="#">Otro</a>
-                            </li>
-                            <li>
-                                <a href="#">Otro</a>
+                                <a href="#">Ver Reporte de Ventas</a>
                             </li>
                         </ul>
 

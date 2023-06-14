@@ -50,6 +50,9 @@
                     <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>
                 </li>
                 <li>
+                    <a class="nav-link" href="<?php echo base_url('ver_ventas_admin');?>">Ventas</a>
+                </li>
+                <li>
                     <a class="nav-link" href="<?php echo base_url('todos_p');?>">Catalogo</a>
                 </li>
                 <li>
@@ -66,6 +69,12 @@
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('comercializacion');?>">Comercialización</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="<?php echo base_url('todos_p');?>">Catalogo</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="<?php echo base_url('muestro');?>">Carrito</a>
                 </li>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -115,6 +124,7 @@
                 <p>Agregar campo o tabla dirreccion a la base de datos.</p>
             </div>
             <div class="modal-footer">
+                <a class="btn btn-info" href="<?php echo base_url('ver_compras_cliente/'.$session->get('id_usuario'));?>">Ver Compras</a>
                 <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
                     <button type="submit" class="btn btn-danger">Cerra Sesion</button>
                 </form>

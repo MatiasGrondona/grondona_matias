@@ -101,7 +101,7 @@ class Carrito_controller extends BaseController {
         }
 
         $venta_cabecera = new Ventas_cabecera_model();
-        $idCabecera = $venta_cabecera->insert(["total_venta" => $montoTotal, "id_usuario" => session()->id]);
+        $idCabecera = $venta_cabecera->insert(["total_venta" => $montoTotal, "usuario_id" => session()->id_usuario]);
 
         $venta_detalle = new Ventas_detalle_model();
         $productoModel = new Productos_model();

@@ -18,8 +18,8 @@
                     <h1>Listado de Mensajes</h1>
                 </div>
                 <div>
-                    <a href="<?php echo base_url('/administrarMensajesLeidos') ?>" class="btn btn-info">
-                        Mensajes Leídos
+                    <a href="<?php echo base_url('/administrarMensajesLeidos') ?>" class="btn btn-secondary">
+                        Ver Mensajes Leídos
                     </a>
                 </div>
                 <?php if(!$mensajes) { ?>
