@@ -115,16 +115,25 @@
                     </div>
                     <?php } ?>
 
+                    <div class="pt-4">
+                        <div class="form-group">
+                            <?php echo form_label('Imagen Actual: ','img_ac');?>
+                            <?php $imagen = $producto['imagen'];?>
+                            <img height="60px" width="75px" src="<?=base_url()?>/assets/upload/<?=$imagen?>" alt="">
+
+                        </div>
+                    </div>
+
                     <!-- Foto del producto -->
                     <div class="mb-3">
                         <label for="formFile" class="form-label margenTituloForm">Imagen de Producto</label>
-                        <input class="form-control" id="formFile" name="imagen" type="file"
+                        <input class="form-control" id="formFile" name="imagen_nueva" type="file"
                             value="<?=base_url()?>/assets/upload/<?php echo $producto['imagen'];  ?>">
                     </div>
                     <!-- Error -->
-                    <?php if ($validation->getError('imagen')) { ?>
+                    <?php if ($validation->getError('imagen_nueva')) { ?>
                     <div class='alert alert-danger mt-2'>
-                        <?= $error = $validation->getError('imagen'); ?>
+                        <?= $error = $validation->getError('imagen_nueva'); ?>
                     </div>
                     <?php } ?>
 

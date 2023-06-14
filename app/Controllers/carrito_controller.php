@@ -24,7 +24,7 @@ class Carrito_controller extends BaseController {
 
         $data = array('titulo' => 'todos los productos');
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->getTodosProductos();
+        $listaProd['productos'] = $productoModel->getProductosCliente();
 
         return view('front/header', $data) 
         . view('front/navbar') 
@@ -49,10 +49,10 @@ class Carrito_controller extends BaseController {
         $cart = \Config\Services::cart();
         $request = \Config\Services::request();
 
-        if($rowid = "all"){
+        if($rowid == "all"){
             $cart->destroy();
         }else{
-            $cart-remove($rowid);
+            $cart->remove($rowid);
         }
 
         return redirect()->back()->withInput();

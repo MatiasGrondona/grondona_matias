@@ -18,13 +18,13 @@
             ?>
                         </div>
                     </div>
-                    <table class="table table-hover table-dark table-responsive-md" border="0" cellpaddin="5px"
+                    <table class="table table-hover table-responsive-md" border="0" cellpaddin="5px"
                         cellspacing="1px">
                         <?php
         if($cart == TRUE): ?>
                         <div class="container">
                             <div class="table-responsive-sm">
-                                <table class="table table-bordered table-hover table-dark table-striped ml-3">
+                                <table class="table table-bordered table-hover table-striped ml-3">
                                     <tr>
                                         <th>ID</th>
                                         <td>nombre_prod</td>
@@ -58,12 +58,12 @@
                                         <td>
                                             <?php echo $item['qty'];?>
                                         </td>
-                                        <?php $gran_total = $item['price'] * $item['qty'];?>
+                                        <?php $gran_total = $gran_total + ( $item['price'] * $item['qty']);?>
                                         <td>
                                             <?php echo number_format($item['subtotal'], 2);?>
                                         </td>
                                         <td>
-                                            <?php $path='<img src='.base_url('img/icons/remove_shopping_cart_black_24dp.svg').'with="25px" height="20px">'; 
+                                            <?php $path="<img src=".base_url('/assets/img/icons/remove_shopping_cart.svg')."  with='25px' height='20px'>"; 
                                 echo anchor('carrito_elimina/'.$item['rowid'], $path)?>
                                         </td>
                                     </tr>

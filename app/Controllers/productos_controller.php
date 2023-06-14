@@ -97,7 +97,8 @@ class Productos_controller extends Controller {
 
     public function listadoProductosCliente(){
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->getTodosProductos();
+        //$listaProd['productos'] = $productoModel->getTodosProductos();
+        $listaProd['productos'] = $productoModel->getProductosCliente();
 
         $data = array('titulo' => 'Listado de Productos');
         return view('front/header', $data) 
@@ -135,6 +136,10 @@ class Productos_controller extends Controller {
         $productoModel = new Productos_model();
         $id = $this->request->getVar('id_producto');
 
+        $img = $this->request->getFile('imagen_nueva');
+        $nombre_aleatorio = $img->getRandomName();
+        $img->move(ROOTPATH.'assets/upload',$nombre_aleatorio);
+
         $productoData = [
             'nombre_prod' => $this->request->getVar('nombre_prod'),
             'descripcion'=> $this->request->getVar('descripcion'),
@@ -143,6 +148,7 @@ class Productos_controller extends Controller {
             'precio_venta'=> $this->request->getVar('precio_venta'),
             'stock_min'=> $this->request->getVar('stock_min'),
             'stock'=> $this->request->getVar('stock'),
+            'imagen' => $img->getName(),
         ];
         $productoModel->update($id, $productoData);
 

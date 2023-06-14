@@ -22,11 +22,11 @@ class Ventas_cabecera_model extends Model {
 
     public function getVentas(){
         $builder = $this->getBuilderVentas();
-        return $builder->get()->getResult();
+        return $builder->orderBy('id', 'DESC')->get()->getResult();
     }
 
     public function getComprasCliente($id_cliente){
         $builder = $this->getBuilderVentas();
-        return $builder->where('usuario_id', $id_cliente)->get()->getResult();
+        return $builder->where('usuario_id', $id_cliente)->orderBy('id', 'DESC')->get()->getResult();
     }
 }

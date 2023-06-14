@@ -22,7 +22,12 @@ class Productos_model extends Model {
 
     public function getTodosProductos(){
         $builder = $this->getBuilderProductos();
-        return $builder->where(['baja' => 'NO'])->get()->getResult();
+        return $builder->where(['baja' => 'NO'])->orderBy('id_producto', 'DESC')->get()->getResult();
+    }
+
+    public function getProductosCliente(){
+        $builder = $this->getBuilderProductos();
+        return $builder->where(['baja' => 'NO'])->where('stock >= stock_min')->orderBy('id_producto', 'DESC')->get()->getResult();
     }
 
     public function getProductosBaja(){
@@ -33,7 +38,7 @@ class Productos_model extends Model {
     public function getProductosOferta(){
         $builder = $this->getBuilderProductos();
         $builder-join('ofertas', 'ofertas.id_producto = productos.id_producto');
-        return $builder->where(['baja' => 'NO'])->get()->getResult();
+        return $builder->where(['baja' => 'NO'])->orderBy('id_producto', 'DESC')->get()->getResult();
     }
 
     public function getProducto($id = null){

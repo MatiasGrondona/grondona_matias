@@ -11,6 +11,7 @@
                     <p>descripcion: <?php echo $producto['descripcion'];  ?></p>
                     <p>Stock: <?php echo $producto['stock'];  ?></p>
                     <h2>Precio: $<?php echo $producto['precio_venta'];  ?></h2>
+                    <?php if(session()->logged_in && session()->perfil_id == 2){?>
                     <?php
                         echo form_open('carrito_agrega');
                             echo form_hidden('id_producto', $producto['id_producto']);
@@ -24,6 +25,7 @@
                             echo form_close();
                         ?>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

@@ -18,7 +18,8 @@ class Home extends BaseController
         $prodOferta['productos'] = $ofertasModel->getOfertasActivas();
         
         $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->getTodosProductos();
+        //$listaProd['productos'] = $productoModel->getTodosProductos();
+        $listaProd['productos'] = $productoModel->getProductosCliente();
 
         return view('front/header', $data) 
         . view('front/navbar')

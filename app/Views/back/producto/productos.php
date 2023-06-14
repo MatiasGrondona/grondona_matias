@@ -37,8 +37,9 @@
             <h2 class="card-title"><?php echo $row->nombre_prod;  ?></h2>
             <p class="text-center">Tamaño: <?php echo $row->size;  ?></p>
             <h3 class="card-text"><strong>$<?php echo $row->precio_venta;  ?></strong></h3>
-            <a href="<?php echo base_url('verProducto/'.$row->id_producto);?>"
-                class="btn btn-outline-secondary  gap-2 m-2">Ver Producto</a>
+            <a href="<?php echo base_url('verProducto/'.$row->id_producto);?>" class="btn btn-outline-secondary  gap-2 m-2">Ver Producto</a>
+                
+            <?php if(session()->logged_in && session()->perfil_id == 2){?>
             <?php
             echo form_open('carrito_agrega');
                 echo form_hidden('id_producto', $row->id_producto);
@@ -52,6 +53,7 @@
                 echo form_close();
                 ?>
             </div>
+            <?php }?>
         </div>
     </div>
     <?php }?>

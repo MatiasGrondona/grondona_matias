@@ -22,7 +22,8 @@ class Ventas_detalle_model extends Model {
     
     public function getDetalle($id_compra){
         $builder = $this->getBuilderDetalle();
-        return $builder->where('venta_id', $id_compra)->get()->getResult();
+        //ordena los productos de acuerdo al orden al que fueron agregados al cart
+        return $builder->where('venta_id', $id_compra)->orderBy('id', 'DESC')->get()->getResult();
     }
 
     public function getDetalles($id = null, $id_usuario = null){

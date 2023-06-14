@@ -62,7 +62,10 @@
                     <a class="nav-link" href="<?php echo base_url('comercializacion');?>">Comercialización</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="<?php echo base_url('muestro');?>">Carrito</a>
+                    <a class="nav-link" href="<?php echo base_url('muestro');?>">
+                        <img src="<?php echo base_url("assets/img/icons/shopping_cart.svg");?>" alt="logo" width="25" height="25">
+                        Carrito
+                    </a>
                 </li>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -102,10 +105,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h3>Email</h3>
-                <p><?php echo($session->get('email'));?></p>
-                <h3>Nombre de Usuario</h3>
-                <p><?php echo($session->get('usuario'));?></p>
+                <p>Email</p>
+                <h3><?php echo($session->get('email'));?></h3>
+                <p class="pt-4">Nombre de Usuario</p>
+                <h3><?php echo($session->get('usuario'));?></h3>
             </div>
             <div class="modal-footer">
                 <a class="btn btn-info" href="<?php echo base_url('ver_compras_cliente/'.$session->get('id_usuario'));?>">Ver Compras</a>

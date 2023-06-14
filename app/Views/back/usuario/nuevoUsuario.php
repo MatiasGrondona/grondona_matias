@@ -9,7 +9,7 @@
 </div>
 <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
 <?php $validation = \Config\Services::validation(); ?>
-<div class="container">
+<div class="container py-3">
     <div class="card">
         <div class="card-body">
             <h1>Nuevo Usuario</h1>
@@ -63,8 +63,10 @@
                     <?= $error = $validation->getError('pass'); ?>
                 </div>
                 <?php } ?>
-                <button type="submit" class="btn btn-primary">Regsitrarme</button>
-                <button type="reset" class="btn btn-danger">Cancelar</button>
+                <div class="py-3">
+                    <button type="submit" class="btn btn-primary">Regsitrarme</button>
+                    <button type="reset" class="btn btn-danger">Cancelar</button>
+                </div>
             </form>
         </div>
     </div>
