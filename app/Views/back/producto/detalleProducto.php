@@ -6,15 +6,26 @@
                     <img src="<?=base_url()?>/assets/upload/<?php echo $producto['imagen'];  ?>" alt="">
                 </div>
                 <div class="col">
-                    <h1>nombre: <?php echo $producto['nombre_prod'];  ?></h1>
+                    <h1><strong><?php echo $producto['nombre_prod'];  ?></strong></h1>
                     <p>Tamaño: <?php echo $producto['size'];  ?></p>
                     <p>descripcion: <?php echo $producto['descripcion'];  ?></p>
-                    <h2>precio venta: <?php echo $producto['precio_venta'];  ?></h2>
                     <p>Stock: <?php echo $producto['stock'];  ?></p>
+                    <h2>Precio: $<?php echo $producto['precio_venta'];  ?></h2>
+                    <?php
+                        echo form_open('carrito_agrega');
+                            echo form_hidden('id_producto', $producto['id_producto']);
+                            echo form_hidden('precio_venta', $producto['precio_venta']);
+                            echo form_hidden('nombre_prod', $producto['nombre_prod']);
+                    ?>
+                    <div>
+                        <?php
+                            $btn = array('class' => 'btn btn-primary', 'value' => 'Agregar al Carrito', 'name' => 'action');
+                            echo form_submit($btn);
+                            echo form_close();
+                        ?>
+                    </div>
                 </div>
             </div>
-            <button class="btn btn-primary">Agregar al Carrito</button>
-
         </div>
     </div>
 </div>

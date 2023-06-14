@@ -15,11 +15,11 @@
         <div class="card">
             <div class="card-body">
                 <div class="card-title text-center pt-3 pb-3">
-                    <h1>Listado de Ofertas</h1>
+                    <h1>Listado de Ofertas de BAJA</h1>
                 </div>
                 <div>
                     <a href="#" class="btn btn-success">Agregar Oferta</a>
-                    <a href="<?php echo base_url('ofertasAdminBaja');?>" class="btn btn-info">Ver Ofertas de Baja</a>
+                    <a href="<?php echo base_url('ofertasAdmin');?>" class="btn btn-secondary">Ver Ofertas Activas</a>
                 </div>
                 <?php if(!$ofertas) { ?>
                 <p class="text-center py-1">No hay productos Cargados</p>
@@ -44,7 +44,7 @@
                             <td><?php echo $row->precio_venta;  ?></td>
                             <td><?php echo $row->precio_oferta;  ?></td>
                             <td>
-                                <a href="<?php echo base_url('dar_baja_oferta/'.$row->id_oferta);?>" class="btn btn-danger">Eliminar Oferta</a>
+                                <a href="<?php echo base_url('dar_alta_oferta/'.$row->id_oferta);?>" class="btn btn-warning">Activar Oferta</a>
                             </td>
                         </tr>
                         <?php } ?>

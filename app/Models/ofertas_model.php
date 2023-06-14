@@ -26,5 +26,18 @@ class Ofertas_model extends Model {
         $builder = $this->getBuilderOfertas();
         return $builder->where(['baja_oferta' => 'NO'])->get()->getResult();
     }
+
+    public function getOfertasBaja(){
+        $builder = $this->getBuilderOfertas();
+        return $builder->where(['baja_oferta' => 'SI'])->get()->getResult();
+    }
+
+    public function getOferta($id = null){
+        $builder = $this->getBuilderProductos();
+        $builder->where('ofertas.id_oferta', $id);
+        $query = $builder->get();
+        return $query->getRowArray();
+
+    }
 }
 

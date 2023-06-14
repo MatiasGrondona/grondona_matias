@@ -10,14 +10,14 @@
 <!-- php $validación = \Config\Services::validación(); Esto carga automáticamente el archivo Config\Validation que contiene configuraciones para incluir múltiples conjuntos de reglas -->
 <?php $validation = \Config\Services::validation(); ?>
 
-<!-- Formulario para Busqueda de productos -->
+<!-- Formulario para Busqueda de productos
 <section class="p-4">
     <form class="d-flex roundSearch col-lg-6 col-sm-12" role="search">
         <input class="form-control me-2 roundSearch" type="search" placeholder="Buscar Productos" aria-label="Search">
         <button class="btn btn-primary" type="submit">Buscar</button>
     </form>
 </section>
-
+-->
 <!-- Listado de Productos - por el momento es completamente estatico -->
 <!--
     /* 

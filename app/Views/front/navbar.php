@@ -41,22 +41,13 @@
                     </ul>
                 </li>
                 <li>
+                    <a class="nav-link" href="<?php echo base_url('ver_ventas_admin');?>">Ventas</a>
+                </li>
+                <li>
                     <a class="nav-link" href="<?php echo base_url('adminUsuarios');?>">Usuarios</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('administrarMensajes');?>">Consultas</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="<?php echo base_url('inProgressViews');?>">Vistas en proceso</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="<?php echo base_url('ver_ventas_admin');?>">Ventas</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="<?php echo base_url('todos_p');?>">Catalogo</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="<?php echo base_url('muestro');?>">Carrito</a>
                 </li>
             </ul>
         </div>
@@ -69,9 +60,6 @@
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('comercializacion');?>">Comercialización</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="<?php echo base_url('todos_p');?>">Catalogo</a>
                 </li>
                 <li>
                     <a class="nav-link" href="<?php echo base_url('muestro');?>">Carrito</a>
@@ -118,17 +106,13 @@
                 <p><?php echo($session->get('email'));?></p>
                 <h3>Nombre de Usuario</h3>
                 <p><?php echo($session->get('usuario'));?></p>
-                <h3>Telefono</h3>
-                <p>agregar campo numero tel a la base de datos</p>
-                <h3>Dirección</h3>
-                <p>Agregar campo o tabla dirreccion a la base de datos.</p>
             </div>
             <div class="modal-footer">
                 <a class="btn btn-info" href="<?php echo base_url('ver_compras_cliente/'.$session->get('id_usuario'));?>">Ver Compras</a>
+                <a class="btn btn-secondary" href="<?php echo base_url('editarUsuario/'.$session->get('id_usuario'));?>">Modificar Datos</a>
                 <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
                     <button type="submit" class="btn btn-danger">Cerra Sesion</button>
                 </form>
-                <a class="btn btn-secondary" href="<?php echo base_url('editarUsuario/'.$session->get('id_usuario'));?>">Modificar Datos</a>
             </div>
         </div>
     </div>

@@ -168,17 +168,6 @@ class Productos_controller extends Controller {
         return $this->response->redirect(base_url('/adminProductosBaja'));
     }
 
-    public function ofertasAdmin(){
-        $ofertaModel = new Ofertas_model();
-        $listaProd['ofertas'] = $ofertaModel->getOfertasActivas();
-
-        $data = array('titulo' => 'Administrar Productos');
-        return view('front/header', $data) 
-        . view('front/navbar') 
-        . view('back/producto/ofertasAdmin', $listaProd) 
-        . view('front/pie');
-    }
-
     public function verProducto($id){
         $productoModel = new Productos_model();
 

@@ -83,7 +83,6 @@ $routes->get('editarProducto/(:num)', 'productos_controller::editarProducto/$1')
 $routes->post('editarProductoForm', 'productos_controller::editarProductoForm');
 $routes->get('eliminarProducto/(:num)', 'productos_controller::bajaProducto/$1');
 $routes->get('altaProducto/(:num)', 'productos_controller::altaProducto/$1');
-$routes->get('ofertasAdmin', 'productos_controller::ofertasAdmin');
 
 //Vistas para el manejo de mensajes del formulario de contacto. 
 $routes->get('contacto', 'mensaje_controller::index');
@@ -119,3 +118,11 @@ $routes->get('ver_ventas_admin', 'ventas_controller::ver_ventas_admin');
 $routes->get('ver_detalle_venta_admin/(:num)', 'ventas_controller::ver_detalle_venta_admin/$1');
 $routes->get('ver_compras_cliente/(:num)', 'ventas_controller::ver_compras_cliente/$1');
 $routes->get('ver_detalle_compra_cliente/(:num)', 'ventas_controller::ver_detalle_compra_cliente/$1');
+
+//RUTAS OFERTAS
+$routes->get('nueva_oferta_view', 'ofertas_controller::nueva_oferta_view');
+$routes->post('nueva_oferta_save', 'ofertas_controller::nueva_oferta_save');
+$routes->get('dar_baja_oferta/(:num)', 'ofertas_controller::dar_baja_oferta/$1');
+$routes->get('dar_alta_oferta/(:num)', 'ofertas_controller::dar_alta_oferta/$1');
+$routes->get('ofertasAdmin', 'ofertas_controller::ofertasAdmin');
+$routes->get('ofertasAdminBaja', 'ofertas_controller::ofertasAdminBaja');

@@ -30,17 +30,9 @@ class Home extends BaseController
     public function panelControl(){
         $data = array('titulo' => 'Panel de Control');
 
-        $ofertasModel = new Ofertas_model();
-        $prodOferta['productos'] = $ofertasModel->getOfertasActivas();
-
-        $productoModel = new Productos_model();
-        $listaProd['productos'] = $productoModel->getTodosProductos();
-
         return view('front/header', $data) 
         . view('front/navbar')
         . view('front/adminDashboard')
-        . view('front/carrusel3', $prodOferta) 
-        . view('back/producto/productos', $listaProd) 
         . view('front/pie');
     }
     
