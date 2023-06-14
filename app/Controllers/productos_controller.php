@@ -64,7 +64,7 @@ class Productos_controller extends Controller {
         $productoModel = new Productos_model();
 
         if (!$input) {
-            session()->setFlashdata('success', 'hay un error con alguno de los campos');
+            session()->setFlashdata('danger', 'hay un error con alguno de los campos');
             $data['titulo']='Agregar Producto'; 
              echo view('front/header',$data);
              echo view('front/navbar');

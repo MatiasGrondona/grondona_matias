@@ -1417,3 +1417,126 @@ INFO - 2023-06-14 07:44:48 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-06-14 07:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-14 07:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-14 07:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:50:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:56:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 07:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:00:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:01:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 08:03:16 --> Class 'App\Controllers\Producto_model' not found
+in APPPATH\Controllers\ofertas_controller.php on line 38.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ofertas_controller->nueva_oferta_view('6')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ofertas_controller))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 08:03:43 --> Undefined variable: tamaño
+in APPPATH\Views\back\ofertas\nueva_oferta.php on line 55.
+ 1 APPPATH\Views\back\ofertas\nueva_oferta.php(55): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tamaño', 'APPPATH\\Views\\back\\ofertas\\nueva_oferta.php', 55, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\ofertas\\nueva_oferta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/ofertas/nueva_oferta', [], true)
+ 5 APPPATH\Controllers\ofertas_controller.php(45): view('back/ofertas/nueva_oferta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ofertas_controller->nueva_oferta_view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ofertas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:07:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 08:10:20 --> Undefined variable: producto
+in APPPATH\Views\back\ofertas\nueva_oferta.php on line 22.
+ 1 APPPATH\Views\back\ofertas\nueva_oferta.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: producto', 'APPPATH\\Views\\back\\ofertas\\nueva_oferta.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\ofertas\\nueva_oferta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/ofertas/nueva_oferta', [], true)
+ 5 APPPATH\Controllers\ofertas_controller.php(45): view('back/ofertas/nueva_oferta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ofertas_controller->nueva_oferta_view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ofertas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 08:11:00 --> Trying to get property 'imagen' of non-object
+in APPPATH\Views\back\ofertas\nueva_oferta.php on line 22.
+ 1 APPPATH\Views\back\ofertas\nueva_oferta.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'imagen\' of non-object', 'APPPATH\\Views\\back\\ofertas\\nueva_oferta.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\ofertas\\nueva_oferta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/ofertas/nueva_oferta', [], true)
+ 5 APPPATH\Controllers\ofertas_controller.php(45): view('back/ofertas/nueva_oferta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ofertas_controller->nueva_oferta_view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ofertas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:43:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 08:43:52 --> Undefined variable: producto
+in APPPATH\Views\back\ofertas\nueva_oferta.php on line 22.
+ 1 APPPATH\Views\back\ofertas\nueva_oferta.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: producto', 'APPPATH\\Views\\back\\ofertas\\nueva_oferta.php', 22, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\back\\ofertas\\nueva_oferta.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('back/ofertas/nueva_oferta', [], true)
+ 5 APPPATH\Controllers\ofertas_controller.php(63): view('back/ofertas/nueva_oferta', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ofertas_controller->nueva_oferta_save()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ofertas_controller))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:46:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:46:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 08:46:18 --> Undefined variable: id_producto
+in APPPATH\Controllers\ofertas_controller.php on line 61.
+ 1 APPPATH\Controllers\ofertas_controller.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: id_producto', 'APPPATH\\Controllers\\ofertas_controller.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ofertas_controller->nueva_oferta_save()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ofertas_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-14 08:48:01 --> Trying to access array offset on value of type bool
+in APPPATH\Controllers\ofertas_controller.php on line 57.
+ 1 APPPATH\Controllers\ofertas_controller.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type bool', 'APPPATH\\Controllers\\ofertas_controller.php', 57, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Ofertas_controller->nueva_oferta_save()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ofertas_controller))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-14 08:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:50:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-14 08:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

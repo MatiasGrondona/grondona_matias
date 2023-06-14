@@ -38,8 +38,9 @@
                             <th scope="col">Stock Minimo</th>
                             <th scope="col">Stock</th>
                             <th scope="col">Imagen</th>
+                            <th scope="col">Agregar Oferta</th>
                             <th scope="col">Editar</th>
-                            <th scope="col">Dar de Baja/Alta</th>
+                            <th scope="col">Dar de Baja</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,6 +57,9 @@
                                     <td><?php echo $row->stock_min;  ?></td>
                                     <td><?php echo $row->stock;  ?></td>
                                     <td><img height="50px" whidth="50px" src="<?=base_url()?>/assets/upload/<?php echo $row->imagen;  ?>" alt=""></td>
+                                    <td>
+                                        <a href="<?php echo base_url('nueva_oferta_view/'.$row->id_producto);?>" class="btn btn-outline-success">Oferta</a>
+                                    </td>
                                     <td>
                                         <a href="<?php echo base_url('editarProducto/'.$row->id_producto);?>" class="btn btn-warning">Editar</a>
                                     </td>

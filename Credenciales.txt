@@ -1,0 +1,16 @@
+ADMINISTRADOR
+
+Usuario: 
+admin@admin.com
+
+Contraseña: 
+1234
+
+*****************************************
+CLIENTE
+
+Usuario: 
+grondonamatias@gmail.com
+
+Contraseña: 
+12345

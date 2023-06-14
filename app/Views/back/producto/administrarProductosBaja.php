@@ -37,7 +37,7 @@
                             <th scope="col">Stock</th>
                             <th scope="col">Imagen</th>
                             <th scope="col">Editar</th>
-                            <th scope="col">Dar de Baja/Alta</th>
+                            <th scope="col">Dar de Alta</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -59,8 +59,7 @@
                                 <a href="<?php echo base_url('editarProducto/');?>" class="btn btn-warning">Editar</a>
                             </td>
                             <td>
-                                <a href="<?php echo base_url('altaProducto/'.$row->id_producto);?>"
-                                    class="btn btn-success">Dar de ALTA</a>
+                                <a href="<?php echo base_url('altaProducto/'.$row->id_producto);?>" class="btn btn-success">ALTA</a>
                             </td>
                         </tr>
                         <?php } ?>

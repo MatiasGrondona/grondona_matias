@@ -36,9 +36,12 @@
                         <a type="button" class="btn btn-primary" href="<?php echo base_url('adminProductos');?>">Listado de productos</a>
                         <a type="button" class="btn btn-primary" href="<?php echo base_url('ofertasAdmin');?>">Listado de Ofertas</a>
                     </div>
-                    <a class="btn btn-primary" href="<?php echo base_url('ver_ventas_admin');?>">Ventas</a>
-                    <a class="btn btn-primary" href="<?php echo base_url('adminUsuarios');?>">Usuarios</a>
-                    <a class="btn btn-primary" href="<?php echo base_url('administrarMensajes');?>">Consultas</a>
+                    <h3><strong>Ventas</strong></h3>
+                    <a class="btn btn-primary" href="<?php echo base_url('ver_ventas_admin');?>">Ver Ventas</a>
+                    <h3><strong>Usuarios</strong></h3>
+                    <a class="btn btn-primary" href="<?php echo base_url('adminUsuarios');?>">Ver Usuarios</a>
+                    <h3><strong>Consultas</strong></h3>
+                    <a class="btn btn-primary" href="<?php echo base_url('administrarMensajes');?>">Ver Consultas</a>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ class Ofertas_controller extends Controller {
         $ofertaModel = new Ofertas_model();
         $listaProd['ofertas'] = $ofertaModel->getOfertasActivas();
 
-        $data = array('titulo' => 'Administrar Productos');
+        $data = array('titulo' => 'Ofertas Activas');
         return view('front/header', $data) 
         . view('front/navbar') 
         . view('back/producto/ofertasAdmin', $listaProd) 
@@ -27,19 +27,54 @@ class Ofertas_controller extends Controller {
         $ofertaModel = new Ofertas_model();
         $listaProd['ofertas'] = $ofertaModel->getOfertasBaja();
 
-        $data = array('titulo' => 'Administrar Productos');
+        $data = array('titulo' => 'Ofertas de Baja');
         return view('front/header', $data) 
         . view('front/navbar') 
         . view('back/producto/ofertasAdminBaja', $listaProd) 
         . view('front/pie');
     }
 
-    public function nueva_oferta_view(){
+    public function nueva_oferta_view($id_producto){
+        $productoModel = new productos_model();
+        $producto['producto'] = $productoModel->getProducto($id_producto);
 
+        $data = array('titulo' => 'Nueva Oferta');
+
+        return view('front/header', $data) 
+        . view('front/navbar') 
+        . view('back/ofertas/nueva_oferta', $producto)  
+        . view('front/pie');
     }
 
     public function nueva_oferta_save(){
+        $input = $this->validate([
+            'id_producto'   => 'required',
+            'descuento' => 'required|min_length[1]|max_length[2]',
+            'precio_oferta'    => 'required|min_length[1]|max_length[10.2]'
+        ],);
 
+        $formModel = new Ofertas_model();
+        $id_producto = (['id_producto' => $this->request->getVar('id_producto')]);
+     
+        if (!$input) {
+            session()->setFlashdata('danger', 'hay un error con alguno de los campos');
+            $productoModel = new productos_model();
+            $producto['producto'] = $productoModel->getProducto($id_producto);
+            $data['titulo']='Nueva Oferta'; 
+            echo view('front/header',$data);
+            echo view('front/navbar');
+            echo view('back/ofertas/nueva_oferta',$producto, ['validation' => $this->validator]);
+            echo view('front/pie');
+        } else {
+            $formModel->save([
+                'id_producto' => $this->request->getVar('id_producto'),
+                'descuento'=> $this->request->getVar('descuento'),
+                'precio_oferta'=> $this->request->getVar('precio_oferta'),
+            ]);
+            // Flashdata funciona solo en redirigir la función en el controlador en la vista de carga.
+            session()->setFlashdata('success', 'Oferta Agregada con exito');
+            return $this->response->redirect(base_url('/ofertasAdmin'));
+        }
     }
 
     public function dar_baja_oferta($id_oferta){

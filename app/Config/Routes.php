@@ -120,7 +120,7 @@ $routes->get('ver_compras_cliente/(:num)', 'ventas_controller::ver_compras_clien
 $routes->get('ver_detalle_compra_cliente/(:num)', 'ventas_controller::ver_detalle_compra_cliente/$1');
 
 //RUTAS OFERTAS
-$routes->get('nueva_oferta_view', 'ofertas_controller::nueva_oferta_view');
+$routes->get('nueva_oferta_view/(:num)', 'ofertas_controller::nueva_oferta_view/$1');
 $routes->post('nueva_oferta_save', 'ofertas_controller::nueva_oferta_save');
 $routes->get('dar_baja_oferta/(:num)', 'ofertas_controller::dar_baja_oferta/$1');
 $routes->get('dar_alta_oferta/(:num)', 'ofertas_controller::dar_alta_oferta/$1');

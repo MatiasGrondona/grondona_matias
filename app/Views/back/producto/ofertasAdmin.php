@@ -18,7 +18,6 @@
                     <h1>Listado de Ofertas</h1>
                 </div>
                 <div>
-                    <a href="#" class="btn btn-success">Agregar Oferta</a>
                     <a href="<?php echo base_url('ofertasAdminBaja');?>" class="btn btn-info">Ver Ofertas de Baja</a>
                 </div>
                 <?php if(!$ofertas) { ?>
