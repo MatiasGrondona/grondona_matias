@@ -7,7 +7,7 @@ class Ventas_detalle_model extends Model {
     protected $primaryKey ='id';
     protected $allowedFields = ['venta_id', 'producto_id', 'cantidad', 'precio'];
 
-    public function getDetalle($id = null, $id_usuario = null){
+    public function getDetalles($id = null, $id_usuario = null){
         $db = \Config\Database::connect();
 
         $builder = $db->table('ventas_detalle');

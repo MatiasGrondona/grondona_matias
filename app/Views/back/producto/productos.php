@@ -25,9 +25,9 @@
     */
 -->
 <div class="row d-flex justify-content-center" id="listaProductos">
-    <?php if(!$productos) { ?>
+<?php if(!$productos) { ?>
     <p>No hay productos Cargados</p>
-    <?php } else { ?>
+<?php } else { ?>
     <?php foreach($productos as $row){ ?>
 
 
@@ -37,24 +37,23 @@
             <h2 class="card-title"><?php echo $row->nombre_prod;  ?></h2>
             <p class="text-center">Tamaño: <?php echo $row->size;  ?></p>
             <h3 class="card-text"><strong>$<?php echo $row->precio_venta;  ?></strong></h3>
-            <a href="<?php echo base_url('verProducto/'.$row->id_producto);?>" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Producto</a>
-            <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
+            <a href="<?php echo base_url('verProducto/'.$row->id_producto);?>"
+                class="btn btn-outline-secondary  gap-2 m-2">Ver Producto</a>
+            <?php
+            echo form_open('carrito_agrega');
+                echo form_hidden('id_producto', $row->id_producto);
+                echo form_hidden('precio_venta', $row->precio_venta);
+                echo form_hidden('nombre_prod', $row->nombre_prod);
+            ?>
+            <div>
+                <?php
+                $btn = array('class' => 'btn btn-primary', 'value' => 'agregar al carrito', 'name' => 'action');
+                echo form_submit($btn);
+                echo form_close();
+                ?>
+            </div>
         </div>
     </div>
     <?php }?>
-    <?php }?>
-
-    <!-- Ultima tarjeta de diseño original despues elimino -->
-    <!--
-    <div class="card productCard text-center col-lg-3 col-md-6 col-sm-12">
-        <img src="assets/img/fotos/carousel5.jpeg" class="card-img-top productImg" alt="...">
-        <div class="card-body">
-            <h4 class="card-title">Abrigo Fucsia</h4>
-            <p class="card-text text-center">Abrigo con capucha de color fucsia y rosado a rayas tamaño medio.</p>
-            <h5 class="card-text">$ 800</h5>
-            <a href="#" class="btn btn-outline-secondary d-grid gap-2 m-2">Ver Más</a>
-            <a href="#" class="btn btn-primary d-grid gap-2 m-2">Agregar al Carrito</a>
-        </div>
-    </div>
-    -->
+<?php }?>
 </div>

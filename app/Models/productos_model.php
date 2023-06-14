@@ -43,6 +43,15 @@ class Productos_model extends Model {
         return $query->getRowArray();
     }
 
+    public function getStock($id = null){
+        $builder = $this->getBuilderProductos();
+        $builder->where('productos.id_producto', $id);
+        //$builder->select('stock');
+        $query = $builder->get();
+        //$query = $builder->get();
+        return $query->getRowArray();
+    }
+
     public function updateStock($id = null, $stock_actual = null){
         $builder = $this->getBuilderProductos();
         $builder->where('productos.id_producto', $id);

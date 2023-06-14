@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
-use App\Models\ventasCabecera_model;
-use App\Models\ventasDetalle_model;
+use App\Models\ventas_cabecera_model;
+use App\Models\ventas_detalle_model;
 use App\Models\productos_model;
 use App\Models\usuarios_model;
 use CodeIgniter\Controller;
@@ -92,26 +92,93 @@ class Carrito_controller extends BaseController {
 
     public function comprar_carrito(){
         $cart = \Config\Services::cart();
-        $productos = $cart->contents();
+        $productosCart = $cart->contents();
         $request = \Config\Services::request();
         $montoTotal = 0;
 
-        foreach($productos as $producto){
+        foreach($productosCart as $producto){
             $montoTotal += $producto["price"] * $producto["qty"];
         }
 
         $venta_cabecera = new Ventas_cabecera_model();
-        $idCabecera = $venta_cabecera->insert(["total_venta" => $montoTotal, "usuario_id" => session()->id]);
+        $idCabecera = $venta_cabecera->insert(["total_venta" => $montoTotal, "id_usuario" => session()->id]);
 
         $venta_detalle = new Ventas_detalle_model();
         $productoModel = new Productos_model();
 
-        foreach($productos as $producto){
-            $venta_detalle->insert(["venta_id" => $id_cabecera, 
-                                    "producto_id"=>$producto["id"],
-                                    "stock" => $producto["qty"],
-                                    "precio" => $producto["price"]]);
-            $productoModel->update($producto["id"], ["stock" => $producto["stock"] - $producto["qty"]]);
+        foreach($productosCart as $productoCart){
+            $venta_detalle->insert(["venta_id" => $idCabecera, 
+                                    "producto_id"=>$productoCart["id"],
+                                    "cantidad" => $productoCart["qty"],
+                                    "precio" => $productoCart["price"]]);
+            $stockViejo = $productoModel->getProducto($producto["id"]);
+            $stockActual = $stockViejo["stock"] - $producto["qty"];
+            $productoModel->updateStock($producto["id"], $stockActual);
         }
+        $cart->destroy();
+        session()->setFlashdata('success', 'Compra realizada con Exito');
+        return $this->response->redirect(base_url('/productos'));
+    }
+
+    public function sumar_carrito(){
+        $cart = \Config\Services::cart();
+
+        $cantidad = $cart->getItem($this->request->getGet("id"))["qty"];
+        $cantidadMax = $cart->getItem($this->request->getGet("id"))["stock"];
+        
+        if($cantidad < $cantidadMax){ 
+            $cart->update(array("rowid" => $this->request->getGet("id"),"qty" => $cantidad+1));
+        }
+        return redirect()->back()->withInput();
+    }
+
+    public function restar_carrito(){
+        $cart = \Config\Services::cart();
+        $productos = $cart->contents();
+        $cantidad = $cart->getItem($this->request->getGet("id"))["qty"];
+     
+        if($cantidad > 1){ 
+            $cart->update(array("rowid" => $this->request->getGet("id"), "qty" => $cantidad-1));
+        }
+        return redirect()->back()->withInput();
+    }
+
+    public function borrar_carrito(){
+        $cart = \Config\Services::cart();
+        $cart->destroy();
+
+        return redirect()->to(base_url('muestro'));
+    }
+
+    public function devolver_carrito(){
+        $cart = \Config\Services::cart();
+        return $cart->contents();
+    }
+
+    public function eliminar_carrito(){
+        $cart = \Config\Services::cart();
+        $session = session();
+
+        $cart->destroy();
+        $session->set('cart', 0);
+
+        return redirect()->to(base_url('muestro'));
+    }
+
+    public function carroCompra(){
+
+        $session=session();
+        $cart = \Config\Services::Cart();
+
+        $productoModel = new Producto_Model();
+        $data['producto'] = $productoModel->findAll();
+        $data['cart'] = $this->request->getVar('cart');
+
+        $dato = array('titulo' => 'Todos los Productos');
+    
+        echo view('front/head', $dato);
+        echo view('front/navbar');
+        echo view('back/carrito/carrito_parte_view',$data);
+        echo view('front/pie');
     }
 }

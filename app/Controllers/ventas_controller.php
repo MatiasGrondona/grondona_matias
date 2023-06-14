@@ -10,7 +10,10 @@ class Ventas_controller extends Controller {
     }
 
     public function nuevaVenta(){
-        
+        $ventas = new Ventas_cabecera_model();
+
+        $nueva_venta = ['id_usuario' => $session->get('id_usuario'), 'total_venta' => $total];
+        $venta_id = $ventas->insert($nueva_venta);
     }
 
     public function ver_facturas($venta_id){
@@ -20,7 +23,7 @@ class Ventas_controller extends Controller {
 
         return view('front/header', $data) 
         . view('front/navbar') 
-        . view('back/compras/administrarProductos', $infoVenta) 
+        . view('back/compras/vista_compras', $infoVenta) 
         . view('front/pie');
     }
 }

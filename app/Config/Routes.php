@@ -111,4 +111,4 @@ $routes->get('carrito_elimina/(:any)','carrito_controller::remove/$1');
 //eliminar todo el carrito
 $routes->get('/borrar','carrito_controller::borrar_carrito');
 //muestra las compras una vez que realizamos la misma
-$routes->get('/carrito-comprar', 'Ventascontroller::registrar_venta');
+$routes->get('/carrito-comprar', 'carrito_controller::comprar_carrito');
