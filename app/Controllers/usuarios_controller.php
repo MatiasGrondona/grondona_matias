@@ -79,10 +79,35 @@ class Usuarios_controller extends Controller {
     public function bajaUsuario($id){
         $usuarioModel = new Usuarios_model();
         $data = ['baja' => 'SI'];
-
+        $session = session();
+        //Este if verifica si el admin esta dando de baja su propia cuenta, si es así entonces cierra la sesion y da de baja la cuenta. 
+        
+        if($session->get('id_usuario') == $id){
+            $session->destroy();
+        }
+        //otra opcion es que el admin no pueda dar de baja su propia cuenta y entonces recarga la pagina y manda un flashdata con la notificación
+        /*
+        if($session->get('id_usuario') == $id){
+            session()->setFlashdata('success', 'No podes dar de baja tu propio usuario de administrador');
+            return $this->response->redirect(base_url('/adminUsuarios'));
+        }
+        */
         $usuarioModel->update($id, $data);
 
         return $this->response->redirect(base_url('/adminUsuarios'));
+    }
+
+    public function bajaUsuarioCliente($id){
+        $usuarioModel = new Usuarios_model();
+        $data = ['baja' => 'SI'];
+
+        $session = session();
+        $session->destroy();
+        
+        $usuarioModel->update($id, $data);
+        
+        //return redirect()->to(base_url('/login'));
+        return $this->response->redirect(base_url('/home'));
     }
 
     public function altaUsuario($id){

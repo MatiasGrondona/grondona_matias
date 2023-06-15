@@ -13,7 +13,7 @@
                 <h1>Panel de Control</h1>
             </div>
             <div class="row">
-                <div class="col">
+                <div class="col-12 col-lg-5">
                     <div class="card">
                         <div class="card-body">
                             <p>Nombre y Apellido</p>
@@ -29,19 +29,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <h3><strong>Productos</strong></h3>
+                <div class="col-12 col-lg-7">
+                    <h3 class="pt-1"><strong>Productos</strong></h3>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <a type="button" class="btn btn-primary" href="<?php echo base_url('vistaAgregarProducto');?>">Cargar Producto</a>
-                        <a type="button" class="btn btn-primary" href="<?php echo base_url('adminProductos');?>">Listado de productos</a>
-                        <a type="button" class="btn btn-primary" href="<?php echo base_url('ofertasAdmin');?>">Listado de Ofertas</a>
+                        <a type="button" class="btn btn-success btn-sm" href="<?php echo base_url('vistaAgregarProducto');?>">Cargar Producto</a>
+                        <a type="button" class="btn btn-dark btn-sm" href="<?php echo base_url('adminProductos');?>">Listado de productos</a>
+                        <a type="button" class="btn btn-info btn-sm" href="<?php echo base_url('ofertasAdmin');?>">Listado de Ofertas</a>
                     </div>
                     <h3><strong>Ventas</strong></h3>
-                    <a class="btn btn-primary" href="<?php echo base_url('ver_ventas_admin');?>">Ver Ventas</a>
+                    <a class="btn btn-success btn-sm" href="<?php echo base_url('ver_ventas_admin');?>">Ver Ventas</a>
                     <h3><strong>Usuarios</strong></h3>
-                    <a class="btn btn-primary" href="<?php echo base_url('adminUsuarios');?>">Ver Usuarios</a>
+                    <a class="btn btn-primary btn-sm" href="<?php echo base_url('adminUsuarios');?>">Ver Usuarios</a>
                     <h3><strong>Consultas</strong></h3>
-                    <a class="btn btn-primary" href="<?php echo base_url('administrarMensajes');?>">Ver Consultas</a>
+                    <a class="btn btn-warning btn-sm" href="<?php echo base_url('administrarMensajes');?>">Ver Consultas</a>
                 </div>
             </div>
         </div>

@@ -27,7 +27,6 @@
 <script src="<?php echo base_url("assets/js/swiper-bundle.min.js");?>"></script>
 <script src="<?php echo base_url("assets/js/script.js");?>"></script>
 <script src="<?php echo base_url("assets/js/modal.js");?>"></script>
-
 </body>
 
 </html>

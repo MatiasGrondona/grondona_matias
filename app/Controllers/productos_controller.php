@@ -135,21 +135,41 @@ class Productos_controller extends Controller {
     public function editarProductoForm(){
         $productoModel = new Productos_model();
         $id = $this->request->getVar('id_producto');
+        $imagen = $this->request->getFile('imagen_nueva');
+        //return print_r($imagen );
+        //return print_r($imagen->getName());
 
-        $img = $this->request->getFile('imagen_nueva');
-        $nombre_aleatorio = $img->getRandomName();
-        $img->move(ROOTPATH.'assets/upload',$nombre_aleatorio);
-
-        $productoData = [
-            'nombre_prod' => $this->request->getVar('nombre_prod'),
-            'descripcion'=> $this->request->getVar('descripcion'),
-            'size'=> $this->request->getVar('size'),
-            'precio_costo'=> $this->request->getVar('precio_costo'),
-            'precio_venta'=> $this->request->getVar('precio_venta'),
-            'stock_min'=> $this->request->getVar('stock_min'),
-            'stock'=> $this->request->getVar('stock'),
-            'imagen' => $img->getName(),
-        ];
+        //al intentar obtener el nombre de la imagen retorna vacio con lo cual la funcion empty tendria que funcionar
+        if (empty($imagen->getName())) {
+            // Update the product without changing the image
+            $productoData = [
+                'nombre_prod' => $this->request->getVar('nombre_prod'),
+                'descripcion'=> $this->request->getVar('descripcion'),
+                'size'=> $this->request->getVar('size'),
+                'precio_costo'=> $this->request->getVar('precio_costo'),
+                'precio_venta'=> $this->request->getVar('precio_venta'),
+                'stock_min'=> $this->request->getVar('stock_min'),
+                'stock'=> $this->request->getVar('stock'),
+            ];
+        } else {
+           
+            // Process the uploaded image
+            //$_FILES['imagen_nueva']
+            $nombre_aleatorio = $imagen->getRandomName();
+            $imagen->move(ROOTPATH.'assets/upload',$nombre_aleatorio);
+    
+            // Update the product with the new image
+            $productoData = [
+                'nombre_prod' => $this->request->getVar('nombre_prod'),
+                'descripcion'=> $this->request->getVar('descripcion'),
+                'size'=> $this->request->getVar('size'),
+                'precio_costo'=> $this->request->getVar('precio_costo'),
+                'precio_venta'=> $this->request->getVar('precio_venta'),
+                'stock_min'=> $this->request->getVar('stock_min'),
+                'stock'=> $this->request->getVar('stock'),
+                'imagen' => $imagen->getName(),
+            ];
+        }
         $productoModel->update($id, $productoData);
 
         session()->setFlashdata('success', 'Producto editado con Exito');

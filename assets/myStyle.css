@@ -9,6 +9,28 @@
 }
 
 /*
+* Prueba de fijacion del Footer al final
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+*/
+
+/*
 * Justificacion de textos
 */
 
@@ -54,6 +76,53 @@ section{
 */
 .card .carta-aviso{
     background-color: #FFE4B5;
+}
+
+/*
+*Estilo para la vista de detalle de productos
+*/
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 4%;
+    border-top-right-radius: 0%;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 0%;
+}
+.titulo{
+    font-size: 3.5em;
+    font-weight: bolder; 
+}
+
+.sub_titulo{
+    font-size: 2.5em;
+}
+
+.precio{
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+.texto{
+    font-size: 2em;
+    font-weight: lighter;
+}
+/*
+! Media Break point para card-img
+*/
+
+@media (max-width: 991px) {
+    .card-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 4.5%;
+        border-top-right-radius: 4.5%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+
 }
 
 /*

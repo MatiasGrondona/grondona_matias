@@ -6,9 +6,10 @@
                     <div class="card-title text-center py-2">
                         <h1>Remitente: <?php echo $mensaje['nombre'];  ?></h1>
                     </div>
-                    <p>Email</p>
+                    <p>Email:</p>
                     <h3><?php echo $mensaje['email'];  ?></h3>
-                    <p>
+                    <h5 class="pt-5">Mensaje:</h5>
+                    <p class="pb-3">
                         <?php echo $mensaje['mensaje'];  ?>
                     </p>
                     <?php if($mensaje['leído'] == 'SI'){?>

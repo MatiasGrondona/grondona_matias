@@ -128,7 +128,7 @@
                     <div class="mb-3">
                         <label for="formFile" class="form-label margenTituloForm">Imagen de Producto</label>
                         <input class="form-control" id="formFile" name="imagen_nueva" type="file"
-                            value="<?=base_url()?>/assets/upload/<?php echo $producto['imagen'];  ?>">
+                            >
                     </div>
                     <!-- Error -->
                     <?php if ($validation->getError('imagen_nueva')) { ?>

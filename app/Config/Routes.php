@@ -70,6 +70,7 @@ $routes->post('enviar_form', 'usuarios_controller::formValidation');
 $routes->get('adminUsuarios', 'usuarios_controller::adminUsuarios');
 $routes->get('adminUsuariosBaja', 'usuarios_controller::adminUsuariosBaja');
 $routes->get('bajaUsuario/(:num)', 'usuarios_controller::bajaUsuario/$1');
+$routes->get('bajaUsuarioCliente/(:num)', 'usuarios_controller::bajaUsuarioCliente/$1');
 $routes->get('altaUsuario/(:num)', 'usuarios_controller::altaUsuario/$1');
 $routes->get('editarUsuario/(:num)', 'usuarios_controller::editarUsuario/$1');
 $routes->post('editarUsuarioForm', 'usuarios_controller::editarUsuarioForm');

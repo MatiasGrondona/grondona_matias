@@ -109,13 +109,14 @@
                 <h3><?php echo($session->get('email'));?></h3>
                 <p class="pt-4">Nombre de Usuario</p>
                 <h3><?php echo($session->get('usuario'));?></h3>
-            </div>
-            <div class="modal-footer">
+                <a class="btn btn-secondary" href="<?php echo base_url('editarUsuario/'.$session->get('id_usuario'));?>">Cambiar Datos</a>
                 <a class="btn btn-info" href="<?php echo base_url('ver_compras_cliente/'.$session->get('id_usuario'));?>">Ver Compras</a>
-                <a class="btn btn-secondary" href="<?php echo base_url('editarUsuario/'.$session->get('id_usuario'));?>">Modificar Datos</a>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
                 <form method="post" action="<?php echo base_url('/cerrar_sesion') ?>">
-                    <button type="submit" class="btn btn-danger">Cerra Sesion</button>
+                    <button type="submit" class="btn btn-warning">Cerra Sesión</button>
                 </form>
+                <a href="<?php echo base_url('bajaUsuarioCliente/'.$session->get('id_usuario'));?>" class="btn btn-danger">Eliminar Cuenta</a>
             </div>
         </div>
     </div>
