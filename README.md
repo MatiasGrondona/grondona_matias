@@ -3,6 +3,8 @@ Este proyecto se trata de una página de ventas para la materia Taller de Progra
 
 Se utiliza CodeIgniter 4, CSS (Bootstrap), JavaScript y PHP. 
 
+Dentro de la carpeta assets se encuentra un txt con algunas credenciales de usuario para probar el proyecto y una base de datos. 
+
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?

@@ -1,5 +1,0 @@
-<div class="form-group">
-                                    <?php echo form_label('Imagen Actual:', 'img_ac'); ?>
-                                    <?php $imagen = $old['imagen'] ?>
-                                    <img height="60px" whith="60px" src="<?=base_url()?>/assets/upload/<?=$imagen?>">
-                                </div>
