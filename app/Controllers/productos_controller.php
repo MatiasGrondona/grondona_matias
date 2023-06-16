@@ -182,6 +182,8 @@ class Productos_controller extends Controller {
 
         $productoModel->update($id, $data);
 
+        //tengo que buscar entre las ofertas y dar de baja 
+
         return $this->response->redirect(base_url('/adminProductos'));
     }
 

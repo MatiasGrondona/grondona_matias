@@ -71,6 +71,10 @@ class Ofertas_controller extends Controller {
                 'descuento'=> $this->request->getVar('descuento'),
                 'precio_oferta'=> $this->request->getVar('precio_oferta'),
             ]);
+            $productoModel = new Productos_model();
+            $tiene_oferta = ['tiene_oferta' => 'SI'];
+
+            $productoModel->update($id, $tiene_oferta);
             // Flashdata funciona solo en redirigir la función en el controlador en la vista de carga.
             session()->setFlashdata('success', 'Oferta Agregada con exito');
             return $this->response->redirect(base_url('/ofertasAdmin'));
@@ -83,6 +87,14 @@ class Ofertas_controller extends Controller {
 
         $ofertaModel->update($id_oferta, $data);
 
+        //consigo el id del id_producto de la oferta que estoy editando y le cambio el campo tiene_oferta a 'SI'
+        $productoModel = new Productos_model();
+        $oferta_producto = ['tiene_oferta' => 'NO'];
+        $ofertaModel->Where(['id_oferta' => $id_oferta]);
+        $producto = $ofertaModel->get()->getRowArray();
+        $id_prod = $producto['id_producto'];
+        $productoModel->update($id_prod, $oferta_producto);
+
         return $this->response->redirect(base_url('/ofertasAdmin'));
     }
 
@@ -91,6 +103,14 @@ class Ofertas_controller extends Controller {
         $data = ['baja_oferta' => 'NO'];
 
         $ofertaModel->update($id_oferta, $data);
+
+        //consigo el id del id_producto de la oferta que estoy editando y le cambio el campo tiene_oferta a 'SI'
+        $productoModel = new Productos_model();
+        $oferta_producto = ['tiene_oferta' => 'SI'];
+        $ofertaModel->Where(['id_oferta' => $id_oferta]);
+        $producto = $ofertaModel->get()->getRowArray();
+        $id_prod = $producto['id_producto'];
+        $productoModel->update($id_prod, $oferta_producto);
 
         return $this->response->redirect(base_url('/ofertasAdminBaja'));
     }

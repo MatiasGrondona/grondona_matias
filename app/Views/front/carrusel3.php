@@ -13,7 +13,7 @@
 <div class="container carouselBody py-4">
     <div class="container carouselContainer swiper">
         <div class="slide-container">
-            <div class="card-wrapper swiper-wrapper">
+            <div class="card-wrapper swiper-wrapper pb-4">
                 <?php foreach($productos as $row){ ?>
 
                 <div class="card carouselCard swiper-slide">

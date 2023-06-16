@@ -33,11 +33,10 @@ class Ofertas_model extends Model {
     }
 
     public function getOferta($id = null){
-        $builder = $this->getBuilderProductos();
+        $builder = $this->getBuilderOfertas();
         $builder->where('ofertas.id_oferta', $id);
         $query = $builder->get();
         return $query->getRowArray();
-
     }
 }
 
